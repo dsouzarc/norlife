@@ -16,6 +16,31 @@
 
 @implementation ViewController
 
+- (void) initializeSOLocationManager
+{
+    [SOLocationManager sharedInstance].allowsBackgroundLocationUpdates = YES;
+    [[SOMotionDetector sharedInstance] startDetection];
+
+    [SOMotionDetector sharedInstance].locationChangedBlock = ^(CLLocation *location) {
+
+        static double lastSpeed = -1.0;
+        if([SOMotionDetector sharedInstance].motionType == MotionTypeAutomotive) {
+            
+            //First time - initialize to current speed
+            if(lastSpeed == -1.0) {
+                lastSpeed = location.speed;
+            } else {
+                double speedDifference = fabs(lastSpeed - location.speed);
+                if(speedDifference/lastSpeed >= DANGEROUS_DRIVING_SPEED_THRESHOLD) {
+                    //NSLog(@"DANGEROUS");
+                }
+                
+                lastSpeed = location.speed;
+            }
+            //NSLog(@"Here: %@", location);
+        }
+    };
+}
 
 - (void) viewDidLoad
 {
@@ -23,30 +48,7 @@
     
     self.locationManager = [Constants getLocationManager];
     self.locationManager.delegate = self;
-    
-     [SOLocationManager sharedInstance].allowsBackgroundLocationUpdates = YES;
-    [[SOMotionDetector sharedInstance] startDetection];
-    [[SOStepDetector sharedInstance] startDetectionWithUpdateBlock:^(NSError *error) {
-        //...
-        NSLog(@"ERROR: %@", error);
-    }];
-    
-    
-    
-    [SOMotionDetector sharedInstance].motionTypeChangedBlock = ^(SOMotionType motionType) {
-        //...
-        NSLog(@"Hey: %d", motionType);
-    };
-    
-    [SOMotionDetector sharedInstance].locationChangedBlock = ^(CLLocation *location) {
-        //...
-        NSLog(@"Here: %@", location);
-    };
-    
-    [SOMotionDetector sharedInstance].accelerationChangedBlock = ^(CMAcceleration acceleration) {
-        //...
-        NSLog(@"Acceleration: %@", acceleration);
-    };
+    [self initializeSOLocationManager];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
@@ -54,6 +56,8 @@
     if(status == kCLAuthorizationStatusAuthorizedWhenInUse) {
         [self.locationManager requestAlwaysAuthorization];
     }
+    
+    [self initializeSOLocationManager];
 }
 
 - (void)didReceiveMemoryWarning

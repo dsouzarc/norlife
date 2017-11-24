@@ -13,11 +13,13 @@
 #import "SOStepDetector.h"
 #import "SOLocationManager.h"
 
+static const double DANGEROUS_DRIVING_SPEED_THRESHOLD = 0.01;
 
 @interface Constants : NSObject
 
 + (instancetype) instance;
 
 + (CLLocationManager*) getLocationManager;
+
 
 @end
