@@ -151,12 +151,9 @@
 			children = (
 				946662121FC8B0CA0033D494 /* Norlife.entitlements */,
 				946662011FC89FFC0033D494 /* SOMotionDetector */,
-				9466620F1FC8AA8F0033D494 /* HealthKitDataManager.h */,
-				946662101FC8AA8F0033D494 /* HealthKitDataManager.m */,
-				946662151FC8B9350033D494 /* LocationDataManager.h */,
-				946662161FC8B9350033D494 /* LocationDataManager.m */,
-				9466620C1FC8A32F0033D494 /* Constants.h */,
-				9466620D1FC8A32F0033D494 /* Constants.m */,
+				94C6FB151FC8C7740089DBA8 /* HealthKit */,
+				94C6FB161FC8C77B0089DBA8 /* Location */,
+				94C6FB171FC8C7850089DBA8 /* Constants */,
 				94A2B7421FC89D2700B84598 /* AppDelegate.h */,
 				94A2B7431FC89D2700B84598 /* AppDelegate.m */,
 				94A2B7451FC89D2700B84598 /* ViewController.h */,
@@ -177,6 +174,33 @@
 				94A2B75D1FC89D2700B84598 /* Info.plist */,
 			);
 			path = NorlifeUITests;
+			sourceTree = "<group>";
+		};
+		94C6FB151FC8C7740089DBA8 /* HealthKit */ = {
+			isa = PBXGroup;
+			children = (
+				9466620F1FC8AA8F0033D494 /* HealthKitDataManager.h */,
+				946662101FC8AA8F0033D494 /* HealthKitDataManager.m */,
+			);
+			path = HealthKit;
+			sourceTree = "<group>";
+		};
+		94C6FB161FC8C77B0089DBA8 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				946662151FC8B9350033D494 /* LocationDataManager.h */,
+				946662161FC8B9350033D494 /* LocationDataManager.m */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
+		94C6FB171FC8C7850089DBA8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				9466620C1FC8A32F0033D494 /* Constants.h */,
+				9466620D1FC8A32F0033D494 /* Constants.m */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -550,6 +574,7 @@
 			baseConfigurationReference = 9BC903D39E2E479F8EBFC58C /* Pods-Norlife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_CONSTANT_CONVERSION = YES_ERROR;
 				CODE_SIGN_ENTITLEMENTS = Norlife/Norlife.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7N3L673D8;
@@ -566,6 +591,7 @@
 			baseConfigurationReference = 8B5E548F739D3192FACB1201 /* Pods-Norlife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_CONSTANT_CONVERSION = YES_ERROR;
 				CODE_SIGN_ENTITLEMENTS = Norlife/Norlife.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7N3L673D8;

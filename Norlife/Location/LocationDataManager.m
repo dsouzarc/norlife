@@ -10,6 +10,13 @@
 
 static LocationDataManager *dataManager;
 
+@interface LocationDataManager ()
+
+@property (strong, nonatomic) MongoDBCollection *drivingCollection;
+@property (strong, nonatomic) MongoDBCollection *sittingCollection;
+
+@end
+
 @implementation LocationDataManager
 
 + (instancetype) instance
@@ -19,7 +26,7 @@ static LocationDataManager *dataManager;
             dataManager = [[self alloc] init];
         }
     }
-    
+
     return dataManager;
 }
 
@@ -27,12 +34,21 @@ static LocationDataManager *dataManager;
 {
     self = [super init];
     if(self) {
+        
+        NSError *error = nil;
+        MongoConnection *connection = [MongoConnection connectionForServer:MONGO_DB_CONNECTION_STRING error:&error];
+        
+        if(error) {
+            NSLog(@"ERROR GETTING MONGO CONNECTION: %@", [error description]);
+        }
+        self.drivingCollection = [connection collectionWithName:DRIVING_COLLECTION_NAME];
+        self.sittingCollection = [connection collectionWithName:SITTING_COLLECTION_NAME];
+        
         [self initializeSOLocationManager];
     }
     
     return self;
 }
-
 
 - (void) initializeSOLocationManager
 {
@@ -49,13 +65,30 @@ static LocationDataManager *dataManager;
                 lastSpeed = location.speed;
             } else {
                 double speedDifference = fabs(lastSpeed - location.speed);
+                
+                if(!self.drivingCollection) {
+
+                }
+                
                 if(speedDifference/lastSpeed >= DANGEROUS_DRIVING_SPEED_THRESHOLD) {
-                    //NSLog(@"DANGEROUS");
+                    NSLog(@"DANGEROUS");
+                    NSDictionary *relevantData = @{
+                                                   @"date": [NSDate date],
+                                                   @"speed": [NSNumber numberWithDouble:lastSpeed]
+                                                   
+                                                   };
+                    NSError *error = nil;
+                    [self.drivingCollection insertDictionary:relevantData writeConcern:nil error:&error];
+                    
+                    if(error) {
+                        NSLog(@"ERROR WRITING TO MONGO IN DRIVING: %@", [error description]);
+                    }
+
                 }
                 
                 lastSpeed = location.speed;
             }
-            //NSLog(@"Here: %@", location);
+            NSLog(@"Here: %@", location);
         }
     };
     

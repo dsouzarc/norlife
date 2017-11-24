@@ -6,6 +6,7 @@ target 'Norlife' do
   # use_frameworks!
 
   # Pods for Norlife
+  pod 'ObjCMongoDB'
 
   target 'NorlifeUITests' do
     inherit! :search_paths

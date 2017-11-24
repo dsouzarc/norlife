@@ -32,6 +32,10 @@
         [self.locationManager requestAlwaysAuthorization];
     }
     
+    if(status == kCLAuthorizationStatusAuthorizedAlways || status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        [LocationDataManager instance];
+    }
+    
     
     [[HealthKitDataManager instance] calculateHeartRate];
 }
