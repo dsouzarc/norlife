@@ -75,13 +75,12 @@ static LocationDataManager *dataManager;
                     NSDictionary *relevantData = @{
                                                    @"date": [NSDate date],
                                                    @"speed": [NSNumber numberWithDouble:lastSpeed]
-                                                   
                                                    };
                     NSError *error = nil;
-                    [self.drivingCollection insertDictionary:relevantData writeConcern:nil error:&error];
+                    //[self.drivingCollection insertDictionary:relevantData writeConcern:nil error:&error];
                     
                     if(error) {
-                        NSLog(@"ERROR WRITING TO MONGO IN DRIVING: %@", [error description]);
+                        //NSLog(@"ERROR WRITING TO MONGO IN DRIVING: %@", [error description]);
                     }
 
                 }

@@ -40,6 +40,22 @@ static Constants *constants;
     return self;
 }
 
++ (NSString*) NORDEA_CLIENT_ID
+{
+    return [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"nordea"] objectForKey:@"client_id"];
+}
+
++ (NSString*) NORDEA_ACCESS_TOKEN
+{
+    return [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"nordea"] objectForKey:@"access_token"];
+}
+
++ (NSString*) NORDEA_CLIENT_SECRET
+{
+    return [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"nordea"] objectForKey:@"client_secret"];
+}
+            
+
 + (CLLocationManager*) getLocationManager
 {
     CLLocationManager *locationManager = [[CLLocationManager alloc] init];

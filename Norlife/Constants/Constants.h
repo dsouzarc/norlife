@@ -18,11 +18,18 @@
 #import "LocationDataManager.h"
 
 static const double DANGEROUS_DRIVING_SPEED_THRESHOLD = 0.01;
-static const NSString *MONGO_DB_CONNECTION_STRING = @"207.154.232.139:27017";
+
+static const NSString *MONGO_DB_CONNECTION_STRING = @"138.197.36.15:27017";
+
+static const NSString *NORDEA_BASE_URL = @"https://api.hackathon.developer.nordeaopenbanking.com/v1/";
 
 @interface Constants : NSObject
 
 + (instancetype) instance;
+
++ (NSString*) NORDEA_CLIENT_SECRET;
++ (NSString*) NORDEA_CLIENT_ID;
++ (NSString*) NORDEA_ACCESS_TOKEN;
 
 + (CLLocationManager*) getLocationManager;
 + (double) hoursBetween:(NSDate*)firstDate and:(NSDate*)secondDate;

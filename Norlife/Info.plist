@@ -2,6 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>nordea</key>
+	<dict>
+		<key>access_key</key>
+		<string>eyJjdHkiOiJKV1QiLCJlbmMiOiJBMTI4R0NNIiwiYWxnIjoiZGlyIn0..ZKoN472H-L12A3FV.YVC30aD-nMnFuuR0oSEKPI-hsEorOsbA3gzH4iwdzbdcfvaTQUsL2XNFvmvkpVpMpgRhP8ra8hfpCQ1NdbyD3esrR2OtOV4fRopjIVV27Ni3WsgcafnExJ2SasyCBrpJw4FyQzobq9WFdCd4mZePRmWmMx7OW5Hu2gLzrhcbV5-HUECfN78c19D-XchCTC2RmwTPSdUpLHyKrh9xOZngSwnlZ_5nyPVnriCm69UOJnxV1mkE5GL7FXE5ZxOy-cuLFqNGMCm096X6u4PDX4jjhXEF3MHZ7fl_KnkCtuHYZtoleaPLB2JBAckyOz-nyDh2NB6vBS8iPDt--_exgI5hbHqJVRXrKK6ESV9JRcoJUNKMa6FQKYU8u5X1YZ7PNLjWzzZTFL6pORbh47bEGhnk4lutAyj_n_dgQbjjG3Ny3-8108zXstNxn6xxkAIGH9CiJcXxmkf_qF8Ybck1RNnRzDmQdUdBFbRS24fF-zOevW6PC3a0XZM26tM-EN--1FEucBHLpaXZmhNsh84AHDZpUVGt7xikO0P_6W6uuAWTspzRamc9SHcaEl2p3GIYgqcS38WgDIc-2mr0LHWesanloXwv_7oT9kzeUz6CsM9QVffOAXBKJkWzeJ0tyFpSF9DzyvLoCyzfV4IuQdJ_J1wP-eq1gYK7-d1DSd9B9ggppnOO3JDTyGD4sbXuLC4L_u8mOgK-QJ2SUoR_xJo6C-I0OFBzWw7c7k1TMAufYD2aAwFuu5IgeJk-em8hUJGD4tktdi8DiiPGPYd8CFOunfruuVIA72U-BSg7pqlVpQXWLeQd4Rmq3FJ2IyQ0gz6XhsZfBHtbGcsq4rxiU2yljb-B9a9T3RXdyVHGQoIlktwjVWsgrpfOvHKjB2mG2xw-mLKbq7ynzqe8KFDknPFui81najtoGY4qch7A3jVtVlqeCn-ya9FMmWoF3Qi6ke4n9LoPYDAgRDexnshIspThg9tiiI-OS8Lt5yV1oFabDFmkC6fFQ7Zxm8qBXLk4HSu-6RBHTWBnPFM96uQMaNMAXghNHKefR8zHtp8rishuBCoZ8SdVxGXfk5d_TLE13x4WHq0J_MpSnCAyuw0lP3raD-wX9Q1ZmYHjKIa8ZlkG9UAmNusLvXCK2_BZFdRNAyz_9O_NxDBxKII9UtDXE0ossQctrdOD8o8BUX-AvfTkcXeEGNU1lZKqTB1KH8odBGj3T4LINe9oH35xShvm5sbLOgsJYp93rkFIqFnwv1O0SGU95Ehm2SgZy6kI7e-Q_M_MqJ5kK63IRSuQWiNXzLZLxPbvIX7blUaH53RzQIYoZH4aXIr-AT38QRoQVmpvyQ6tJF1UeMjU2I47t9UC2qXiJw4.IvSCaTyVGgYYZDrI75oPtw</string>
+		<key>client_secret</key>
+		<string>C6rL3oR7kL0eV3bM8fR8aQ0aP0yP2tR5dA1uN5oW0qA0qK6uC5</string>
+		<key>client_id</key>
+		<string>ac432bfc-de56-47e8-9ba5-851a6886a144</string>
+	</dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -21,15 +30,15 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSHealthShareUsageDescription</key>
-	<string>We'd like to more accurately and fairly calculate your insurance premiums.</string>
+	<string>We&apos;d like to more accurately and fairly calculate your insurance premiums.</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>We'd like to more accurately and fairly calculate your insurance premiums.</string>
+	<string>We&apos;d like to more accurately and fairly calculate your insurance premiums.</string>
 	<key>NSLocationAlwaysUsageDescription</key>
-	<string>We'd like to more accurately and fairly calculate your insurance premiums.</string>
+	<string>We&apos;d like to more accurately and fairly calculate your insurance premiums.</string>
 	<key>NSLocationUsageDescription</key>
-	<string>We'd like to more accurately and fairly calculate your insurance premiums.</string>
+	<string>We&apos;d like to more accurately and fairly calculate your insurance premiums.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>We'd like to more accurately and fairly calculate your insurance premiums.</string>
+	<string>We&apos;d like to more accurately and fairly calculate your insurance premiums.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
