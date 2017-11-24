@@ -43,14 +43,12 @@ static LocationDataManager *dataManager;
         }
         self.drivingCollection = [connection collectionWithName:DRIVING_COLLECTION_NAME];
         self.sittingCollection = [connection collectionWithName:SITTING_COLLECTION_NAME];
-        
-        [self initializeSOLocationManager];
     }
     
     return self;
 }
 
-- (void) initializeSOLocationManager
+- (void) beginLocationTracking
 {
     [SOLocationManager sharedInstance].allowsBackgroundLocationUpdates = YES;
     [[SOMotionDetector sharedInstance] startDetection];

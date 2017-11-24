@@ -34,7 +34,7 @@
     }
     
     if(status == kCLAuthorizationStatusAuthorizedAlways || status == kCLAuthorizationStatusAuthorizedWhenInUse) {
-        [LocationDataManager instance];
+        [[LocationDataManager instance] beginLocationTracking];
     }
     
     

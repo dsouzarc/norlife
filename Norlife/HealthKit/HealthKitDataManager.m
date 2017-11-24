@@ -65,8 +65,6 @@ static HealthKitDataManager *dataManager;
                                            if(success) {
                                                [self readHeartRateWithCompletion:^(NSArray *results, NSError *error) {
                                                    NSString *items = [results componentsJoinedByString:@"\n"];
-                                                   NSLog(@"%@", items);
-                                                   NSLog(@"WE IN");
                                                }];
                                            }
                                            else {
@@ -106,8 +104,6 @@ static HealthKitDataManager *dataManager;
             NSLog(@"An error occured fetching the user's heartrate. The error was: %@.", error);
             abort();
         }
-                                                          
-                                                          NSLog(@"STILL HERE");
         
         dispatch_async(dispatch_get_main_queue(), ^{
             
@@ -126,7 +122,6 @@ static HealthKitDataManager *dataManager;
         });
     }];
     [[[HKHealthStore alloc] init] executeQuery:query];
-    NSLog(@"QUERY DONE");
     
 }
 
