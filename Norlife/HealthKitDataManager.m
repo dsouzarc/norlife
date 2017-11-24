@@ -8,6 +8,9 @@
 
 #import "HealthKitDataManager.h"
 
+//https://stackoverflow.com/questions/36446649/how-to-save-the-blood-pressure-data-in-health-kit-app-in-ios
+//https://github.com/mseemann/healthkit-sample-generator/blob/master/Pod/Classes/SampleCreator.swift
+
 static HealthKitDataManager *dataManager;
 
 @interface HealthKitDataManager ()
