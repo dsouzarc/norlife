@@ -10,33 +10,55 @@
 
 @interface ViewController ()
 
+@property (strong, nonatomic) CLLocationManager *locationManager;
+
 @end
 
 @implementation ViewController
 
-- (void)viewDidLoad
+
+- (void) viewDidLoad
 {
     [super viewDidLoad];
     
-    [SOLocationManager sharedInstance].allowsBackgroundLocationUpdates = YES;
+    self.locationManager = [Constants getLocationManager];
+    self.locationManager.delegate = self;
+    
+     [SOLocationManager sharedInstance].allowsBackgroundLocationUpdates = YES;
     [[SOMotionDetector sharedInstance] startDetection];
     [[SOStepDetector sharedInstance] startDetectionWithUpdateBlock:^(NSError *error) {
         //...
-        
+        NSLog(@"ERROR: %@", error);
     }];
     
-    [SOMotionDetector sharedInstance].accelerationChangedBlock = ^(CMAcceleration acceleration) {
-
-        NSLog(@"ACCELERATION: %@", acceleration);
+    
+    
+    [SOMotionDetector sharedInstance].motionTypeChangedBlock = ^(SOMotionType motionType) {
+        //...
+        NSLog(@"Hey: %d", motionType);
     };
     
+    [SOMotionDetector sharedInstance].locationChangedBlock = ^(CLLocation *location) {
+        //...
+        NSLog(@"Here: %@", location);
+    };
+    
+    [SOMotionDetector sharedInstance].accelerationChangedBlock = ^(CMAcceleration acceleration) {
+        //...
+        NSLog(@"Acceleration: %@", acceleration);
+    };
 }
 
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    if(status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        [self.locationManager requestAlwaysAuthorization];
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-
 }
 
 

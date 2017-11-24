@@ -8,11 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-#import "SOMotionDetector.h"
-#import "SOStepDetector.h"
-#import "SOLocationManager.h"
+#import "Constants.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <CLLocationManagerDelegate>
 
 
 @end

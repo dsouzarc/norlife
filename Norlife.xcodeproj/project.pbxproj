@@ -12,6 +12,7 @@
 		946662081FC89FFC0033D494 /* SOStepDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662051FC89FFC0033D494 /* SOStepDetector.m */; };
 		946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662061FC89FFC0033D494 /* SOLocationManager.m */; };
 		9466620A1FC89FFC0033D494 /* SOMotionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662071FC89FFC0033D494 /* SOMotionDetector.m */; };
+		9466620E1FC8A32F0033D494 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9466620D1FC8A32F0033D494 /* Constants.m */; };
 		94A2B7441FC89D2700B84598 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2B7431FC89D2700B84598 /* AppDelegate.m */; };
 		94A2B7471FC89D2700B84598 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2B7461FC89D2700B84598 /* ViewController.m */; };
 		94A2B74A1FC89D2700B84598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A2B7481FC89D2700B84598 /* Main.storyboard */; };
@@ -43,6 +44,8 @@
 		946662051FC89FFC0033D494 /* SOStepDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOStepDetector.m; sourceTree = "<group>"; };
 		946662061FC89FFC0033D494 /* SOLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLocationManager.m; sourceTree = "<group>"; };
 		946662071FC89FFC0033D494 /* SOMotionDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMotionDetector.m; sourceTree = "<group>"; };
+		9466620C1FC8A32F0033D494 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		9466620D1FC8A32F0033D494 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 		94A2B73F1FC89D2700B84598 /* Norlife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Norlife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A2B7421FC89D2700B84598 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94A2B7431FC89D2700B84598 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				946662011FC89FFC0033D494 /* SOMotionDetector */,
+				9466620C1FC8A32F0033D494 /* Constants.h */,
+				9466620D1FC8A32F0033D494 /* Constants.m */,
 				94A2B7421FC89D2700B84598 /* AppDelegate.h */,
 				94A2B7431FC89D2700B84598 /* AppDelegate.m */,
 				94A2B7451FC89D2700B84598 /* ViewController.h */,
@@ -370,6 +375,7 @@
 				94A2B7441FC89D2700B84598 /* AppDelegate.m in Sources */,
 				946662081FC89FFC0033D494 /* SOStepDetector.m in Sources */,
 				946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */,
+				9466620E1FC8A32F0033D494 /* Constants.m in Sources */,
 				9466620A1FC89FFC0033D494 /* SOMotionDetector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
