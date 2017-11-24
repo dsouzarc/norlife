@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F29F58375AACCC14BF07340 /* libPods-NorlifeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1ED0C65B0C025EDD37FAF9 /* libPods-NorlifeUITests.a */; };
+		7BF6DAD2A846759E89E016CE /* libPods-Norlife.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CC82B4A21CC58672DC45FD /* libPods-Norlife.a */; };
+		946662081FC89FFC0033D494 /* SOStepDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662051FC89FFC0033D494 /* SOStepDetector.m */; };
+		946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662061FC89FFC0033D494 /* SOLocationManager.m */; };
+		9466620A1FC89FFC0033D494 /* SOMotionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662071FC89FFC0033D494 /* SOMotionDetector.m */; };
 		94A2B7441FC89D2700B84598 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2B7431FC89D2700B84598 /* AppDelegate.m */; };
 		94A2B7471FC89D2700B84598 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2B7461FC89D2700B84598 /* ViewController.m */; };
 		94A2B74A1FC89D2700B84598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A2B7481FC89D2700B84598 /* Main.storyboard */; };
@@ -27,6 +32,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A49AABB0AEB17ED254D924F /* Pods-NorlifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NorlifeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NorlifeUITests/Pods-NorlifeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		31CC82B4A21CC58672DC45FD /* libPods-Norlife.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Norlife.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		493D2955C981D33144A12406 /* Pods-NorlifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NorlifeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NorlifeUITests/Pods-NorlifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4A1ED0C65B0C025EDD37FAF9 /* libPods-NorlifeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NorlifeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8B5E548F739D3192FACB1201 /* Pods-Norlife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Norlife.release.xcconfig"; path = "Pods/Target Support Files/Pods-Norlife/Pods-Norlife.release.xcconfig"; sourceTree = "<group>"; };
+		946662021FC89FFC0033D494 /* SOStepDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOStepDetector.h; sourceTree = "<group>"; };
+		946662031FC89FFC0033D494 /* SOMotionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMotionDetector.h; sourceTree = "<group>"; };
+		946662041FC89FFC0033D494 /* SOLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLocationManager.h; sourceTree = "<group>"; };
+		946662051FC89FFC0033D494 /* SOStepDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOStepDetector.m; sourceTree = "<group>"; };
+		946662061FC89FFC0033D494 /* SOLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOLocationManager.m; sourceTree = "<group>"; };
+		946662071FC89FFC0033D494 /* SOMotionDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMotionDetector.m; sourceTree = "<group>"; };
 		94A2B73F1FC89D2700B84598 /* Norlife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Norlife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A2B7421FC89D2700B84598 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94A2B7431FC89D2700B84598 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -40,6 +56,7 @@
 		94A2B7571FC89D2700B84598 /* NorlifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NorlifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A2B75B1FC89D2700B84598 /* NorlifeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NorlifeUITests.m; sourceTree = "<group>"; };
 		94A2B75D1FC89D2700B84598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BC903D39E2E479F8EBFC58C /* Pods-Norlife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Norlife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Norlife/Pods-Norlife.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BF6DAD2A846759E89E016CE /* libPods-Norlife.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,18 +72,54 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F29F58375AACCC14BF07340 /* libPods-NorlifeUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1BCA09F0D927C0B4B96173BD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9BC903D39E2E479F8EBFC58C /* Pods-Norlife.debug.xcconfig */,
+				8B5E548F739D3192FACB1201 /* Pods-Norlife.release.xcconfig */,
+				493D2955C981D33144A12406 /* Pods-NorlifeUITests.debug.xcconfig */,
+				0A49AABB0AEB17ED254D924F /* Pods-NorlifeUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4EF678D8477F6C5FD9B582DB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31CC82B4A21CC58672DC45FD /* libPods-Norlife.a */,
+				4A1ED0C65B0C025EDD37FAF9 /* libPods-NorlifeUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		946662011FC89FFC0033D494 /* SOMotionDetector */ = {
+			isa = PBXGroup;
+			children = (
+				946662021FC89FFC0033D494 /* SOStepDetector.h */,
+				946662031FC89FFC0033D494 /* SOMotionDetector.h */,
+				946662041FC89FFC0033D494 /* SOLocationManager.h */,
+				946662051FC89FFC0033D494 /* SOStepDetector.m */,
+				946662061FC89FFC0033D494 /* SOLocationManager.m */,
+				946662071FC89FFC0033D494 /* SOMotionDetector.m */,
+			);
+			path = SOMotionDetector;
+			sourceTree = "<group>";
+		};
 		94A2B7361FC89D2700B84598 = {
 			isa = PBXGroup;
 			children = (
 				94A2B7411FC89D2700B84598 /* Norlife */,
 				94A2B75A1FC89D2700B84598 /* NorlifeUITests */,
 				94A2B7401FC89D2700B84598 /* Products */,
+				1BCA09F0D927C0B4B96173BD /* Pods */,
+				4EF678D8477F6C5FD9B582DB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +135,7 @@
 		94A2B7411FC89D2700B84598 /* Norlife */ = {
 			isa = PBXGroup;
 			children = (
+				946662011FC89FFC0033D494 /* SOMotionDetector */,
 				94A2B7421FC89D2700B84598 /* AppDelegate.h */,
 				94A2B7431FC89D2700B84598 /* AppDelegate.m */,
 				94A2B7451FC89D2700B84598 /* ViewController.h */,
@@ -110,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94A2B7601FC89D2700B84598 /* Build configuration list for PBXNativeTarget "Norlife" */;
 			buildPhases = (
+				332CEB2C6DEA6960E43A25DC /* [CP] Check Pods Manifest.lock */,
 				94A2B73B1FC89D2700B84598 /* Sources */,
 				94A2B73C1FC89D2700B84598 /* Frameworks */,
 				94A2B73D1FC89D2700B84598 /* Resources */,
+				04554EF1D66D5ADB049ADC14 /* [CP] Embed Pods Frameworks */,
+				2DD305E4926127404145DFE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,9 +185,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 94A2B7631FC89D2700B84598 /* Build configuration list for PBXNativeTarget "NorlifeUITests" */;
 			buildPhases = (
+				6AFEFA141F71EA3C4C0E9E15 /* [CP] Check Pods Manifest.lock */,
 				94A2B7531FC89D2700B84598 /* Sources */,
 				94A2B7541FC89D2700B84598 /* Frameworks */,
 				94A2B7551FC89D2700B84598 /* Resources */,
+				B9AF62CAFB648C22F96F2328 /* [CP] Embed Pods Frameworks */,
+				50A5C182DE743DA9A29A0433 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,6 +261,105 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04554EF1D66D5ADB049ADC14 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Norlife/Pods-Norlife-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2DD305E4926127404145DFE7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Norlife/Pods-Norlife-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		332CEB2C6DEA6960E43A25DC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Norlife-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		50A5C182DE743DA9A29A0433 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NorlifeUITests/Pods-NorlifeUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AFEFA141F71EA3C4C0E9E15 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NorlifeUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B9AF62CAFB648C22F96F2328 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NorlifeUITests/Pods-NorlifeUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		94A2B73B1FC89D2700B84598 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -208,6 +368,9 @@
 				94A2B7471FC89D2700B84598 /* ViewController.m in Sources */,
 				94A2B7521FC89D2700B84598 /* main.m in Sources */,
 				94A2B7441FC89D2700B84598 /* AppDelegate.m in Sources */,
+				946662081FC89FFC0033D494 /* SOStepDetector.m in Sources */,
+				946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */,
+				9466620A1FC89FFC0033D494 /* SOMotionDetector.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +518,7 @@
 		};
 		94A2B7611FC89D2700B84598 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9BC903D39E2E479F8EBFC58C /* Pods-Norlife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -369,6 +533,7 @@
 		};
 		94A2B7621FC89D2700B84598 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B5E548F739D3192FACB1201 /* Pods-Norlife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -383,6 +548,7 @@
 		};
 		94A2B7641FC89D2700B84598 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 493D2955C981D33144A12406 /* Pods-NorlifeUITests.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7N3L673D8;
@@ -397,6 +563,7 @@
 		};
 		94A2B7651FC89D2700B84598 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A49AABB0AEB17ED254D924F /* Pods-NorlifeUITests.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7N3L673D8;

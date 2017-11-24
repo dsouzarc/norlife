@@ -1,0 +1,443 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7BA434EB3D0AAA8AA5717DDADC4E7BED /* Pods-NorlifeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F27691ACE18768A35108FCE1065C45 /* Pods-NorlifeUITests-dummy.m */; };
+		93452FE3EBBF2C85613F59AED1224FBA /* Pods-Norlife-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA770A38DA6884E612D352853CCCE5 /* Pods-Norlife-dummy.m */; };
+		D1E29BE0B712DE3C3AEA0B2D4D26B08F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		E736A13E1BD2AAD5D428B5A3D47ABAD9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		084342A8E8D30878C3AA61250EF02B50 /* Pods-Norlife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Norlife.debug.xcconfig"; sourceTree = "<group>"; };
+		09FA770A38DA6884E612D352853CCCE5 /* Pods-Norlife-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Norlife-dummy.m"; sourceTree = "<group>"; };
+		163EDF0E912E10F34894AD1165973B54 /* Pods-NorlifeUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NorlifeUITests-resources.sh"; sourceTree = "<group>"; };
+		259A902FA96821D521D90B148B2C7E1C /* Pods-Norlife-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Norlife-resources.sh"; sourceTree = "<group>"; };
+		29F30CB5C167EDB728FCF726B24BDD1F /* libPods-Norlife.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Norlife.a"; path = "libPods-Norlife.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA943EBB448B63FD3EEBF33982D76D5 /* Pods-Norlife-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Norlife-acknowledgements.plist"; sourceTree = "<group>"; };
+		3E7C6ADBFEBC3819DE01EDAC8523248D /* Pods-NorlifeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NorlifeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		4BC65313A8F0386C766EC0E63D5104DE /* Pods-Norlife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Norlife.release.xcconfig"; sourceTree = "<group>"; };
+		62F27691ACE18768A35108FCE1065C45 /* Pods-NorlifeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NorlifeUITests-dummy.m"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		7195A765E682BBD07705EC02FF6BCFA1 /* Pods-Norlife-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Norlife-frameworks.sh"; sourceTree = "<group>"; };
+		7D4D894C78969A26550757E36C3A000B /* Pods-NorlifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NorlifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		8439E8888FFF7027B04C1D2B92EE55E8 /* Pods-Norlife-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Norlife-acknowledgements.markdown"; sourceTree = "<group>"; };
+		89B5AA65F783784DCBDF80C887506C28 /* libPods-NorlifeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NorlifeUITests.a"; path = "libPods-NorlifeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F534FD86DA33DA0B4F0DB30CF39DF88 /* Pods-NorlifeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NorlifeUITests-frameworks.sh"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		948BAE893385D3FCD4725A73722CD04B /* Pods-NorlifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NorlifeUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E3CCCFDECE0DCD85CEAC8A486E0B0041 /* Pods-NorlifeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NorlifeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0D272BC4AB527C2A125E111E92F87CBC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1E29BE0B712DE3C3AEA0B2D4D26B08F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8DF0348535334408D021B3133A8C529E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E736A13E1BD2AAD5D428B5A3D47ABAD9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2B12A83CEE63DF81EF190C1E4BC0FACA /* Pods-Norlife */ = {
+			isa = PBXGroup;
+			children = (
+				8439E8888FFF7027B04C1D2B92EE55E8 /* Pods-Norlife-acknowledgements.markdown */,
+				2CA943EBB448B63FD3EEBF33982D76D5 /* Pods-Norlife-acknowledgements.plist */,
+				09FA770A38DA6884E612D352853CCCE5 /* Pods-Norlife-dummy.m */,
+				7195A765E682BBD07705EC02FF6BCFA1 /* Pods-Norlife-frameworks.sh */,
+				259A902FA96821D521D90B148B2C7E1C /* Pods-Norlife-resources.sh */,
+				084342A8E8D30878C3AA61250EF02B50 /* Pods-Norlife.debug.xcconfig */,
+				4BC65313A8F0386C766EC0E63D5104DE /* Pods-Norlife.release.xcconfig */,
+			);
+			name = "Pods-Norlife";
+			path = "Target Support Files/Pods-Norlife";
+			sourceTree = "<group>";
+		};
+		42A397975ED42ED4CC7C5E3C2DBD74CA /* Pods-NorlifeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				E3CCCFDECE0DCD85CEAC8A486E0B0041 /* Pods-NorlifeUITests-acknowledgements.markdown */,
+				3E7C6ADBFEBC3819DE01EDAC8523248D /* Pods-NorlifeUITests-acknowledgements.plist */,
+				62F27691ACE18768A35108FCE1065C45 /* Pods-NorlifeUITests-dummy.m */,
+				8F534FD86DA33DA0B4F0DB30CF39DF88 /* Pods-NorlifeUITests-frameworks.sh */,
+				163EDF0E912E10F34894AD1165973B54 /* Pods-NorlifeUITests-resources.sh */,
+				7D4D894C78969A26550757E36C3A000B /* Pods-NorlifeUITests.debug.xcconfig */,
+				948BAE893385D3FCD4725A73722CD04B /* Pods-NorlifeUITests.release.xcconfig */,
+			);
+			name = "Pods-NorlifeUITests";
+			path = "Target Support Files/Pods-NorlifeUITests";
+			sourceTree = "<group>";
+		};
+		6B7ED001794531AB2DC2F2E11AD87877 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				29F30CB5C167EDB728FCF726B24BDD1F /* libPods-Norlife.a */,
+				89B5AA65F783784DCBDF80C887506C28 /* libPods-NorlifeUITests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				6B7ED001794531AB2DC2F2E11AD87877 /* Products */,
+				AF7CEEFC9AB45FC9CA91772E4C53DD6B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		AF7CEEFC9AB45FC9CA91772E4C53DD6B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2B12A83CEE63DF81EF190C1E4BC0FACA /* Pods-Norlife */,
+				42A397975ED42ED4CC7C5E3C2DBD74CA /* Pods-NorlifeUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B67761EAA227ECDEE10975CD0F28C69A /* Pods-Norlife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9388CB1988F9BC742DB9C89198EC95CF /* Build configuration list for PBXNativeTarget "Pods-Norlife" */;
+			buildPhases = (
+				69185804289F019DEA1A47E6ABFE8E5A /* Sources */,
+				8DF0348535334408D021B3133A8C529E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-Norlife";
+			productName = "Pods-Norlife";
+			productReference = 29F30CB5C167EDB728FCF726B24BDD1F /* libPods-Norlife.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E490F13ADD68B4798D6EA02BA7936F13 /* Pods-NorlifeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 90AB264CFE22F3117177CA7952F6FD5C /* Build configuration list for PBXNativeTarget "Pods-NorlifeUITests" */;
+			buildPhases = (
+				341A489F99E7FD3A70B4D79E282D108A /* Sources */,
+				0D272BC4AB527C2A125E111E92F87CBC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-NorlifeUITests";
+			productName = "Pods-NorlifeUITests";
+			productReference = 89B5AA65F783784DCBDF80C887506C28 /* libPods-NorlifeUITests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 6B7ED001794531AB2DC2F2E11AD87877 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B67761EAA227ECDEE10975CD0F28C69A /* Pods-Norlife */,
+				E490F13ADD68B4798D6EA02BA7936F13 /* Pods-NorlifeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		341A489F99E7FD3A70B4D79E282D108A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BA434EB3D0AAA8AA5717DDADC4E7BED /* Pods-NorlifeUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		69185804289F019DEA1A47E6ABFE8E5A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93452FE3EBBF2C85613F59AED1224FBA /* Pods-Norlife-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D23278938ADF334174C5BF2A4B6B1B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		2A9BD1892E6788444B1A90108B435457 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7D4D894C78969A26550757E36C3A000B /* Pods-NorlifeUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F3FED4BF8D2D4F9ABEC9B1D6F8D54E6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 084342A8E8D30878C3AA61250EF02B50 /* Pods-Norlife.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7EB643AF1A61F957E610D58950FE1433 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948BAE893385D3FCD4725A73722CD04B /* Pods-NorlifeUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		954573C62193B081ADE372742942E01B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BC65313A8F0386C766EC0E63D5104DE /* Pods-Norlife.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		995C3A53DEAA96B47E756185345E180D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				995C3A53DEAA96B47E756185345E180D /* Debug */,
+				1D23278938ADF334174C5BF2A4B6B1B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		90AB264CFE22F3117177CA7952F6FD5C /* Build configuration list for PBXNativeTarget "Pods-NorlifeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A9BD1892E6788444B1A90108B435457 /* Debug */,
+				7EB643AF1A61F957E610D58950FE1433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9388CB1988F9BC742DB9C89198EC95CF /* Build configuration list for PBXNativeTarget "Pods-Norlife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F3FED4BF8D2D4F9ABEC9B1D6F8D54E6 /* Debug */,
+				954573C62193B081ADE372742942E01B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

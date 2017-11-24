@@ -14,15 +14,29 @@
 
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    [SOLocationManager sharedInstance].allowsBackgroundLocationUpdates = YES;
+    [[SOMotionDetector sharedInstance] startDetection];
+    [[SOStepDetector sharedInstance] startDetectionWithUpdateBlock:^(NSError *error) {
+        //...
+        
+    }];
+    
+    [SOMotionDetector sharedInstance].accelerationChangedBlock = ^(CMAcceleration acceleration) {
+
+        NSLog(@"ACCELERATION: %@", acceleration);
+    };
+    
 }
 
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
 }
 
 

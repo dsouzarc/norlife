@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+#import "SOMotionDetector.h"
+#import "SOStepDetector.h"
+#import "SOLocationManager.h"
+
 @interface ViewController : UIViewController
 
 
