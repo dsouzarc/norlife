@@ -16,31 +16,6 @@
 
 @implementation ViewController
 
-- (void) initializeSOLocationManager
-{
-    [SOLocationManager sharedInstance].allowsBackgroundLocationUpdates = YES;
-    [[SOMotionDetector sharedInstance] startDetection];
-
-    [SOMotionDetector sharedInstance].locationChangedBlock = ^(CLLocation *location) {
-
-        static double lastSpeed = -1.0;
-        if([SOMotionDetector sharedInstance].motionType == MotionTypeAutomotive) {
-            
-            //First time - initialize to current speed
-            if(lastSpeed == -1.0) {
-                lastSpeed = location.speed;
-            } else {
-                double speedDifference = fabs(lastSpeed - location.speed);
-                if(speedDifference/lastSpeed >= DANGEROUS_DRIVING_SPEED_THRESHOLD) {
-                    //NSLog(@"DANGEROUS");
-                }
-                
-                lastSpeed = location.speed;
-            }
-            //NSLog(@"Here: %@", location);
-        }
-    };
-}
 
 - (void) viewDidLoad
 {
@@ -48,7 +23,7 @@
     
     self.locationManager = [Constants getLocationManager];
     self.locationManager.delegate = self;
-    [self initializeSOLocationManager];
+
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
@@ -57,7 +32,8 @@
         [self.locationManager requestAlwaysAuthorization];
     }
     
-    [self initializeSOLocationManager];
+    
+    [[HealthKitDataManager instance] calculateHeartRate];
 }
 
 - (void)didReceiveMemoryWarning

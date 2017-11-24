@@ -13,6 +13,8 @@
 #import "SOStepDetector.h"
 #import "SOLocationManager.h"
 
+#import "HealthKitDataManager.h"
+
 static const double DANGEROUS_DRIVING_SPEED_THRESHOLD = 0.01;
 
 @interface Constants : NSObject
@@ -21,5 +23,6 @@ static const double DANGEROUS_DRIVING_SPEED_THRESHOLD = 0.01;
 
 + (CLLocationManager*) getLocationManager;
 
++ (double) hoursBetween:(NSDate*)firstDate and:(NSDate*)secondDate;
 
 @end

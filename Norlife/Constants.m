@@ -59,5 +59,12 @@ static Constants *constants;
     return locationManager;
 }
 
++ (double) hoursBetween:(NSDate*)firstDate and:(NSDate*)secondDate
+{
+    NSTimeInterval timeBetweenDates = [secondDate timeIntervalSinceDate:firstDate];
+    double secondsInAnHour = 3600.0;
+    double hoursBetweenDates = timeBetweenDates / secondsInAnHour;
+    return hoursBetweenDates;
+}
 
 @end

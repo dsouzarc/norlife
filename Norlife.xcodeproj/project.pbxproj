@@ -13,6 +13,9 @@
 		946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662061FC89FFC0033D494 /* SOLocationManager.m */; };
 		9466620A1FC89FFC0033D494 /* SOMotionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662071FC89FFC0033D494 /* SOMotionDetector.m */; };
 		9466620E1FC8A32F0033D494 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9466620D1FC8A32F0033D494 /* Constants.m */; };
+		946662111FC8AA8F0033D494 /* HealthKitDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662101FC8AA8F0033D494 /* HealthKitDataManager.m */; };
+		946662141FC8B0CA0033D494 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946662131FC8B0CA0033D494 /* HealthKit.framework */; };
+		946662171FC8B9350033D494 /* LocationDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662161FC8B9350033D494 /* LocationDataManager.m */; };
 		94A2B7441FC89D2700B84598 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2B7431FC89D2700B84598 /* AppDelegate.m */; };
 		94A2B7471FC89D2700B84598 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2B7461FC89D2700B84598 /* ViewController.m */; };
 		94A2B74A1FC89D2700B84598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A2B7481FC89D2700B84598 /* Main.storyboard */; };
@@ -46,6 +49,12 @@
 		946662071FC89FFC0033D494 /* SOMotionDetector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SOMotionDetector.m; sourceTree = "<group>"; };
 		9466620C1FC8A32F0033D494 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		9466620D1FC8A32F0033D494 /* Constants.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		9466620F1FC8AA8F0033D494 /* HealthKitDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HealthKitDataManager.h; sourceTree = "<group>"; };
+		946662101FC8AA8F0033D494 /* HealthKitDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HealthKitDataManager.m; sourceTree = "<group>"; };
+		946662121FC8B0CA0033D494 /* Norlife.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Norlife.entitlements; sourceTree = "<group>"; };
+		946662131FC8B0CA0033D494 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		946662151FC8B9350033D494 /* LocationDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDataManager.h; sourceTree = "<group>"; };
+		946662161FC8B9350033D494 /* LocationDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationDataManager.m; sourceTree = "<group>"; };
 		94A2B73F1FC89D2700B84598 /* Norlife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Norlife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A2B7421FC89D2700B84598 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94A2B7431FC89D2700B84598 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -68,6 +77,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BF6DAD2A846759E89E016CE /* libPods-Norlife.a in Frameworks */,
+				946662141FC8B0CA0033D494 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +106,7 @@
 		4EF678D8477F6C5FD9B582DB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				946662131FC8B0CA0033D494 /* HealthKit.framework */,
 				31CC82B4A21CC58672DC45FD /* libPods-Norlife.a */,
 				4A1ED0C65B0C025EDD37FAF9 /* libPods-NorlifeUITests.a */,
 			);
@@ -138,7 +149,12 @@
 		94A2B7411FC89D2700B84598 /* Norlife */ = {
 			isa = PBXGroup;
 			children = (
+				946662121FC8B0CA0033D494 /* Norlife.entitlements */,
 				946662011FC89FFC0033D494 /* SOMotionDetector */,
+				9466620F1FC8AA8F0033D494 /* HealthKitDataManager.h */,
+				946662101FC8AA8F0033D494 /* HealthKitDataManager.m */,
+				946662151FC8B9350033D494 /* LocationDataManager.h */,
+				946662161FC8B9350033D494 /* LocationDataManager.m */,
 				9466620C1FC8A32F0033D494 /* Constants.h */,
 				9466620D1FC8A32F0033D494 /* Constants.m */,
 				94A2B7421FC89D2700B84598 /* AppDelegate.h */,
@@ -219,6 +235,11 @@
 					94A2B73E1FC89D2700B84598 = {
 						CreatedOnToolsVersion = 9.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					94A2B7561FC89D2700B84598 = {
 						CreatedOnToolsVersion = 9.1;
@@ -371,9 +392,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				94A2B7471FC89D2700B84598 /* ViewController.m in Sources */,
+				946662171FC8B9350033D494 /* LocationDataManager.m in Sources */,
 				94A2B7521FC89D2700B84598 /* main.m in Sources */,
 				94A2B7441FC89D2700B84598 /* AppDelegate.m in Sources */,
 				946662081FC89FFC0033D494 /* SOStepDetector.m in Sources */,
+				946662111FC8AA8F0033D494 /* HealthKitDataManager.m in Sources */,
 				946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */,
 				9466620E1FC8A32F0033D494 /* Constants.m in Sources */,
 				9466620A1FC89FFC0033D494 /* SOMotionDetector.m in Sources */,
@@ -527,6 +550,7 @@
 			baseConfigurationReference = 9BC903D39E2E479F8EBFC58C /* Pods-Norlife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Norlife/Norlife.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7N3L673D8;
 				INFOPLIST_FILE = Norlife/Info.plist;
@@ -542,6 +566,7 @@
 			baseConfigurationReference = 8B5E548F739D3192FACB1201 /* Pods-Norlife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Norlife/Norlife.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7N3L673D8;
 				INFOPLIST_FILE = Norlife/Info.plist;
