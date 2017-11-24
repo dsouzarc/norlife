@@ -54,7 +54,49 @@ static Constants *constants;
 {
     return [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"nordea"] objectForKey:@"client_secret"];
 }
-            
+
++ (NSDictionary*) userProperties
+{
+    NSMutableDictionary *userProperties = [[NSMutableDictionary alloc] init];
+    [userProperties setObject:@"Steve" forKey:@"first_name"];
+    [userProperties setObject:@"Bhatia" forKey:@"last_name"];
+    [userProperties setObject:@"dsouzarc@gmail.com" forKey:@"email_address"];
+    [userProperties setObject:@"29/11/1996" forKey:@"birthday"];
+    [userProperties setObject:@"1996" forKey:@"birth_year"];
+    [userProperties setObject:@"Hack_junction2017" forKey:@"password"];
+    [userProperties setObject:@"6e9c0f4d-4ec4-478a-95c9-cdfd97198f8d" forKey:@"user_id"];
+    [userProperties setObject:@(0) forKey:@"num_kids"];
+    [userProperties setObject:@"student" forKey:@"profession_type"];
+    [userProperties setObject:@(70) forKey:@"weight"];
+    [userProperties setObject:@(181) forKey:@"height"];
+    [userProperties setObject:@(NO) forKey:@"overweight"];
+    
+    [userProperties setObject:@(135) forKey:@"original_monthly_premium"];
+    [userProperties setObject:@(135) forKey:@"current_monthly_premium"];
+    [userProperties setObject:@(2090) forKey:@"life_insurance_end"];
+    
+    return [NSDictionary dictionaryWithDictionary:userProperties];
+}
+
++ (NSString*) mongoDBUserID
+{
+    return [[Constants userProperties] objectForKey:@"user_id"];
+}
+
++ (void) addUserToDB
+{
+    NSDictionary *userProperties = [Constants userProperties];
+
+    NSError *error;
+    MongoConnection *connection = [MongoConnection connectionForServer:MONGO_DB_CONNECTION_STRING error:&error];
+    MongoDBCollection *usersCollection = [connection collectionWithName:MONGO_DB_USERS_COLLECTION_NAME];
+    
+    MongoKeyedPredicate *deletePredicate = [MongoKeyedPredicate predicate];
+    [deletePredicate keyPath:@"user_id" matches:[userProperties objectForKey:@"user_id"]];
+    [usersCollection removeWithPredicate:deletePredicate writeConcern:nil error:&error];
+    
+    [usersCollection insertDictionary:userProperties writeConcern:nil error:&error];
+}
 
 + (CLLocationManager*) getLocationManager
 {

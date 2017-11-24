@@ -70,24 +70,51 @@ static LocationDataManager *dataManager;
 
                 }
                 
-                if(speedDifference/lastSpeed >= DANGEROUS_DRIVING_SPEED_THRESHOLD) {
-                    NSLog(@"DANGEROUS");
-                    NSDictionary *relevantData = @{
-                                                   @"date": [NSDate date],
-                                                   @"speed": [NSNumber numberWithDouble:lastSpeed]
-                                                   };
-                    NSError *error = nil;
-                    //[self.drivingCollection insertDictionary:relevantData writeConcern:nil error:&error];
-                    
-                    if(error) {
-                        //NSLog(@"ERROR WRITING TO MONGO IN DRIVING: %@", [error description]);
-                    }
-
+                double speedPercentDifference = speedDifference / lastSpeed;
+                
+                NSString *classification = @"";
+                double influence = 0.0;
+                
+                if(speedPercentDifference <= 0.02) {
+                    classification = @"good";
+                    influence = 0.001;
+                } else if(speedPercentDifference <= 0.1) {
+                    classification = @"mild";
+                    influence = -0.001;
+                } else if(speedPercentDifference <= 0.25) {
+                    classification = @"moderate";
+                    influence = -0.0020;
+                } else if(speedPercentDifference <= 0.35) {
+                    classification = @"severe";
+                    influence = -0.0050;
+                } else if(speedPercentDifference <= 0.45) {
+                    classification = @"drastic";
+                    influence = -0.008;
+                } else {
+                    classification = @"reckless";
+                    influence = -0.015;
+                }
+                
+                NSDictionary *relevantData = @{
+                                               @"date": [NSDate date],
+                                               @"last_speed": [NSNumber numberWithDouble:lastSpeed],
+                                               @"current_speed": [NSNumber numberWithDouble:location.speed],
+                                               @"speed_difference": [NSNumber numberWithDouble:speedDifference],
+                                               @"user_id": [Constants mongoDBUserID],
+                                               @"classification": classification,
+                                               @"influence": [NSNumber numberWithDouble:influence],
+                                               @"location": location
+                                               };
+                NSError *error = nil;
+                [self.drivingCollection insertDictionary:relevantData writeConcern:nil error:&error];
+                
+                if(error) {
+                    NSLog(@"ERROR WRITING TO MONGO IN DRIVING: %@", [error description]);
                 }
                 
                 lastSpeed = location.speed;
             }
-            NSLog(@"Here: %@", location);
+            //NSLog(@"Here: %@", location);
         }
     };
     

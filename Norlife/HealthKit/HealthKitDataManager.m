@@ -63,7 +63,6 @@ static HealthKitDataManager *dataManager;
                                         readTypes:readObjectTypes
                                        completion:^(BOOL success, NSError *error) {
                                            if(success) {
-                                               NSLog(@"GRANTED");
                                                [self readHeartRateWithCompletion:^(NSArray *results, NSError *error) {
                                                    NSString *items = [results componentsJoinedByString:@"\n"];
                                                    NSLog(@"%@", items);

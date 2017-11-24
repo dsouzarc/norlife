@@ -24,6 +24,7 @@
     self.locationManager = [Constants getLocationManager];
     self.locationManager.delegate = self;
 
+    [Constants addUserToDB];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status

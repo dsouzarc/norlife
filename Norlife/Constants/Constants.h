@@ -17,9 +17,8 @@
 #import "HealthKitDataManager.h"
 #import "LocationDataManager.h"
 
-static const double DANGEROUS_DRIVING_SPEED_THRESHOLD = 0.01;
-
 static const NSString *MONGO_DB_CONNECTION_STRING = @"138.197.36.15:27017";
+static const NSString *MONGO_DB_USERS_COLLECTION_NAME = @"norlife.users";
 
 static const NSString *NORDEA_BASE_URL = @"https://api.hackathon.developer.nordeaopenbanking.com/v1/";
 
@@ -31,7 +30,12 @@ static const NSString *NORDEA_BASE_URL = @"https://api.hackathon.developer.norde
 + (NSString*) NORDEA_CLIENT_ID;
 + (NSString*) NORDEA_ACCESS_TOKEN;
 
++ (NSString*) mongoDBUserID;
++ (NSDictionary*) userProperties;
+
 + (CLLocationManager*) getLocationManager;
 + (double) hoursBetween:(NSDate*)firstDate and:(NSDate*)secondDate;
+
++ (void) addUserToDB;
 
 @end
