@@ -8,8 +8,16 @@
 
 #import <Foundation/Foundation.h>
 
+#import "Constants.h"
+
 @interface FoodClassifierHandler : NSObject
 
-- (instancetype) init;
+- (instancetype) initWithImageURL:(NSString*)imageURL;
+- (instancetype) initWithImage:(UIImage*)image;
+
+/*!
+ @brief Executes the URL Request and returns the JSON response. IS SYNCHRONOUS
+ */
+- (NSDictionary*) getImageClassification;
 
 @end

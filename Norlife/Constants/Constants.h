@@ -17,6 +17,7 @@
 
 #import "UIColor+Norlife.h"
 
+#import "FoodClassifierHandler.h"
 #import "HealthKitDataManager.h"
 #import "LocationDataManager.h"
 
