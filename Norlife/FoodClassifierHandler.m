@@ -151,7 +151,7 @@ static MongoDBCollection *foodCollection;
     }
     NSError *error;
     
-    /*[clarifaiApp getModelByName:@"general-v1.3" completion:^(ClarifaiModel *model, NSError *error) {
+    [clarifaiApp getModelByName:@"general-v1.3" completion:^(ClarifaiModel *model, NSError *error) {
 
         [model predictOnImages:@[self.clarifaiFoodImage]
                     completion:^(NSArray<ClarifaiOutput *> *outputs, NSError *error) {
@@ -167,26 +167,36 @@ static MongoDBCollection *foodCollection;
                             }
                             
                             NSLog(@"%@", [NSString stringWithFormat:@"Tags:\n%@", [relevantTags componentsJoinedByString:@", "]]);
+                            
+                            NSMutableArray *relevantFoodScores = [self computeFoodScores:relevantTags];
+                            
+                            MongoConnection *connection = [MongoConnection connectionForServer:MONGO_DB_CONNECTION_STRING error:&error];
+                            if(error) {
+                                NSLog(@"ERROR GETTING MONGO CONNECTION: %@", [error description]);
+                            }
+                            
+                            MongoDBCollection *foodCollection = [connection collectionWithName:FOOD_COLLECTION_NAME];
+                            
+                            for(NSMutableDictionary *relevantFoodScore in relevantFoodScores) {
+                                [relevantFoodScore setObject:[Constants mongoDBUserID] forKey:@"user_id"];
+                                [relevantFoodScore setObject:self.foodDate forKey:@"date_consumed"];
+                                
+                                NSLog(@"INSERTING: %@", relevantFoodScore);
+                                [foodCollection insertDictionary:relevantFoodScore writeConcern:nil error:&error];
+                                if(error) {
+                                    NSLog(@"ERROR WRITING TO MONGO IN DRIVING: %@", [error description]);
+                                }
+                            }
                         }
                         else {
                             NSLog(@"ERROR USING CLARIFAI API: %@", [error description]);
                         }
                     }
          ];
-    }];*/
+    }];
     
-    NSMutableArray *relevantTags = [NSMutableArray arrayWithArray:[@"breakfast, no person, food, delicious, dawn, plate, lunch, homemade, nutrition, bread, egg, meal, pancake, cooking, butter, dinner, dish, toast, traditional, baking" componentsSeparatedByString:@", "]];
-    NSMutableArray *relevantFoodScores = [self computeFoodScores:relevantTags];
-    
-    for(NSMutableDictionary *relevantFoodScore in relevantFoodScores) {
-        [relevantFoodScore setObject:[Constants mongoDBUserID] forKey:@"user_id"];
-        [relevantFoodScore setObject:self.foodDate forKey:@"date_consumed"];
-        
-        [foodCollection insertDictionary:relevantFoodScore writeConcern:nil error:&error];
-        if(error) {
-            NSLog(@"ERROR WRITING TO MONGO IN DRIVING: %@", [error description]);
-        }
-    }
+    /*NSMutableArray *relevantTags = [NSMutableArray arrayWithArray:[@"breakfast, no person, food, delicious, dawn, plate, lunch, homemade, nutrition, bread, egg, meal, pancake, cooking, butter, dinner, dish, toast, traditional, baking" componentsSeparatedByString:@", "]]; */
+
 }
 
 @end
