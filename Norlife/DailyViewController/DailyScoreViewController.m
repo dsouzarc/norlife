@@ -11,11 +11,9 @@
 @interface DailyScoreViewController ()
 
 @property (weak, nonatomic) IBOutlet MKDropdownMenu *mainDropdownMenu;
-@property (weak, nonatomic) IBOutlet WMGaugeView *scoreGaugeView;
 
-@property (weak, nonatomic) IBOutlet UILabel *currentScoreLabel;
-@property (weak, nonatomic) IBOutlet UILabel *percentChangeLabel;
-@property (weak, nonatomic) IBOutlet UILabel *valueChangeLabel;
+@property (weak, nonatomic) IBOutlet UICollectionView *mainCollectionView;
+
 
 @property (strong, nonatomic) UIImage *chosenImage;
 @property NSInteger lastChosenMenuItem;
@@ -24,92 +22,6 @@
 
 @implementation DailyScoreViewController
 
-- (void) setupScoreLabels
-{
-    double todayScore = 89.5;
-    double yesterdayScore = 80.5;
-    double valueChange = todayScore - yesterdayScore;
-    double percentChange = (valueChange / yesterdayScore) * 100.0;
-    
-    [self.currentScoreLabel setText:[NSString stringWithFormat:@"%.2f", todayScore]];
-
-    UIColor *changeColor = [UIColor blackColor];
-    if(valueChange < 0.0) {
-        changeColor = [UIColor redColor];
-    } else if(valueChange > 0.0) {
-        changeColor = [UIColor greenColor];
-    }
-    
-    NSString *valueChangeString;
-    NSString *percentChangeString;
-    
-    if(valueChange > 0.0) {
-        valueChangeString = [NSString stringWithFormat:@"+ %.2f", valueChange];
-        percentChangeString = [NSString stringWithFormat:@"+ (%.2f%%)", percentChange];
-    } else {
-        valueChangeString = [NSString stringWithFormat:@"%.2f", valueChange];
-        percentChangeString = [NSString stringWithFormat:@"(%.2f%%)", percentChange];
-    }
-    
-    [self.valueChangeLabel setAttributedText:[Constants string:valueChangeString color:changeColor]];
-    [self.percentChangeLabel setAttributedText:[Constants string:percentChangeString color:changeColor]];
-    
-    NSMutableArray *randomIntervals = [NSMutableArray arrayWithObjects:@(100.0),
-                                       @(todayScore * 0.5),
-                                       todayScore * 1.3 < 100.0 ? @(todayScore * 1.3 ) : @(99.9),
-                                       @(todayScore * 0.8),
-                                       @(todayScore), nil];
-    [self recursiveScoreAnimationForScore:todayScore randomIntervals:randomIntervals];
-}
-
-- (void) recursiveScoreAnimationForScore:(double)score randomIntervals:(NSMutableArray*)randomIntervals
-{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
-        sleep(1.1);
-        dispatch_async(dispatch_get_main_queue(), ^(void) {
-            
-            if([randomIntervals count] == 0) {
-                [self.scoreGaugeView setValue:score animated:YES];
-                return;
-            }
-            [self.scoreGaugeView setValue: [[randomIntervals objectAtIndex:0] doubleValue] animated:YES];
-            [randomIntervals removeObjectAtIndex:0];
-            [self recursiveScoreAnimationForScore:score randomIntervals:randomIntervals];
-        });
-    });
-}
-
-- (void) setupGaugeView
-{
-    [self.scoreGaugeView setBackgroundColor:[UIColor colorFromHexCode:@"#D6E4F0"]];
-    self.scoreGaugeView.layer.cornerRadius = 50;
-    self.scoreGaugeView.layer.masksToBounds = true;
-    
-    self.scoreGaugeView.style = [WMGaugeViewStyleFlatThin new];
-    self.scoreGaugeView.maxValue = 100.0;
-    self.scoreGaugeView.scaleDivisions = 10;
-    self.scoreGaugeView.scaleSubdivisions = 5;
-    self.scoreGaugeView.scaleStartAngle = 30;
-    self.scoreGaugeView.scaleEndAngle = 330;
-    self.scoreGaugeView.showScaleShadow = NO;
-    self.scoreGaugeView.scaleFont = [UIFont fontWithName:@"AvenirNext-UltraLight" size:0.065];
-    self.scoreGaugeView.scalesubdivisionsAligment = WMGaugeViewSubdivisionsAlignmentCenter;
-    self.scoreGaugeView.scaleSubdivisionsWidth = 0.002;
-    self.scoreGaugeView.scaleSubdivisionsLength = 0.04;
-    self.scoreGaugeView.scaleDivisionsWidth = 0.007;
-    self.scoreGaugeView.scaleDivisionsLength = 0.07;
-    
-    self.scoreGaugeView.rangeValues = @[@20, @40, @60, @80, @100];
-    self.scoreGaugeView.rangeLabels = @[@"Very risky", @"Risky", @"Average", @"Good", @"Great"];
-    self.scoreGaugeView.showRangeLabels = YES;
-    self.scoreGaugeView.rangeColors = @[[UIColor colorFromHexCode:@"#E46161"],
-                                        [UIColor colorFromHexCode:@"#EF7E56"],
-                                        [UIColor colorFromHexCode:@"#F8F398"],
-                                        [UIColor colorFromHexCode:@"#C7E78B"],
-                                        [UIColor colorFromHexCode:@"#81AE64"]];
-    self.scoreGaugeView.rangeLabelsFontColor = [UIColor blackColor];
-
-}
 
 - (void)viewDidLoad
 {
@@ -117,9 +29,9 @@
     
     [self.mainDropdownMenu setDropdownShowsBorder:YES];
     [self.mainDropdownMenu setBackgroundColor:[UIColor colorWithRed:0.29 green:0.37 blue:1.00 alpha:1.0]];
+
+    [self.mainCollectionView registerNib:[UINib nibWithNibName:@"DailyScoreView" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"DailyScoreViewIdentifier"];
     
-    [self setupGaugeView];
-    [self setupScoreLabels];
     
     //[self updateMongoFood];
 }
@@ -128,6 +40,25 @@
 {
     return YES;
 }
+
+- (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return 1;
+}
+
+- (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
+{
+    return 1;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    DailyScoreView *scoreView = [collectionView dequeueReusableCellWithReuseIdentifier:@"DailyScoreViewIdentifier"
+                                                                          forIndexPath:indexPath];
+    [scoreView setupViewWithYesterdayScore:80.5 todayScore:90.7];
+    return scoreView;
+}
+
 
 
 /****************************************************************

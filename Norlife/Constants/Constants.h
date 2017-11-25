@@ -28,6 +28,7 @@
 
 #import "DailyScoreViewController.h"
 #import "TrendsScoreViewController.h"
+#import "DailyScoreView.h"
 
 static NSString *MONGO_DB_CONNECTION_STRING = @"138.197.36.15:27017";
 static NSString *MONGO_DB_USERS_COLLECTION_NAME = @"norlife.users";

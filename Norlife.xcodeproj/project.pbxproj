@@ -24,6 +24,8 @@
 		946662111FC8AA8F0033D494 /* HealthKitDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662101FC8AA8F0033D494 /* HealthKitDataManager.m */; };
 		946662141FC8B0CA0033D494 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 946662131FC8B0CA0033D494 /* HealthKit.framework */; };
 		946662171FC8B9350033D494 /* LocationDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662161FC8B9350033D494 /* LocationDataManager.m */; };
+		94851B8E1FC9D207009E11B2 /* DailyScoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94851B8D1FC9D207009E11B2 /* DailyScoreView.m */; };
+		94851B901FC9D215009E11B2 /* DailyScoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94851B8F1FC9D215009E11B2 /* DailyScoreView.xib */; };
 		94A2B7441FC89D2700B84598 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2B7431FC89D2700B84598 /* AppDelegate.m */; };
 		94A2B7471FC89D2700B84598 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2B7461FC89D2700B84598 /* ViewController.m */; };
 		94A2B74A1FC89D2700B84598 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A2B7481FC89D2700B84598 /* Main.storyboard */; };
@@ -80,6 +82,9 @@
 		946662131FC8B0CA0033D494 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		946662151FC8B9350033D494 /* LocationDataManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LocationDataManager.h; sourceTree = "<group>"; };
 		946662161FC8B9350033D494 /* LocationDataManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LocationDataManager.m; sourceTree = "<group>"; };
+		94851B8C1FC9D207009E11B2 /* DailyScoreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyScoreView.h; sourceTree = "<group>"; };
+		94851B8D1FC9D207009E11B2 /* DailyScoreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyScoreView.m; sourceTree = "<group>"; };
+		94851B8F1FC9D215009E11B2 /* DailyScoreView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyScoreView.xib; sourceTree = "<group>"; };
 		94A2B73F1FC89D2700B84598 /* Norlife.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Norlife.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A2B7421FC89D2700B84598 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		94A2B7431FC89D2700B84598 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -161,6 +166,9 @@
 				94259F7B1FC944C70067320B /* DailyScoreViewController.h */,
 				94259F7C1FC944C70067320B /* DailyScoreViewController.m */,
 				94259F7D1FC944C70067320B /* DailyScoreViewController.xib */,
+				94851B8C1FC9D207009E11B2 /* DailyScoreView.h */,
+				94851B8D1FC9D207009E11B2 /* DailyScoreView.m */,
+				94851B8F1FC9D215009E11B2 /* DailyScoreView.xib */,
 			);
 			path = DailyViewController;
 			sourceTree = "<group>";
@@ -388,6 +396,7 @@
 				94A2B74A1FC89D2700B84598 /* Main.storyboard in Resources */,
 				94259F901FC955B30067320B /* calendar_icon.png in Resources */,
 				94259F7F1FC944C70067320B /* DailyScoreViewController.xib in Resources */,
+				94851B901FC9D215009E11B2 /* DailyScoreView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -533,6 +542,7 @@
 				94C220A71FC9AFB4009F696D /* WMGaugeView.m in Sources */,
 				9466620E1FC8A32F0033D494 /* Constants.m in Sources */,
 				9466620A1FC89FFC0033D494 /* SOMotionDetector.m in Sources */,
+				94851B8E1FC9D207009E11B2 /* DailyScoreView.m in Sources */,
 				94259F7E1FC944C70067320B /* DailyScoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
