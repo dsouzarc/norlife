@@ -56,7 +56,7 @@ static NSString *MICROSOFT_VISION_SERVICE_ANALYZE_URL = @"https://westeurope.api
     return self;
 }
 
-- (NSDictionary*) getImageClassification
+- (NSDictionary*) classifyImage
 {
     NSError *error;
     NSData *responseData = [NSURLConnection sendSynchronousRequest:self.classifyURLRequest returningResponse:nil error:&error];

@@ -18,6 +18,6 @@
 /*!
  @brief Executes the URL Request and returns the JSON response. IS SYNCHRONOUS
  */
-- (NSDictionary*) getImageClassification;
+- (NSDictionary*) classifyImage;
 
 @end
