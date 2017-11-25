@@ -55,21 +55,27 @@ static LocationDataManager *dataManager;
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"dd/MM/yyyy";
-    __block NSDate *locationDate = [dateFormatter dateFromString:@"24/11/2000"];
+    __block NSDate *locationDate = [dateFormatter dateFromString:@"24/05/2017"];
     __block NSDate *endDate = [dateFormatter dateFromString:@"24/11/2017"];
     __block int numEntriesPerDay = 5;
     __block int counter = 0;
-    BOOL toContinue = YES;
     
     [SOMotionDetector sharedInstance].locationChangedBlock = ^(CLLocation *location) {
         
+        NSCalendar *cal = [NSCalendar currentCalendar];
+        
+        //Increment the day and reset to start of day
         if(counter == numEntriesPerDay) {
             counter = 0;
-            NSCalendar *cal = [NSCalendar currentCalendar];
             locationDate = [cal dateByAddingUnit:NSCalendarUnitDay
                                                value:1
                                               toDate:locationDate
                                              options:0];
+            locationDate = [cal dateBySettingUnit:NSCalendarUnitHour value:0 ofDate:locationDate options:0];
+        }
+        //Increment the hour count
+        else {
+            locationDate = [cal dateByAddingUnit:NSCalendarUnitHour value:3 toDate:locationDate options:0];
         }
         
         if([locationDate isEqualToDate:endDate]) {
@@ -82,8 +88,9 @@ static LocationDataManager *dataManager;
             //First time - initialize to current speed
             if(lastSpeed == -1.0) {
                 lastSpeed = location.speed;
-            } else {
-                
+            }
+            
+            else {
                 double speedDifference = fabs(lastSpeed - location.speed);
                 double speedPercentDifference = speedDifference / lastSpeed;
                 

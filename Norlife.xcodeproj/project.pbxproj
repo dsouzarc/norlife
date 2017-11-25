@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F29F58375AACCC14BF07340 /* libPods-NorlifeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A1ED0C65B0C025EDD37FAF9 /* libPods-NorlifeUITests.a */; };
-		7BF6DAD2A846759E89E016CE /* libPods-Norlife.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 31CC82B4A21CC58672DC45FD /* libPods-Norlife.a */; };
+		4D458DEBCA6B2E3B0C3498AB /* libPods-NorlifeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327B126B45AE22C28D70D1AD /* libPods-NorlifeUITests.a */; };
+		94259F7E1FC944C70067320B /* DailyScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94259F7C1FC944C70067320B /* DailyScoreViewController.m */; };
+		94259F7F1FC944C70067320B /* DailyScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94259F7D1FC944C70067320B /* DailyScoreViewController.xib */; };
+		94259F831FC946460067320B /* TrendsScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94259F811FC946460067320B /* TrendsScoreViewController.m */; };
+		94259F841FC946460067320B /* TrendsScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94259F821FC946460067320B /* TrendsScoreViewController.xib */; };
+		94259F8A1FC94AED0067320B /* UIColor+Norlife.m in Sources */ = {isa = PBXBuildFile; fileRef = 94259F891FC94AED0067320B /* UIColor+Norlife.m */; };
 		946662081FC89FFC0033D494 /* SOStepDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662051FC89FFC0033D494 /* SOStepDetector.m */; };
 		946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662061FC89FFC0033D494 /* SOLocationManager.m */; };
 		9466620A1FC89FFC0033D494 /* SOMotionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662071FC89FFC0033D494 /* SOMotionDetector.m */; };
@@ -23,6 +27,7 @@
 		94A2B74F1FC89D2700B84598 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A2B74D1FC89D2700B84598 /* LaunchScreen.storyboard */; };
 		94A2B7521FC89D2700B84598 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2B7511FC89D2700B84598 /* main.m */; };
 		94A2B75C1FC89D2700B84598 /* NorlifeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2B75B1FC89D2700B84598 /* NorlifeUITests.m */; };
+		CFD1CB240428949FE5D34FE1 /* libPods-Norlife.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CAB9369446DC6B02F7ABF5D /* libPods-Norlife.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +42,18 @@
 
 /* Begin PBXFileReference section */
 		0A49AABB0AEB17ED254D924F /* Pods-NorlifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NorlifeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NorlifeUITests/Pods-NorlifeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		31CC82B4A21CC58672DC45FD /* libPods-Norlife.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Norlife.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		327B126B45AE22C28D70D1AD /* libPods-NorlifeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NorlifeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		493D2955C981D33144A12406 /* Pods-NorlifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NorlifeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NorlifeUITests/Pods-NorlifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4A1ED0C65B0C025EDD37FAF9 /* libPods-NorlifeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NorlifeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6CAB9369446DC6B02F7ABF5D /* libPods-Norlife.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Norlife.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5E548F739D3192FACB1201 /* Pods-Norlife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Norlife.release.xcconfig"; path = "Pods/Target Support Files/Pods-Norlife/Pods-Norlife.release.xcconfig"; sourceTree = "<group>"; };
+		94259F7B1FC944C70067320B /* DailyScoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyScoreViewController.h; sourceTree = "<group>"; };
+		94259F7C1FC944C70067320B /* DailyScoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyScoreViewController.m; sourceTree = "<group>"; };
+		94259F7D1FC944C70067320B /* DailyScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyScoreViewController.xib; sourceTree = "<group>"; };
+		94259F801FC946460067320B /* TrendsScoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TrendsScoreViewController.h; sourceTree = "<group>"; };
+		94259F811FC946460067320B /* TrendsScoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TrendsScoreViewController.m; sourceTree = "<group>"; };
+		94259F821FC946460067320B /* TrendsScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendsScoreViewController.xib; sourceTree = "<group>"; };
+		94259F881FC94AED0067320B /* UIColor+Norlife.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Norlife.h"; sourceTree = "<group>"; };
+		94259F891FC94AED0067320B /* UIColor+Norlife.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Norlife.m"; sourceTree = "<group>"; };
 		946662021FC89FFC0033D494 /* SOStepDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOStepDetector.h; sourceTree = "<group>"; };
 		946662031FC89FFC0033D494 /* SOMotionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMotionDetector.h; sourceTree = "<group>"; };
 		946662041FC89FFC0033D494 /* SOLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLocationManager.h; sourceTree = "<group>"; };
@@ -76,8 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BF6DAD2A846759E89E016CE /* libPods-Norlife.a in Frameworks */,
 				946662141FC8B0CA0033D494 /* HealthKit.framework in Frameworks */,
+				CFD1CB240428949FE5D34FE1 /* libPods-Norlife.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3F29F58375AACCC14BF07340 /* libPods-NorlifeUITests.a in Frameworks */,
+				4D458DEBCA6B2E3B0C3498AB /* libPods-NorlifeUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,10 +120,39 @@
 			isa = PBXGroup;
 			children = (
 				946662131FC8B0CA0033D494 /* HealthKit.framework */,
-				31CC82B4A21CC58672DC45FD /* libPods-Norlife.a */,
-				4A1ED0C65B0C025EDD37FAF9 /* libPods-NorlifeUITests.a */,
+				6CAB9369446DC6B02F7ABF5D /* libPods-Norlife.a */,
+				327B126B45AE22C28D70D1AD /* libPods-NorlifeUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94259F851FC94A3B0067320B /* TrendsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				94259F801FC946460067320B /* TrendsScoreViewController.h */,
+				94259F811FC946460067320B /* TrendsScoreViewController.m */,
+				94259F821FC946460067320B /* TrendsScoreViewController.xib */,
+			);
+			path = TrendsViewController;
+			sourceTree = "<group>";
+		};
+		94259F861FC94A460067320B /* DailyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				94259F7B1FC944C70067320B /* DailyScoreViewController.h */,
+				94259F7C1FC944C70067320B /* DailyScoreViewController.m */,
+				94259F7D1FC944C70067320B /* DailyScoreViewController.xib */,
+			);
+			path = DailyViewController;
+			sourceTree = "<group>";
+		};
+		94259F8B1FC94BA60067320B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				94259F881FC94AED0067320B /* UIColor+Norlife.h */,
+				94259F891FC94AED0067320B /* UIColor+Norlife.m */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		946662011FC89FFC0033D494 /* SOMotionDetector */ = {
@@ -150,10 +192,13 @@
 			isa = PBXGroup;
 			children = (
 				946662121FC8B0CA0033D494 /* Norlife.entitlements */,
+				94259F8B1FC94BA60067320B /* Extensions */,
 				946662011FC89FFC0033D494 /* SOMotionDetector */,
 				94C6FB151FC8C7740089DBA8 /* HealthKit */,
 				94C6FB161FC8C77B0089DBA8 /* Location */,
 				94C6FB171FC8C7850089DBA8 /* Constants */,
+				94259F851FC94A3B0067320B /* TrendsViewController */,
+				94259F861FC94A460067320B /* DailyViewController */,
 				94A2B7421FC89D2700B84598 /* AppDelegate.h */,
 				94A2B7431FC89D2700B84598 /* AppDelegate.m */,
 				94A2B7451FC89D2700B84598 /* ViewController.h */,
@@ -296,9 +341,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94259F841FC946460067320B /* TrendsScoreViewController.xib in Resources */,
 				94A2B74F1FC89D2700B84598 /* LaunchScreen.storyboard in Resources */,
 				94A2B74C1FC89D2700B84598 /* Assets.xcassets in Resources */,
 				94A2B74A1FC89D2700B84598 /* Main.storyboard in Resources */,
+				94259F7F1FC944C70067320B /* DailyScoreViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,9 +365,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Norlife/Pods-Norlife-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Fusuma/Fusuma.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjCMongoDB/ObjCMongoDB.framework",
+				"${BUILT_PRODUCTS_DIR}/mongo-c-driver/mongo_c_driver.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Fusuma.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjCMongoDB.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/mongo_c_driver.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -418,12 +472,15 @@
 				94A2B7471FC89D2700B84598 /* ViewController.m in Sources */,
 				946662171FC8B9350033D494 /* LocationDataManager.m in Sources */,
 				94A2B7521FC89D2700B84598 /* main.m in Sources */,
+				94259F8A1FC94AED0067320B /* UIColor+Norlife.m in Sources */,
+				94259F831FC946460067320B /* TrendsScoreViewController.m in Sources */,
 				94A2B7441FC89D2700B84598 /* AppDelegate.m in Sources */,
 				946662081FC89FFC0033D494 /* SOStepDetector.m in Sources */,
 				946662111FC8AA8F0033D494 /* HealthKitDataManager.m in Sources */,
 				946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */,
 				9466620E1FC8A32F0033D494 /* Constants.m in Sources */,
 				9466620A1FC89FFC0033D494 /* SOMotionDetector.m in Sources */,
+				94259F7E1FC944C70067320B /* DailyScoreViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

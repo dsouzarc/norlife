@@ -10,17 +10,45 @@
 
 @interface AppDelegate ()
 
+@property (strong, nonatomic) UITabBarController *tabBarController;
+
 @end
+
 
 @implementation AppDelegate
 
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{    
-    // Override point for customization after application launch.
+{
+    self.tabBarController = [[UITabBarController alloc] init];
+    self.tabBarController.delegate = self;
+    
+    DailyScoreViewController *dailyScore = [[DailyScoreViewController alloc] initWithNibName:@"DailyScoreViewController"
+                                                                                      bundle:[NSBundle mainBundle]];
+    UITabBarItem *dailyScoreTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Daily" image:nil tag:0];
+    dailyScore.tabBarItem = dailyScoreTabBarItem;
+    
+    TrendsScoreViewController *trendsScore = [[TrendsScoreViewController alloc] initWithNibName:@"TrendsScoreViewController"
+                                                                                         bundle:[NSBundle mainBundle]];
+    UITabBarItem *trendsScoreTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Trends" image:nil tag:1];
+    trendsScore.tabBarItem = trendsScoreTabBarItem;
+    
+    [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor darkNordeaBlue] }
+                                             forState:UIControlStateNormal];
+    
+    NSArray *viewControllers = @[trendsScore, dailyScore];
+    
+    self.tabBarController.viewControllers = viewControllers;
+    self.window.rootViewController = self.tabBarController;
+    
+    [[LocationDataManager instance] beginLocationTracking];
+    
     return YES;
 }
 
+- (BOOL)tabBarController:(UITabBarController *)tabBarController shouldSelectViewController:(UIViewController *)viewController
+{
+    return YES;
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
@@ -52,6 +80,5 @@
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
-
 
 @end

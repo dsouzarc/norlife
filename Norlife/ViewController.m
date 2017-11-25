@@ -37,7 +37,6 @@
         [[LocationDataManager instance] beginLocationTracking];
     }
     
-    
     [[HealthKitDataManager instance] calculateHeartRate];
 }
 

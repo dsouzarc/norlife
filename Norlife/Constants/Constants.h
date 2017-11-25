@@ -8,14 +8,20 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
+#import <Photos/Photos.h>
 
 #import "SOMotionDetector.h"
 #import "SOStepDetector.h"
 #import "SOLocationManager.h"
 #import "ObjCMongoDB.h"
 
+#import "UIColor+Norlife.h"
+
 #import "HealthKitDataManager.h"
 #import "LocationDataManager.h"
+
+#import "DailyScoreViewController.h"
+#import "TrendsScoreViewController.h"
 
 static const NSString *MONGO_DB_CONNECTION_STRING = @"138.197.36.15:27017";
 static const NSString *MONGO_DB_USERS_COLLECTION_NAME = @"norlife.users";
