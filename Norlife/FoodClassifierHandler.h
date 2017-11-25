@@ -10,10 +10,12 @@
 
 #import "Constants.h"
 
+static NSString *FOOD_COLLECTION_NAME = @"norlife.food";
+
 @interface FoodClassifierHandler : NSObject
 
-- (instancetype) initWithImageURL:(NSString*)imageURL;
-- (instancetype) initWithImage:(UIImage*)image;
+- (instancetype) initWithImageURL:(NSString*)imageURL forDate:(NSDate*)date;
+- (instancetype) initWithImage:(UIImage*)image forDate:(NSDate*)date;
 
 /*!
  @brief Classifies the image and saves the results to the database

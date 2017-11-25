@@ -55,8 +55,8 @@ static LocationDataManager *dataManager;
     
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     dateFormatter.dateFormat = @"dd/MM/yyyy";
-    __block NSDate *locationDate = [dateFormatter dateFromString:@"24/05/2017"];
-    __block NSDate *endDate = [dateFormatter dateFromString:@"24/11/2017"];
+    __block NSDate *locationDate = [dateFormatter dateFromString:@"24/10/2017"];
+    __block NSDate *endDate = [dateFormatter dateFromString:@"26/11/2017"];
     __block int numEntriesPerDay = 5;
     __block int counter = 0;
     
@@ -78,7 +78,7 @@ static LocationDataManager *dataManager;
             locationDate = [cal dateByAddingUnit:NSCalendarUnitHour value:3 toDate:locationDate options:0];
         }
         
-        if([locationDate isEqualToDate:endDate]) {
+        if([locationDate timeIntervalSinceReferenceDate] > [endDate timeIntervalSinceReferenceDate]) {
             exit(1);
         }
         
@@ -132,7 +132,7 @@ static LocationDataManager *dataManager;
                                                @"location": location
                                                };
                 NSError *error = nil;
-                [self.drivingCollection insertDictionary:relevantData writeConcern:nil error:&error];
+                //[self.drivingCollection insertDictionary:relevantData writeConcern:nil error:&error];
                 
                 if(error) {
                     NSLog(@"ERROR WRITING TO MONGO IN DRIVING: %@", [error description]);

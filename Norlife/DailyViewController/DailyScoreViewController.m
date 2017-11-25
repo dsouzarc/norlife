@@ -27,7 +27,9 @@
     [self.mainDropdownMenu setBackgroundColor:[UIColor colorWithRed:0.29 green:0.37 blue:1.00 alpha:1.0]];
     
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
-        [[[FoodClassifierHandler alloc] initWithImageURL:@"https://az616578.vo.msecnd.net/files/2016/03/11/635933105470950505-1562028560_Breakfast-Food-Idea-A1.jpg"] classifyImage];
+        [[[FoodClassifierHandler alloc]
+          initWithImageURL:@"https://az616578.vo.msecnd.net/files/2016/03/11/635933105470950505-1562028560_Breakfast-Food-Idea-A1.jpg"
+          forDate:[NSDate date]] classifyImage];
     });
 }
 
@@ -110,7 +112,7 @@
 {
     self.chosenImage = image;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
-        [[[FoodClassifierHandler alloc] initWithImage:self.chosenImage] classifyImage];
+        [[[FoodClassifierHandler alloc] initWithImage:self.chosenImage forDate:[NSDate date]] classifyImage];
     });
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -120,7 +122,7 @@
     self.chosenImage = image;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
         if(self.lastChosenMenuItem == 1) {
-            [[[FoodClassifierHandler alloc] initWithImage:self.chosenImage] classifyImage];
+            [[[FoodClassifierHandler alloc] initWithImage:self.chosenImage forDate:[NSDate date]] classifyImage];
         }
     });
     [self dismissViewControllerAnimated:YES completion:nil];

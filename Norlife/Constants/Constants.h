@@ -36,6 +36,9 @@ static const NSString *NORDEA_BASE_URL = @"https://api.hackathon.developer.norde
 
 + (instancetype) instance;
 
++ (NSString*) NUTRITIONIX_APP_ID;
++ (NSString*) NUTRITIONIX_APP_KEY;
++ (NSString*) NUTRITIONIX_REMOTE_USER_ID;
 + (NSString*) CLARIFAI_API_KEY;
 + (NSString*) MICROSOFT_COMPUTER_VISION_API_KEY;
 + (NSString*) NORDEA_CLIENT_SECRET;

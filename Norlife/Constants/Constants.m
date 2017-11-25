@@ -45,10 +45,30 @@ static Constants *constants;
 */
 + (NSDictionary*) constantsJSON
 {
-    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"constants" ofType:@"json"];
-    NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+    static NSDictionary *constantsJson;
     
-    return [NSJSONSerialization JSONObjectWithData:fileData options:kNilOptions error:nil];
+    if(!constantsJson) {
+        NSString *filePath = [[NSBundle mainBundle] pathForResource:@"constants" ofType:@"json"];
+        NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+        constantsJson = [NSJSONSerialization JSONObjectWithData:fileData options:kNilOptions error:nil];
+    }
+    
+    return constantsJson;
+}
+
++ (NSString*) NUTRITIONIX_APP_ID
+{
+    return [[[Constants constantsJSON] objectForKey:@"nutritionix"] objectForKey:@"x-app-id"];
+}
+
++ (NSString*) NUTRITIONIX_APP_KEY
+{
+    return [[[Constants constantsJSON] objectForKey:@"nutritionix"] objectForKey:@"x-app-key"];
+}
+
++ (NSString*) NUTRITIONIX_REMOTE_USER_ID
+{
+    return [[[Constants constantsJSON] objectForKey:@"nutritionix"] objectForKey:@"x-remote-user-id"];
 }
 
 + (NSString*) NORDEA_CLIENT_ID
@@ -95,6 +115,13 @@ static Constants *constants;
     [userProperties setObject:@(135) forKey:@"original_monthly_premium"];
     [userProperties setObject:@(135) forKey:@"current_monthly_premium"];
     [userProperties setObject:@(2090) forKey:@"life_insurance_end"];
+    [userProperties setObject:@(2000) forKey:@"recommended_calories_per_day"];
+    [userProperties setObject:@(60) forKey:@"recommended_grams_of_fat_per_day"];
+    [userProperties setObject:@(20) forKey:@"recommended_saturated_fat_per_day"];
+    [userProperties setObject:@(200) forKey:@"recommended_cholesterol_per_day"];
+    [userProperties setObject:@(2000) forKey:@"recommended_sodium_per_day"];
+    [userProperties setObject:@(24) forKey:@"recommended_sugar_per_day"];
+    [userProperties setObject:@(50) forKey:@"recommended_protein_per_day"];
     
     return [NSDictionary dictionaryWithDictionary:userProperties];
 }
