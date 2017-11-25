@@ -79,16 +79,9 @@
     });
 }
 
-- (void)viewDidLoad
+- (void) setupGaugeView
 {
-    [super viewDidLoad];
-    
-    //[self updateMongoFood];
-    
-    [self.mainDropdownMenu setDropdownShowsBorder:YES];
-    [self.mainDropdownMenu setBackgroundColor:[UIColor colorWithRed:0.29 green:0.37 blue:1.00 alpha:1.0]];
-    
-    [self.scoreGaugeView setBackgroundColor:[UIColor lightGrayColor]];
+    [self.scoreGaugeView setBackgroundColor:[UIColor colorFromHexCode:@"#D6E4F0"]];
     self.scoreGaugeView.layer.cornerRadius = 50;
     self.scoreGaugeView.layer.masksToBounds = true;
     
@@ -106,7 +99,29 @@
     self.scoreGaugeView.scaleDivisionsWidth = 0.007;
     self.scoreGaugeView.scaleDivisionsLength = 0.07;
     
+    self.scoreGaugeView.rangeValues = @[@20, @40, @60, @80, @100];
+    self.scoreGaugeView.rangeLabels = @[@"Very risky", @"Risky", @"Average", @"Good", @"Great"];
+    self.scoreGaugeView.showRangeLabels = YES;
+    self.scoreGaugeView.rangeColors = @[[UIColor colorFromHexCode:@"#E46161"],
+                                        [UIColor colorFromHexCode:@"#EF7E56"],
+                                        [UIColor colorFromHexCode:@"#F8F398"],
+                                        [UIColor colorFromHexCode:@"#C7E78B"],
+                                        [UIColor colorFromHexCode:@"#81AE64"]];
+    self.scoreGaugeView.rangeLabelsFontColor = [UIColor blackColor];
+
+}
+
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    [self.mainDropdownMenu setDropdownShowsBorder:YES];
+    [self.mainDropdownMenu setBackgroundColor:[UIColor colorWithRed:0.29 green:0.37 blue:1.00 alpha:1.0]];
+    
+    [self setupGaugeView];
     [self setupScoreLabels];
+    
+    //[self updateMongoFood];
 }
 
 - (BOOL) prefersStatusBarHidden

@@ -281,7 +281,7 @@
             // Draw label
             NSString *valueString = [NSString stringWithFormat:@"%0.0f",value];
             UIFont* font = _scaleFont ? _scaleFont : [UIFont fontWithName:@"Helvetica-Bold" size:0.05];
-            NSDictionary* stringAttrs = @{ NSFontAttributeName : font, NSForegroundColorAttributeName : color };
+            NSDictionary* stringAttrs = @{ NSFontAttributeName : font, NSForegroundColorAttributeName : [UIColor blackColor] };
             NSAttributedString* attrStr = [[NSAttributedString alloc] initWithString:valueString attributes:stringAttrs];
             CGSize fontWidth;
             fontWidth = [valueString sizeWithAttributes:stringAttrs];
