@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <Photos/Photos.h>
+#import <QuartzCore/QuartzCore.h>
 
 #import "SOMotionDetector.h"
 #import "SOStepDetector.h"

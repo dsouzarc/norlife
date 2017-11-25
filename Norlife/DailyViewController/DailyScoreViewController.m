@@ -88,7 +88,9 @@
     [self.mainDropdownMenu setDropdownShowsBorder:YES];
     [self.mainDropdownMenu setBackgroundColor:[UIColor colorWithRed:0.29 green:0.37 blue:1.00 alpha:1.0]];
     
-    [self.scoreGaugeView setBackgroundColor:[UIColor whiteColor]];
+    [self.scoreGaugeView setBackgroundColor:[UIColor lightGrayColor]];
+    self.scoreGaugeView.layer.cornerRadius = 50;
+    self.scoreGaugeView.layer.masksToBounds = true;
     
     self.scoreGaugeView.style = [WMGaugeViewStyleFlatThin new];
     self.scoreGaugeView.maxValue = 100.0;
@@ -208,6 +210,15 @@
     [TGCamera setOption:kTGCameraOptionHiddenFilterButton value:@(YES)];
     [self presentViewController:navigationController animated:YES completion:nil];
 }
+
+
+/****************************************************************
+ *
+ *              Miscellaneous
+ *
+ *****************************************************************/
+
+# pragma mark - Miscellaneous
 
 - (void) updateMongoFood
 {
