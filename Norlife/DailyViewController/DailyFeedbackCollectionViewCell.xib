@@ -38,9 +38,9 @@
             </view>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="I4z-HB-prU" secondAttribute="trailing" constant="20" id="A2p-dR-dwk"/>
+                <constraint firstItem="I4z-HB-prU" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="FbR-76-Nh2"/>
                 <constraint firstAttribute="bottom" secondItem="Hss-Pp-nl5" secondAttribute="bottom" constant="8" id="JFz-pn-qaW"/>
                 <constraint firstItem="Hss-Pp-nl5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="MKB-zC-CXz"/>
-                <constraint firstItem="I4z-HB-prU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="ac7-qE-6Dd"/>
                 <constraint firstItem="Hss-Pp-nl5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="uKe-9z-jp3"/>
             </constraints>
             <size key="customSize" width="259" height="60"/>

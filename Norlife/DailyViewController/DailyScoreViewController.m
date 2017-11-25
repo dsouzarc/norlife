@@ -117,6 +117,15 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
     return YES;
 }
 
+
+/****************************************************************
+ *
+ *              UICollectionView Delegate + DataSource
+ *
+ *****************************************************************/
+
+# pragma mark - UICollectionView Delegate + DataSource
+
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     if(section == 0) {
@@ -159,7 +168,7 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
     if([indexPath section] == 0) {
         DailyScoreView *scoreView = [collectionView dequeueReusableCellWithReuseIdentifier:dailyScoreIdentifier
                                                                               forIndexPath:indexPath];
-        [scoreView setupViewWithYesterdayScore:indexPath.section todayScore:90.7];
+        [scoreView setupViewWithYesterdayScore:80.6 todayScore:90.7];
         return scoreView;
     }
     
@@ -170,9 +179,9 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
         [feedbackCell.feedbackLabel setText:[feedbackItem objectForKey:@"text"]];
         
         if([[feedbackItem objectForKey:@"feedback"] isEqualToString:@"positive"]) {
-            feedbackCell.feedbackImageIcon = [UIImage imageNamed:@"checkmark_icon.png"];
+            feedbackCell.feedbackImageIcon.image = [UIImage imageNamed:@"checkmark_icon.png"];
         } else if([[feedbackItem objectForKey:@"feedback"] isEqualToString:@"negative"]) {
-            feedbackCell.feedbackImageIcon = [UIImage imageNamed:@"cross_mark_icon.png"];
+            feedbackCell.feedbackImageIcon.image = [UIImage imageNamed:@"cross_mark_icon.png"];
         }
         
         return feedbackCell;
@@ -188,15 +197,12 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
     if([indexPath section] == 0) {
         return CGSizeMake(CGRectGetWidth(collectionView.frame), 400.0);
     }
+    
     else if([indexPath section] == 1) {
         NSDictionary *feedbackItem = [self.feedbackArray objectAtIndex:[indexPath row]];
         NSString *feedback = [feedbackItem objectForKey:@"text"];
-       
-        
-        
-        return CGSizeMake(CGRectGetWidth(collectionView.frame), [feedback sizeWithAttributes:
-                                                                 @{NSFontAttributeName: [UIFont systemFontOfSize:300.0]}].height);
-        
+        NSDictionary *attributes = @{NSFontAttributeName: [UIFont systemFontOfSize:300.0]};
+        return CGSizeMake(CGRectGetWidth(collectionView.frame), [feedback sizeWithAttributes:attributes].height);
     }
     
     return CGSizeZero;

@@ -39,6 +39,7 @@
 {
     double valueChange = self.todayScore - self.yesterdayScore;
     double percentChange = (valueChange / self.yesterdayScore) * 100.0;
+    NSLog(@"PERCENT CHANGE: %.2f\t%.2f", valueChange, self.yesterdayScore);
     
     [self.currentScoreLabel setText:[NSString stringWithFormat:@"%.2f", self.todayScore]];
     
