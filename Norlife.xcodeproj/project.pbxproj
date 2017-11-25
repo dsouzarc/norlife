@@ -159,6 +159,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		942244171FCA131100A83A62 /* Feedback View */ = {
+			isa = PBXGroup;
+			children = (
+				9422440E1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.h */,
+				9422440F1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m */,
+				942244101FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib */,
+			);
+			path = "Feedback View";
+			sourceTree = "<group>";
+		};
 		94259F851FC94A3B0067320B /* TrendsViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -172,9 +182,7 @@
 		94259F861FC94A460067320B /* DailyViewController */ = {
 			isa = PBXGroup;
 			children = (
-				9422440E1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.h */,
-				9422440F1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m */,
-				942244101FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib */,
+				942244171FCA131100A83A62 /* Feedback View */,
 				94259F7B1FC944C70067320B /* DailyScoreViewController.h */,
 				94259F7C1FC944C70067320B /* DailyScoreViewController.m */,
 				94259F7D1FC944C70067320B /* DailyScoreViewController.xib */,

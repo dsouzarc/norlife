@@ -8,12 +8,11 @@
 
 #import "FoodClassifierHandler.h"
 
-static NSString *MICROSOFT_VISION_SERVICE_ANALYZE_URL = @"https://westeurope.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags,Categories,Description&language=en";
-
 static NSString *NUTRIONIX_NUTRIENTS_URL = @"https://trackapi.nutritionix.com/v2/natural/nutrients";
 
 static ClarifaiApp *clarifaiApp;
 static MongoDBCollection *foodCollection;
+
 
 @interface FoodClassifierHandler ()
 
@@ -22,7 +21,17 @@ static MongoDBCollection *foodCollection;
 
 @end
 
+
 @implementation FoodClassifierHandler
+
+
+/****************************************************************
+ *
+ *              Constructor
+ *
+ *****************************************************************/
+
+# pragma mark - Constructor
 
 - (instancetype) initWithImageURL:(NSString*)imageURL forDate:(NSDate *)date
 {
@@ -66,6 +75,15 @@ static MongoDBCollection *foodCollection;
     
     return self;
 }
+
+
+/****************************************************************
+ *
+ *              Computation-Specific
+ *
+ *****************************************************************/
+
+# pragma mark - Computation-Specific
 
 - (NSMutableArray*) computeFoodScores:(NSMutableArray*)foodItems
 {
@@ -149,7 +167,6 @@ static MongoDBCollection *foodCollection;
     if(!clarifaiApp) {
         clarifaiApp = [[ClarifaiApp alloc] initWithApiKey:[Constants CLARIFAI_API_KEY]];
     }
-    NSError *error;
     
     [clarifaiApp getModelByName:@"general-v1.3" completion:^(ClarifaiModel *model, NSError *error) {
 
@@ -203,6 +220,7 @@ static MongoDBCollection *foodCollection;
 
 /**
 OLD MICROSOFT CODE
+ static NSString *MICROSOFT_VISION_SERVICE_ANALYZE_URL = @"https://westeurope.api.cognitive.microsoft.com/vision/v1.0/analyze?visualFeatures=Tags,Categories,Description&language=en";
  
  [self.classifyURLRequest setURL:[NSURL URLWithString:MICROSOFT_VISION_SERVICE_ANALYZE_URL]];
  [self.classifyURLRequest setHTTPMethod:@"POST"];
