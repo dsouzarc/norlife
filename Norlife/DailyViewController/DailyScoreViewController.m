@@ -7,6 +7,8 @@
 //
 
 #import "DailyScoreViewController.h"
+#include "WMGaugeView.h"
+
 
 @interface DailyScoreViewController ()
 
@@ -26,11 +28,34 @@
     [self.mainDropdownMenu setDropdownShowsBorder:YES];
     [self.mainDropdownMenu setBackgroundColor:[UIColor colorWithRed:0.29 green:0.37 blue:1.00 alpha:1.0]];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
+    /*dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
         [[[FoodClassifierHandler alloc]
           initWithImageURL:@"https://az616578.vo.msecnd.net/files/2016/03/11/635933105470950505-1562028560_Breakfast-Food-Idea-A1.jpg"
           forDate:[NSDate date]] classifyImage];
-    });
+    }); */
+    
+    
+    WMGaugeView *gaugeView = [[WMGaugeView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
+    gaugeView.style = [WMGaugeViewStyleFlatThin new];
+    gaugeView.maxValue = 100.0;
+    gaugeView.scaleDivisions = 10;
+    gaugeView.scaleSubdivisions = 5;
+    gaugeView.scaleStartAngle = 30;
+    gaugeView.scaleEndAngle = 280;
+    gaugeView.showScaleShadow = NO;
+    gaugeView.scaleFont = [UIFont fontWithName:@"AvenirNext-UltraLight" size:0.065];
+    gaugeView.scalesubdivisionsAligment = WMGaugeViewSubdivisionsAlignmentCenter;
+    gaugeView.scaleSubdivisionsWidth = 0.002;
+    gaugeView.scaleSubdivisionsLength = 0.04;
+    gaugeView.scaleDivisionsWidth = 0.007;
+    gaugeView.scaleDivisionsLength = 0.07;
+    
+    
+    [self.view addSubview:gaugeView];
+    
+    [gaugeView setValue:56.2 animated:YES duration:1.6 completion:^(BOOL finished) {
+        NSLog(@"gaugeView animation complete");
+    }];
 }
 
 - (BOOL) prefersStatusBarHidden

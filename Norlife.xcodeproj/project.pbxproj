@@ -31,6 +31,9 @@
 		94A2B74F1FC89D2700B84598 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 94A2B74D1FC89D2700B84598 /* LaunchScreen.storyboard */; };
 		94A2B7521FC89D2700B84598 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2B7511FC89D2700B84598 /* main.m */; };
 		94A2B75C1FC89D2700B84598 /* NorlifeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 94A2B75B1FC89D2700B84598 /* NorlifeUITests.m */; };
+		94C220A71FC9AFB4009F696D /* WMGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C220A01FC9AFB3009F696D /* WMGaugeView.m */; };
+		94C220A81FC9AFB4009F696D /* WMGaugeViewStyle3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C220A31FC9AFB4009F696D /* WMGaugeViewStyle3D.m */; };
+		94C220A91FC9AFB4009F696D /* WMGaugeViewStyleFlatThin.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C220A51FC9AFB4009F696D /* WMGaugeViewStyleFlatThin.m */; };
 		CFD1CB240428949FE5D34FE1 /* libPods-Norlife.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CAB9369446DC6B02F7ABF5D /* libPods-Norlife.a */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +93,13 @@
 		94A2B7571FC89D2700B84598 /* NorlifeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NorlifeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		94A2B75B1FC89D2700B84598 /* NorlifeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NorlifeUITests.m; sourceTree = "<group>"; };
 		94A2B75D1FC89D2700B84598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		94C220A01FC9AFB3009F696D /* WMGaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGaugeView.m; sourceTree = "<group>"; };
+		94C220A11FC9AFB3009F696D /* WMGaugeViewStyleFlatThin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGaugeViewStyleFlatThin.h; sourceTree = "<group>"; };
+		94C220A21FC9AFB3009F696D /* WMGaugeViewStyle3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGaugeViewStyle3D.h; sourceTree = "<group>"; };
+		94C220A31FC9AFB4009F696D /* WMGaugeViewStyle3D.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGaugeViewStyle3D.m; sourceTree = "<group>"; };
+		94C220A41FC9AFB4009F696D /* WMGaugeViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGaugeViewStyle.h; sourceTree = "<group>"; };
+		94C220A51FC9AFB4009F696D /* WMGaugeViewStyleFlatThin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGaugeViewStyleFlatThin.m; sourceTree = "<group>"; };
+		94C220A61FC9AFB4009F696D /* WMGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGaugeView.h; sourceTree = "<group>"; };
 		9BC903D39E2E479F8EBFC58C /* Pods-Norlife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Norlife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Norlife/Pods-Norlife.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +187,20 @@
 			path = SOMotionDetector;
 			sourceTree = "<group>";
 		};
+		94851B881FC9B050009E11B2 /* WMGaugeView */ = {
+			isa = PBXGroup;
+			children = (
+				94C220A61FC9AFB4009F696D /* WMGaugeView.h */,
+				94C220A01FC9AFB3009F696D /* WMGaugeView.m */,
+				94C220A41FC9AFB4009F696D /* WMGaugeViewStyle.h */,
+				94C220A21FC9AFB3009F696D /* WMGaugeViewStyle3D.h */,
+				94C220A31FC9AFB4009F696D /* WMGaugeViewStyle3D.m */,
+				94C220A11FC9AFB3009F696D /* WMGaugeViewStyleFlatThin.h */,
+				94C220A51FC9AFB4009F696D /* WMGaugeViewStyleFlatThin.m */,
+			);
+			path = WMGaugeView;
+			sourceTree = "<group>";
+		};
 		94A2B7361FC89D2700B84598 = {
 			isa = PBXGroup;
 			children = (
@@ -202,6 +226,7 @@
 			children = (
 				946662121FC8B0CA0033D494 /* Norlife.entitlements */,
 				94259F8B1FC94BA60067320B /* Extensions */,
+				94851B881FC9B050009E11B2 /* WMGaugeView */,
 				946662011FC89FFC0033D494 /* SOMotionDetector */,
 				94C6FB151FC8C7740089DBA8 /* HealthKit */,
 				94C6FB161FC8C77B0089DBA8 /* Location */,
@@ -501,8 +526,11 @@
 				94259F941FC957760067320B /* FoodClassifierHandler.m in Sources */,
 				94A2B7441FC89D2700B84598 /* AppDelegate.m in Sources */,
 				946662081FC89FFC0033D494 /* SOStepDetector.m in Sources */,
+				94C220A91FC9AFB4009F696D /* WMGaugeViewStyleFlatThin.m in Sources */,
 				946662111FC8AA8F0033D494 /* HealthKitDataManager.m in Sources */,
+				94C220A81FC9AFB4009F696D /* WMGaugeViewStyle3D.m in Sources */,
 				946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */,
+				94C220A71FC9AFB4009F696D /* WMGaugeView.m in Sources */,
 				9466620E1FC8A32F0033D494 /* Constants.m in Sources */,
 				9466620A1FC89FFC0033D494 /* SOMotionDetector.m in Sources */,
 				94259F7E1FC944C70067320B /* DailyScoreViewController.m in Sources */,
@@ -583,7 +611,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -637,7 +665,7 @@
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_NO_COMMON_BLOCKS = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
