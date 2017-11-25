@@ -21,7 +21,7 @@ database = database_client['norlife']
 heartrate_table = database['heartrate']
 
 date_iterator = datetime(2017, 11, 25, 21, 00, 00)
-end_date = datetime(2000, 11, 25, 21, 00, 00)
+end_date = datetime(2016, 11, 25, 21, 00, 00)
 
 day_difference = (date_iterator - end_date).days
 
