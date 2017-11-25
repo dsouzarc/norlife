@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4D458DEBCA6B2E3B0C3498AB /* libPods-NorlifeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327B126B45AE22C28D70D1AD /* libPods-NorlifeUITests.a */; };
+		942244111FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9422440F1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m */; };
+		942244121FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942244101FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib */; };
+		942244151FC9FE5A00A83A62 /* checkmark_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 942244131FC9FE5900A83A62 /* checkmark_icon.png */; };
+		942244161FC9FE5A00A83A62 /* cross_mark_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 942244141FC9FE5900A83A62 /* cross_mark_icon.png */; };
 		94259F7E1FC944C70067320B /* DailyScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94259F7C1FC944C70067320B /* DailyScoreViewController.m */; };
 		94259F7F1FC944C70067320B /* DailyScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94259F7D1FC944C70067320B /* DailyScoreViewController.xib */; };
 		94259F831FC946460067320B /* TrendsScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94259F811FC946460067320B /* TrendsScoreViewController.m */; };
@@ -55,6 +59,11 @@
 		493D2955C981D33144A12406 /* Pods-NorlifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NorlifeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NorlifeUITests/Pods-NorlifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CAB9369446DC6B02F7ABF5D /* libPods-Norlife.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Norlife.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5E548F739D3192FACB1201 /* Pods-Norlife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Norlife.release.xcconfig"; path = "Pods/Target Support Files/Pods-Norlife/Pods-Norlife.release.xcconfig"; sourceTree = "<group>"; };
+		9422440E1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyFeedbackCollectionViewCell.h; sourceTree = "<group>"; };
+		9422440F1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyFeedbackCollectionViewCell.m; sourceTree = "<group>"; };
+		942244101FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyFeedbackCollectionViewCell.xib; sourceTree = "<group>"; };
+		942244131FC9FE5900A83A62 /* checkmark_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkmark_icon.png; sourceTree = "<group>"; };
+		942244141FC9FE5900A83A62 /* cross_mark_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cross_mark_icon.png; sourceTree = "<group>"; };
 		94259F7B1FC944C70067320B /* DailyScoreViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyScoreViewController.h; sourceTree = "<group>"; };
 		94259F7C1FC944C70067320B /* DailyScoreViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyScoreViewController.m; sourceTree = "<group>"; };
 		94259F7D1FC944C70067320B /* DailyScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyScoreViewController.xib; sourceTree = "<group>"; };
@@ -163,6 +172,9 @@
 		94259F861FC94A460067320B /* DailyViewController */ = {
 			isa = PBXGroup;
 			children = (
+				9422440E1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.h */,
+				9422440F1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m */,
+				942244101FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib */,
 				94259F7B1FC944C70067320B /* DailyScoreViewController.h */,
 				94259F7C1FC944C70067320B /* DailyScoreViewController.m */,
 				94259F7D1FC944C70067320B /* DailyScoreViewController.xib */,
@@ -259,6 +271,8 @@
 				94A2B74B1FC89D2700B84598 /* Assets.xcassets */,
 				94A2B74D1FC89D2700B84598 /* LaunchScreen.storyboard */,
 				94A2B7501FC89D2700B84598 /* Info.plist */,
+				942244131FC9FE5900A83A62 /* checkmark_icon.png */,
+				942244141FC9FE5900A83A62 /* cross_mark_icon.png */,
 				94259F8E1FC955B30067320B /* calendar_icon.png */,
 				94259F8F1FC955B30067320B /* combo_chart_icon.png */,
 				94A2B7511FC89D2700B84598 /* main.m */,
@@ -400,10 +414,13 @@
 				94A2B74F1FC89D2700B84598 /* LaunchScreen.storyboard in Resources */,
 				94A2B74C1FC89D2700B84598 /* Assets.xcassets in Resources */,
 				94259F961FC957D30067320B /* constants.json in Resources */,
+				942244151FC9FE5A00A83A62 /* checkmark_icon.png in Resources */,
 				94259F911FC955B30067320B /* combo_chart_icon.png in Resources */,
 				94A2B74A1FC89D2700B84598 /* Main.storyboard in Resources */,
 				94259F901FC955B30067320B /* calendar_icon.png in Resources */,
+				942244121FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib in Resources */,
 				94259F7F1FC944C70067320B /* DailyScoreViewController.xib in Resources */,
+				942244161FC9FE5A00A83A62 /* cross_mark_icon.png in Resources */,
 				94851B901FC9D215009E11B2 /* DailyScoreView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +563,7 @@
 				94C220A91FC9AFB4009F696D /* WMGaugeViewStyleFlatThin.m in Sources */,
 				946662111FC8AA8F0033D494 /* HealthKitDataManager.m in Sources */,
 				94C220A81FC9AFB4009F696D /* WMGaugeViewStyle3D.m in Sources */,
+				942244111FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m in Sources */,
 				946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */,
 				94C220A71FC9AFB4009F696D /* WMGaugeView.m in Sources */,
 				9466620E1FC8A32F0033D494 /* Constants.m in Sources */,

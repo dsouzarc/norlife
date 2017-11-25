@@ -10,9 +10,9 @@
 
 @implementation DailyFeedbackCollectionViewCell
 
-- (void)awakeFromNib {
+- (void)awakeFromNib
+{
     [super awakeFromNib];
-    // Initialization code
 }
 
 @end

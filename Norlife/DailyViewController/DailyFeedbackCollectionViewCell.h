@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface DailyFeedbackCollectionViewCell : UICollectionViewCell
+@property (weak, nonatomic) IBOutlet UILabel *feedbackLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *feedbackImageIcon;
 
 @end

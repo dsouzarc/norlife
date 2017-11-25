@@ -34,7 +34,7 @@
                     </connections>
                 </view>
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-Rx-WnE">
-                    <rect key="frame" x="0.0" y="56" width="375" height="611"/>
+                    <rect key="frame" x="0.0" y="48" width="375" height="619"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cmx-uU-qnO">
                         <size key="itemSize" width="50" height="50"/>
@@ -50,10 +50,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="CG3-Rx-WnE" firstAttribute="top" secondItem="wfC-Ec-Q8Z" secondAttribute="bottom" id="JUf-R7-8DN"/>
                 <constraint firstItem="wfC-Ec-Q8Z" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Wgu-Zl-Vqo"/>
                 <constraint firstItem="wfC-Ec-Q8Z" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="bun-8T-hGe"/>
                 <constraint firstItem="CG3-Rx-WnE" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="hFD-at-5Aw"/>
-                <constraint firstItem="CG3-Rx-WnE" firstAttribute="top" secondItem="wfC-Ec-Q8Z" secondAttribute="bottom" constant="8" id="oI1-cn-i1y"/>
                 <constraint firstItem="wfC-Ec-Q8Z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pH8-yq-B5a"/>
                 <constraint firstItem="CG3-Rx-WnE" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="rjO-7T-jMR"/>
                 <constraint firstItem="CG3-Rx-WnE" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="xxv-cS-s4G"/>

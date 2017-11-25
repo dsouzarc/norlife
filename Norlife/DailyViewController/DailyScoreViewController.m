@@ -8,6 +8,10 @@
 
 #import "DailyScoreViewController.h"
 
+static NSString *dailyScoreIdentifier = @"DailyScoreViewIdentifier";
+static NSString *dailyFeedbackIdentifier = @"DailyFeedbackCellIdentifier";
+static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
+
 @interface DailyScoreViewController ()
 
 @property (weak, nonatomic) IBOutlet MKDropdownMenu *mainDropdownMenu;
@@ -15,6 +19,8 @@
 
 @property (strong, nonatomic) UIImage *chosenImage;
 @property NSInteger lastChosenMenuItem;
+
+@property (strong, nonatomic) NSMutableArray *feedbackArray;
 
 @end
 
@@ -26,10 +32,28 @@
     
     [self.mainDropdownMenu setDropdownShowsBorder:YES];
     [self.mainDropdownMenu setBackgroundColor:[UIColor colorWithRed:0.29 green:0.37 blue:1.00 alpha:1.0]];
-
-    [self.mainCollectionView registerNib:[UINib nibWithNibName:@"DailyScoreView" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"DailyScoreViewIdentifier"];
     
-    //[self updateMongoFood];
+    [self.mainCollectionView registerNib:[UINib nibWithNibName:@"DailyScoreView"
+                                                        bundle:[NSBundle mainBundle]]
+              forCellWithReuseIdentifier:dailyScoreIdentifier];
+    
+    [self.mainCollectionView registerNib:[UINib nibWithNibName:@"DailyFeedbackCollectionViewCell"
+                                                        bundle:[NSBundle mainBundle]]
+              forCellWithReuseIdentifier:dailyFeedbackIdentifier];
+    
+    [self.mainCollectionView registerClass:[UICollectionReusableView class]
+                forSupplementaryViewOfKind:separatorViewKindIdentifier
+                       withReuseIdentifier:@"Separator"];
+    
+    UICollectionViewFlowLayout *mainLayout = (UICollectionViewFlowLayout*) [self.mainCollectionView collectionViewLayout];
+    [mainLayout setEstimatedItemSize:CGSizeMake(1, 1)];
+    
+    self.feedbackArray = [[NSMutableArray alloc] init];
+    for(int i = 0; i < 5; i++) {
+        NSString *randomString = [NSString stringWithFormat:@"Hello, World: %d", i];
+        NSLog(@"%@\n\n", randomString);
+        [self.feedbackArray addObject:randomString];
+    }
 }
 
 - (BOOL) prefersStatusBarHidden
@@ -39,31 +63,76 @@
 
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 1;
+    if(section == 0) {
+        return 1;
+    } else if(section == 1) {
+        return [self.feedbackArray count];
+    }
+    return 0;
 }
 
 - (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 10;
+    //Section 1: Daily activity. Section 2: Feedback
+    return 2;
+}
+
+- (UICollectionReusableView *)collectionView:(UICollectionView*)collectionView
+           viewForSupplementaryElementOfKind:(NSString *)kind
+                                 atIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionReusableView *separator = [collectionView dequeueReusableSupplementaryViewOfKind:kind
+                                                                             withReuseIdentifier:separatorViewKindIdentifier forIndexPath:indexPath];
+    
+    if ([kind isEqualToString:separatorViewKindIdentifier]) {
+        separator.backgroundColor = [UIColor clearColor];
+        
+        if (!separator.subviews.count) {
+            
+            // … create the subview to represent the line, and set it up
+            // if subviews were present, it means this work has already been done
+            
+        }
+    }
+    
+    return separator;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    DailyScoreView *scoreView = [collectionView dequeueReusableCellWithReuseIdentifier:@"DailyScoreViewIdentifier"
-                                                                          forIndexPath:indexPath];
-    [scoreView setupViewWithYesterdayScore:indexPath.section todayScore:90.7];
-    return scoreView;
+    if([indexPath section] == 0) {
+        DailyScoreView *scoreView = [collectionView dequeueReusableCellWithReuseIdentifier:dailyScoreIdentifier
+                                                                              forIndexPath:indexPath];
+        [scoreView setupViewWithYesterdayScore:indexPath.section todayScore:90.7];
+        return scoreView;
+    }
+    
+    else if([indexPath section] == 1) {
+        DailyFeedbackCollectionViewCell *feedbackCell = [collectionView dequeueReusableCellWithReuseIdentifier:dailyFeedbackIdentifier forIndexPath:indexPath];
+        feedbackCell.feedbackLabel.preferredMaxLayoutWidth = (collectionView.frame.size.width * 0.75);
+        NSString *feedback = [self.feedbackArray objectAtIndex:[indexPath row]];
+        [feedbackCell.feedbackLabel setText:feedback];
+        return feedbackCell;
+    }
+    
+    return nil;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView
                   layout:(UICollectionViewLayout *)collectionViewLayout
   sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    return CGSizeMake(CGRectGetWidth(collectionView.frame), 400.0);
+    if([indexPath section] == 0) {
+        return CGSizeMake(CGRectGetWidth(collectionView.frame), 400.0);
+    }
+    else if([indexPath section] == 1) {
+        //NSString *feedback = [self.feedbackArray objectAtIndex:[indexPath row]];
+        //return [feedback sizeWithAttributes:nil];
+        return CGSizeMake(CGRectGetWidth(collectionView.frame), 60.0);
+    }
+    
+    return CGSizeZero;
 }
-
-
-
 
 /****************************************************************
  *
