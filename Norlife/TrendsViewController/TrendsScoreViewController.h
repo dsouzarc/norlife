@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Norlife-Swift.h"
 
 @interface TrendsScoreViewController : UIViewController
 

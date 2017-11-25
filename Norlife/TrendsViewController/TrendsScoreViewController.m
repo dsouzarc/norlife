@@ -8,30 +8,48 @@
 
 #import "TrendsScoreViewController.h"
 
+#import "Norlife-Swift.h"
+
 @interface TrendsScoreViewController ()
+
+@property (strong, nonatomic) NSArray* data;
+@property NSInteger numberOfDataItems;
 
 @end
 
 @implementation TrendsScoreViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
+    self.numberOfDataItems = 30;
+    
+    self.data = [Random generateRandomData:self.numberOfDataItems max:100 shouldIncludeOutliers:false];
+    
+    ScrollableGraphView* graphView = [[ScrollableGraphView alloc] initWithFrame: self.view.frame dataSource: self];
+    LinePlot* plot = [[LinePlot alloc] initWithIdentifier:@"linePlot"];
+    ReferenceLines* referenceLines = [[ReferenceLines alloc] init];
+    
+    [graphView addPlotWithPlot:plot];
+    [graphView addReferenceLinesWithReferenceLines:referenceLines];
+    
+    [self.view addSubview: graphView];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+// Implement ScrollableGraphViewDataSource
+- (double)valueForPlot:(Plot * _Nonnull)plot atIndex:(NSInteger)pointIndex {
+    double value = [self.data[pointIndex] doubleValue];
+    return value;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSString * _Nonnull)labelAtIndex:(NSInteger)pointIndex {
+    return @"label";
 }
-*/
+
+- (NSInteger)numberOfPoints {
+    return self.numberOfDataItems;
+}
+
 
 @end

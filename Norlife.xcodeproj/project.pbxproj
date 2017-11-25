@@ -8,6 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		4D458DEBCA6B2E3B0C3498AB /* libPods-NorlifeUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 327B126B45AE22C28D70D1AD /* libPods-NorlifeUITests.a */; };
+		940A295A1FCA2771005DA001 /* Random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29411FCA2770005DA001 /* Random.swift */; };
+		940A295B1FCA2771005DA001 /* ReferenceLineDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29441FCA2771005DA001 /* ReferenceLineDrawingView.swift */; };
+		940A295C1FCA2771005DA001 /* BarDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29451FCA2771005DA001 /* BarDrawingLayer.swift */; };
+		940A295D1FCA2771005DA001 /* GradientDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29461FCA2771005DA001 /* GradientDrawingLayer.swift */; };
+		940A295E1FCA2771005DA001 /* DotDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29471FCA2771005DA001 /* DotDrawingLayer.swift */; };
+		940A295F1FCA2771005DA001 /* ScrollableGraphViewDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29481FCA2771005DA001 /* ScrollableGraphViewDrawingLayer.swift */; };
+		940A29601FCA2771005DA001 /* LineDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29491FCA2771005DA001 /* LineDrawingLayer.swift */; };
+		940A29611FCA2771005DA001 /* FillDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A294A1FCA2771005DA001 /* FillDrawingLayer.swift */; };
+		940A29621FCA2771005DA001 /* ScrollableGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A294B1FCA2771005DA001 /* ScrollableGraphView.swift */; };
+		940A29631FCA2771005DA001 /* ScrollableGraphViewDrawingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A294D1FCA2771005DA001 /* ScrollableGraphViewDrawingDelegate.swift */; };
+		940A29641FCA2771005DA001 /* ScrollableGraphViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A294E1FCA2771005DA001 /* ScrollableGraphViewDataSource.swift */; };
+		940A29651FCA2771005DA001 /* ReferenceLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29501FCA2771005DA001 /* ReferenceLines.swift */; };
+		940A29661FCA2771005DA001 /* LabelPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29511FCA2771005DA001 /* LabelPool.swift */; };
+		940A29671FCA2771005DA001 /* BarPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29531FCA2771005DA001 /* BarPlot.swift */; };
+		940A29681FCA2771005DA001 /* GraphPointAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29551FCA2771005DA001 /* GraphPointAnimation.swift */; };
+		940A29691FCA2771005DA001 /* GraphPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29561FCA2771005DA001 /* GraphPoint.swift */; };
+		940A296A1FCA2771005DA001 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29571FCA2771005DA001 /* Plot.swift */; };
+		940A296B1FCA2771005DA001 /* LinePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29581FCA2771005DA001 /* LinePlot.swift */; };
+		940A296C1FCA2771005DA001 /* DotPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29591FCA2771005DA001 /* DotPlot.swift */; };
 		942244111FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9422440F1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m */; };
 		942244121FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942244101FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib */; };
 		942244151FC9FE5A00A83A62 /* checkmark_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 942244131FC9FE5900A83A62 /* checkmark_icon.png */; };
@@ -59,6 +78,26 @@
 		493D2955C981D33144A12406 /* Pods-NorlifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NorlifeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NorlifeUITests/Pods-NorlifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		6CAB9369446DC6B02F7ABF5D /* libPods-Norlife.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Norlife.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B5E548F739D3192FACB1201 /* Pods-Norlife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Norlife.release.xcconfig"; path = "Pods/Target Support Files/Pods-Norlife/Pods-Norlife.release.xcconfig"; sourceTree = "<group>"; };
+		940A29401FCA2770005DA001 /* Norlife-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Norlife-Bridging-Header.h"; sourceTree = "<group>"; };
+		940A29411FCA2770005DA001 /* Random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Random.swift; sourceTree = "<group>"; };
+		940A29441FCA2771005DA001 /* ReferenceLineDrawingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLineDrawingView.swift; sourceTree = "<group>"; };
+		940A29451FCA2771005DA001 /* BarDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarDrawingLayer.swift; sourceTree = "<group>"; };
+		940A29461FCA2771005DA001 /* GradientDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientDrawingLayer.swift; sourceTree = "<group>"; };
+		940A29471FCA2771005DA001 /* DotDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotDrawingLayer.swift; sourceTree = "<group>"; };
+		940A29481FCA2771005DA001 /* ScrollableGraphViewDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableGraphViewDrawingLayer.swift; sourceTree = "<group>"; };
+		940A29491FCA2771005DA001 /* LineDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineDrawingLayer.swift; sourceTree = "<group>"; };
+		940A294A1FCA2771005DA001 /* FillDrawingLayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FillDrawingLayer.swift; sourceTree = "<group>"; };
+		940A294B1FCA2771005DA001 /* ScrollableGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableGraphView.swift; sourceTree = "<group>"; };
+		940A294D1FCA2771005DA001 /* ScrollableGraphViewDrawingDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableGraphViewDrawingDelegate.swift; sourceTree = "<group>"; };
+		940A294E1FCA2771005DA001 /* ScrollableGraphViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableGraphViewDataSource.swift; sourceTree = "<group>"; };
+		940A29501FCA2771005DA001 /* ReferenceLines.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferenceLines.swift; sourceTree = "<group>"; };
+		940A29511FCA2771005DA001 /* LabelPool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabelPool.swift; sourceTree = "<group>"; };
+		940A29531FCA2771005DA001 /* BarPlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarPlot.swift; sourceTree = "<group>"; };
+		940A29551FCA2771005DA001 /* GraphPointAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphPointAnimation.swift; sourceTree = "<group>"; };
+		940A29561FCA2771005DA001 /* GraphPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphPoint.swift; sourceTree = "<group>"; };
+		940A29571FCA2771005DA001 /* Plot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
+		940A29581FCA2771005DA001 /* LinePlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinePlot.swift; sourceTree = "<group>"; };
+		940A29591FCA2771005DA001 /* DotPlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotPlot.swift; sourceTree = "<group>"; };
 		9422440E1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyFeedbackCollectionViewCell.h; sourceTree = "<group>"; };
 		9422440F1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyFeedbackCollectionViewCell.m; sourceTree = "<group>"; };
 		942244101FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyFeedbackCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -157,6 +196,71 @@
 				327B126B45AE22C28D70D1AD /* libPods-NorlifeUITests.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		940A29421FCA2771005DA001 /* SwiftCode */ = {
+			isa = PBXGroup;
+			children = (
+				940A29431FCA2771005DA001 /* Drawing */,
+				940A294B1FCA2771005DA001 /* ScrollableGraphView.swift */,
+				940A294C1FCA2771005DA001 /* Protocols */,
+				940A294F1FCA2771005DA001 /* Reference */,
+				940A29521FCA2771005DA001 /* Plots */,
+			);
+			path = SwiftCode;
+			sourceTree = "<group>";
+		};
+		940A29431FCA2771005DA001 /* Drawing */ = {
+			isa = PBXGroup;
+			children = (
+				940A29441FCA2771005DA001 /* ReferenceLineDrawingView.swift */,
+				940A29451FCA2771005DA001 /* BarDrawingLayer.swift */,
+				940A29461FCA2771005DA001 /* GradientDrawingLayer.swift */,
+				940A29471FCA2771005DA001 /* DotDrawingLayer.swift */,
+				940A29481FCA2771005DA001 /* ScrollableGraphViewDrawingLayer.swift */,
+				940A29491FCA2771005DA001 /* LineDrawingLayer.swift */,
+				940A294A1FCA2771005DA001 /* FillDrawingLayer.swift */,
+			);
+			path = Drawing;
+			sourceTree = "<group>";
+		};
+		940A294C1FCA2771005DA001 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				940A294D1FCA2771005DA001 /* ScrollableGraphViewDrawingDelegate.swift */,
+				940A294E1FCA2771005DA001 /* ScrollableGraphViewDataSource.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		940A294F1FCA2771005DA001 /* Reference */ = {
+			isa = PBXGroup;
+			children = (
+				940A29501FCA2771005DA001 /* ReferenceLines.swift */,
+				940A29511FCA2771005DA001 /* LabelPool.swift */,
+			);
+			path = Reference;
+			sourceTree = "<group>";
+		};
+		940A29521FCA2771005DA001 /* Plots */ = {
+			isa = PBXGroup;
+			children = (
+				940A29531FCA2771005DA001 /* BarPlot.swift */,
+				940A29541FCA2771005DA001 /* Animation */,
+				940A29571FCA2771005DA001 /* Plot.swift */,
+				940A29581FCA2771005DA001 /* LinePlot.swift */,
+				940A29591FCA2771005DA001 /* DotPlot.swift */,
+			);
+			path = Plots;
+			sourceTree = "<group>";
+		};
+		940A29541FCA2771005DA001 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				940A29551FCA2771005DA001 /* GraphPointAnimation.swift */,
+				940A29561FCA2771005DA001 /* GraphPoint.swift */,
+			);
+			path = Animation;
 			sourceTree = "<group>";
 		};
 		942244171FCA131100A83A62 /* Feedback View */ = {
@@ -321,6 +425,9 @@
 				9466620C1FC8A32F0033D494 /* Constants.h */,
 				9466620D1FC8A32F0033D494 /* Constants.m */,
 				94259F951FC957D30067320B /* constants.json */,
+				940A29411FCA2770005DA001 /* Random.swift */,
+				940A29421FCA2771005DA001 /* SwiftCode */,
+				940A29401FCA2770005DA001 /* Norlife-Bridging-Header.h */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -380,6 +487,7 @@
 				TargetAttributes = {
 					94A2B73E1FC89D2700B84598 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HealthKit = {
@@ -560,24 +668,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				940A296B1FCA2771005DA001 /* LinePlot.swift in Sources */,
 				94A2B7471FC89D2700B84598 /* ViewController.m in Sources */,
+				940A295F1FCA2771005DA001 /* ScrollableGraphViewDrawingLayer.swift in Sources */,
+				940A295C1FCA2771005DA001 /* BarDrawingLayer.swift in Sources */,
+				940A296A1FCA2771005DA001 /* Plot.swift in Sources */,
+				940A296C1FCA2771005DA001 /* DotPlot.swift in Sources */,
+				940A295D1FCA2771005DA001 /* GradientDrawingLayer.swift in Sources */,
 				946662171FC8B9350033D494 /* LocationDataManager.m in Sources */,
 				94A2B7521FC89D2700B84598 /* main.m in Sources */,
 				94259F8A1FC94AED0067320B /* UIColor+Norlife.m in Sources */,
+				940A29691FCA2771005DA001 /* GraphPoint.swift in Sources */,
+				940A29661FCA2771005DA001 /* LabelPool.swift in Sources */,
 				94259F831FC946460067320B /* TrendsScoreViewController.m in Sources */,
+				940A29601FCA2771005DA001 /* LineDrawingLayer.swift in Sources */,
+				940A29611FCA2771005DA001 /* FillDrawingLayer.swift in Sources */,
 				94259F941FC957760067320B /* FoodClassifierHandler.m in Sources */,
 				94A2B7441FC89D2700B84598 /* AppDelegate.m in Sources */,
 				946662081FC89FFC0033D494 /* SOStepDetector.m in Sources */,
 				94C220A91FC9AFB4009F696D /* WMGaugeViewStyleFlatThin.m in Sources */,
+				940A29631FCA2771005DA001 /* ScrollableGraphViewDrawingDelegate.swift in Sources */,
 				946662111FC8AA8F0033D494 /* HealthKitDataManager.m in Sources */,
 				94C220A81FC9AFB4009F696D /* WMGaugeViewStyle3D.m in Sources */,
+				940A295E1FCA2771005DA001 /* DotDrawingLayer.swift in Sources */,
+				940A29681FCA2771005DA001 /* GraphPointAnimation.swift in Sources */,
 				942244111FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m in Sources */,
 				946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */,
 				94C220A71FC9AFB4009F696D /* WMGaugeView.m in Sources */,
+				940A29651FCA2771005DA001 /* ReferenceLines.swift in Sources */,
 				9466620E1FC8A32F0033D494 /* Constants.m in Sources */,
 				9466620A1FC89FFC0033D494 /* SOMotionDetector.m in Sources */,
+				940A295A1FCA2771005DA001 /* Random.swift in Sources */,
 				94851B8E1FC9D207009E11B2 /* DailyScoreView.m in Sources */,
+				940A29641FCA2771005DA001 /* ScrollableGraphViewDataSource.swift in Sources */,
+				940A29671FCA2771005DA001 /* BarPlot.swift in Sources */,
 				94259F7E1FC944C70067320B /* DailyScoreViewController.m in Sources */,
+				940A29621FCA2771005DA001 /* ScrollableGraphView.swift in Sources */,
+				940A295B1FCA2771005DA001 /* ReferenceLineDrawingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -728,6 +855,7 @@
 			baseConfigurationReference = 9BC903D39E2E479F8EBFC58C /* Pods-Norlife.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES_ERROR;
 				CODE_SIGN_ENTITLEMENTS = Norlife/Norlife.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -736,6 +864,9 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryan.Norlife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Norlife/Constants/Norlife-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -745,6 +876,7 @@
 			baseConfigurationReference = 8B5E548F739D3192FACB1201 /* Pods-Norlife.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES_ERROR;
 				CODE_SIGN_ENTITLEMENTS = Norlife/Norlife.entitlements;
 				CODE_SIGN_STYLE = Automatic;
@@ -753,6 +885,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ryan.Norlife;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Norlife/Constants/Norlife-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -761,6 +895,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 493D2955C981D33144A12406 /* Pods-NorlifeUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7N3L673D8;
 				INFOPLIST_FILE = NorlifeUITests/Info.plist;
@@ -776,6 +911,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0A49AABB0AEB17ED254D924F /* Pods-NorlifeUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7N3L673D8;
 				INFOPLIST_FILE = NorlifeUITests/Info.plist;
