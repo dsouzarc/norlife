@@ -11,9 +11,7 @@
 @interface DailyScoreViewController ()
 
 @property (weak, nonatomic) IBOutlet MKDropdownMenu *mainDropdownMenu;
-
 @property (weak, nonatomic) IBOutlet UICollectionView *mainCollectionView;
-
 
 @property (strong, nonatomic) UIImage *chosenImage;
 @property NSInteger lastChosenMenuItem;
@@ -21,7 +19,6 @@
 @end
 
 @implementation DailyScoreViewController
-
 
 - (void)viewDidLoad
 {
@@ -31,7 +28,6 @@
     [self.mainDropdownMenu setBackgroundColor:[UIColor colorWithRed:0.29 green:0.37 blue:1.00 alpha:1.0]];
 
     [self.mainCollectionView registerNib:[UINib nibWithNibName:@"DailyScoreView" bundle:[NSBundle mainBundle]] forCellWithReuseIdentifier:@"DailyScoreViewIdentifier"];
-    
     
     //[self updateMongoFood];
 }
@@ -48,16 +44,25 @@
 
 - (NSInteger) numberOfSectionsInCollectionView:(UICollectionView *)collectionView
 {
-    return 1;
+    return 10;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     DailyScoreView *scoreView = [collectionView dequeueReusableCellWithReuseIdentifier:@"DailyScoreViewIdentifier"
                                                                           forIndexPath:indexPath];
-    [scoreView setupViewWithYesterdayScore:80.5 todayScore:90.7];
+    [scoreView setupViewWithYesterdayScore:indexPath.section todayScore:90.7];
+    
     return scoreView;
 }
+
+- (CGSize)collectionView:(UICollectionView *)collectionView
+                  layout:(UICollectionViewLayout *)collectionViewLayout
+  sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    return CGSizeMake(CGRectGetWidth(collectionView.frame), 400.0);
+}
+
 
 
 
