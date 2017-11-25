@@ -13,6 +13,8 @@
 		94259F831FC946460067320B /* TrendsScoreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 94259F811FC946460067320B /* TrendsScoreViewController.m */; };
 		94259F841FC946460067320B /* TrendsScoreViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94259F821FC946460067320B /* TrendsScoreViewController.xib */; };
 		94259F8A1FC94AED0067320B /* UIColor+Norlife.m in Sources */ = {isa = PBXBuildFile; fileRef = 94259F891FC94AED0067320B /* UIColor+Norlife.m */; };
+		94259F901FC955B30067320B /* calendar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 94259F8E1FC955B30067320B /* calendar_icon.png */; };
+		94259F911FC955B30067320B /* combo_chart_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 94259F8F1FC955B30067320B /* combo_chart_icon.png */; };
 		946662081FC89FFC0033D494 /* SOStepDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662051FC89FFC0033D494 /* SOStepDetector.m */; };
 		946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662061FC89FFC0033D494 /* SOLocationManager.m */; };
 		9466620A1FC89FFC0033D494 /* SOMotionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662071FC89FFC0033D494 /* SOMotionDetector.m */; };
@@ -54,6 +56,8 @@
 		94259F821FC946460067320B /* TrendsScoreViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrendsScoreViewController.xib; sourceTree = "<group>"; };
 		94259F881FC94AED0067320B /* UIColor+Norlife.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+Norlife.h"; sourceTree = "<group>"; };
 		94259F891FC94AED0067320B /* UIColor+Norlife.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Norlife.m"; sourceTree = "<group>"; };
+		94259F8E1FC955B30067320B /* calendar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar_icon.png; sourceTree = "<group>"; };
+		94259F8F1FC955B30067320B /* combo_chart_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = combo_chart_icon.png; sourceTree = "<group>"; };
 		946662021FC89FFC0033D494 /* SOStepDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOStepDetector.h; sourceTree = "<group>"; };
 		946662031FC89FFC0033D494 /* SOMotionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMotionDetector.h; sourceTree = "<group>"; };
 		946662041FC89FFC0033D494 /* SOLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLocationManager.h; sourceTree = "<group>"; };
@@ -207,6 +211,8 @@
 				94A2B74B1FC89D2700B84598 /* Assets.xcassets */,
 				94A2B74D1FC89D2700B84598 /* LaunchScreen.storyboard */,
 				94A2B7501FC89D2700B84598 /* Info.plist */,
+				94259F8E1FC955B30067320B /* calendar_icon.png */,
+				94259F8F1FC955B30067320B /* combo_chart_icon.png */,
 				94A2B7511FC89D2700B84598 /* main.m */,
 			);
 			path = Norlife;
@@ -344,7 +350,9 @@
 				94259F841FC946460067320B /* TrendsScoreViewController.xib in Resources */,
 				94A2B74F1FC89D2700B84598 /* LaunchScreen.storyboard in Resources */,
 				94A2B74C1FC89D2700B84598 /* Assets.xcassets in Resources */,
+				94259F911FC955B30067320B /* combo_chart_icon.png in Resources */,
 				94A2B74A1FC89D2700B84598 /* Main.storyboard in Resources */,
+				94259F901FC955B30067320B /* calendar_icon.png in Resources */,
 				94259F7F1FC944C70067320B /* DailyScoreViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

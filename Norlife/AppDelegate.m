@@ -24,18 +24,22 @@
     
     DailyScoreViewController *dailyScore = [[DailyScoreViewController alloc] initWithNibName:@"DailyScoreViewController"
                                                                                       bundle:[NSBundle mainBundle]];
-    UITabBarItem *dailyScoreTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Daily" image:nil tag:0];
+    UIImage *dailyImage = [Constants imageWithImage:[UIImage imageNamed:@"calendar_icon.png"] scaledToSize:CGSizeMake(30, 30)];
+    UITabBarItem *dailyScoreTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Daily" image:dailyImage tag:0];
     dailyScore.tabBarItem = dailyScoreTabBarItem;
     
     TrendsScoreViewController *trendsScore = [[TrendsScoreViewController alloc] initWithNibName:@"TrendsScoreViewController"
                                                                                          bundle:[NSBundle mainBundle]];
-    UITabBarItem *trendsScoreTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Trends" image:nil tag:1];
+    UIImage *trendsImage = [Constants imageWithImage:[UIImage imageNamed:@"combo_chart_icon.png"] scaledToSize:CGSizeMake(30, 30)];
+    UITabBarItem *trendsScoreTabBarItem = [[UITabBarItem alloc] initWithTitle:@"Trends" image:trendsImage tag:1];
     trendsScore.tabBarItem = trendsScoreTabBarItem;
     
     [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor darkNordeaBlue] }
                                              forState:UIControlStateNormal];
     
-    NSArray *viewControllers = @[trendsScore, dailyScore];
+    
+    
+    NSArray *viewControllers = @[dailyScore, trendsScore];
     
     self.tabBarController.viewControllers = viewControllers;
     self.window.rootViewController = self.tabBarController;

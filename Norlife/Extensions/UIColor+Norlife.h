@@ -20,4 +20,9 @@
 */
 + (UIColor*) red:(float)red green:(float)green blue:(float)blue alpha:(float)alpha;
 
+/*!
+ @brief Convenience method to convert a HEX code into a UIColor
+*/
++ (UIColor *) colorFromHexCode:(NSString *)hexString;
+
 @end

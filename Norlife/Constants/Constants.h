@@ -42,6 +42,8 @@ static const NSString *NORDEA_BASE_URL = @"https://api.hackathon.developer.norde
 + (CLLocationManager*) getLocationManager;
 + (double) hoursBetween:(NSDate*)firstDate and:(NSDate*)secondDate;
 
++ (UIImage*)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
+
 + (void) addUserToDB;
 
 @end
