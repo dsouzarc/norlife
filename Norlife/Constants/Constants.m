@@ -10,11 +10,9 @@
 #import "Constants.h"
 
 static Constants *constants;
-
 @interface Constants ()
 
 @end
-
 
 @implementation Constants
 

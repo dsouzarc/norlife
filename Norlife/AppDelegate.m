@@ -19,8 +19,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [application setStatusBarHidden:YES];
-    
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.delegate = self;
     

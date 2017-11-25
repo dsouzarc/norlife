@@ -10,8 +10,8 @@
 
 #import "Constants.h"
 
-static const NSString *DRIVING_COLLECTION_NAME = @"norlife.driving";
-static const NSString *SITTING_COLLECTION_NAME = @"norlife.sitting";
+static NSString *DRIVING_COLLECTION_NAME = @"norlife.driving";
+static NSString *SITTING_COLLECTION_NAME = @"norlife.sitting";
 
 @interface LocationDataManager : NSObject
 

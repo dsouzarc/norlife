@@ -194,22 +194,22 @@ static MongoDBCollection *foodCollection;
 /**
 OLD MICROSOFT CODE
  
- /*[self.classifyURLRequest setURL:[NSURL URLWithString:MICROSOFT_VISION_SERVICE_ANALYZE_URL]];
+ [self.classifyURLRequest setURL:[NSURL URLWithString:MICROSOFT_VISION_SERVICE_ANALYZE_URL]];
  [self.classifyURLRequest setHTTPMethod:@"POST"];
  [self.classifyURLRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
  [self.classifyURLRequest setValue:[Constants MICROSOFT_COMPUTER_VISION_API_KEY] forHTTPHeaderField:@"Ocp-Apim-Subscription-Key"];
  
  NSDictionary *postValues = @{ @"url": imageURL };
  NSData *postData = [NSJSONSerialization dataWithJSONObject:postValues options:0 error:&error];
- [self.classifyURLRequest setHTTPBody:postData];*/
+ [self.classifyURLRequest setHTTPBody:postData];
 
-/*NSError *error;
+ NSError *error;
  NSData *responseData = [NSURLConnection sendSynchronousRequest:self.classifyURLRequest returningResponse:nil error:&error];
  NSMutableDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:responseData
  options: NSJSONReadingMutableContainers
- error: &error];*/
+ error: &error];
 
-/*[self.classifyURLRequest setURL:[NSURL URLWithString:MICROSOFT_VISION_SERVICE_ANALYZE_URL]];
+ [self.classifyURLRequest setURL:[NSURL URLWithString:MICROSOFT_VISION_SERVICE_ANALYZE_URL]];
  [self.classifyURLRequest setHTTPMethod:@"POST"];
  [self.classifyURLRequest setValue:@"application/octet-stream" forHTTPHeaderField:@"Content-Type"];
  [self.classifyURLRequest setValue:[Constants MICROSOFT_COMPUTER_VISION_API_KEY] forHTTPHeaderField:@"Ocp-Apim-Subscription-Key"];
