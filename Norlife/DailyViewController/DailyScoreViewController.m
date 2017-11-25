@@ -7,12 +7,16 @@
 //
 
 #import "DailyScoreViewController.h"
-#include "WMGaugeView.h"
 
 
 @interface DailyScoreViewController ()
 
 @property (weak, nonatomic) IBOutlet MKDropdownMenu *mainDropdownMenu;
+@property (weak, nonatomic) IBOutlet WMGaugeView *scoreGaugeView;
+
+@property (weak, nonatomic) IBOutlet UILabel *currentScoreLabel;
+@property (weak, nonatomic) IBOutlet UILabel *percentChangeLabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueChangeLabel;
 
 @property (strong, nonatomic) UIImage *chosenImage;
 @property NSInteger lastChosenMenuItem;
@@ -20,6 +24,61 @@
 @end
 
 @implementation DailyScoreViewController
+
+- (void) setupScoreLabels
+{
+    double todayScore = 89.5;
+    double yesterdayScore = 80.5;
+    double valueChange = todayScore - yesterdayScore;
+    double percentChange = (valueChange / yesterdayScore) * 100.0;
+    
+    [self.currentScoreLabel setText:[NSString stringWithFormat:@"%.2f", todayScore]];
+
+    UIColor *changeColor = [UIColor blackColor];
+    if(valueChange < 0.0) {
+        changeColor = [UIColor redColor];
+    } else if(valueChange > 0.0) {
+        changeColor = [UIColor greenColor];
+    }
+    
+    NSString *valueChangeString;
+    NSString *percentChangeString;
+    
+    if(valueChange > 0.0) {
+        valueChangeString = [NSString stringWithFormat:@"+ %.2f", valueChange];
+        percentChangeString = [NSString stringWithFormat:@"+ (%.2f%%)", percentChange];
+    } else {
+        valueChangeString = [NSString stringWithFormat:@"%.2f", valueChange];
+        percentChangeString = [NSString stringWithFormat:@"(%.2f%%)", percentChange];
+    }
+    
+    [self.valueChangeLabel setAttributedText:[Constants string:valueChangeString color:changeColor]];
+    [self.percentChangeLabel setAttributedText:[Constants string:percentChangeString color:changeColor]];
+    
+    NSMutableArray *randomIntervals = [NSMutableArray arrayWithObjects:@(100.0),
+                                       @(todayScore * 0.5),
+                                       todayScore * 1.3 < 100.0 ? @(todayScore * 1.3 ) : @(99.9),
+                                       @(todayScore * 0.8),
+                                       @(todayScore), nil];
+    [self recursiveScoreAnimationForScore:todayScore randomIntervals:randomIntervals];
+}
+
+- (void) recursiveScoreAnimationForScore:(double)score randomIntervals:(NSMutableArray*)randomIntervals
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^(void) {
+        sleep(1.1);
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            
+            if([randomIntervals count] == 0) {
+                [self.scoreGaugeView setValue:score animated:YES];
+                return;
+            }
+            [self.scoreGaugeView setValue: [[randomIntervals objectAtIndex:0] doubleValue] animated:YES];
+            [randomIntervals removeObjectAtIndex:0];
+            [self recursiveScoreAnimationForScore:score randomIntervals:randomIntervals];
+        });
+    });
+}
 
 - (void)viewDidLoad
 {
@@ -34,28 +93,23 @@
           forDate:[NSDate date]] classifyImage];
     }); */
     
+    [self.scoreGaugeView setBackgroundColor:[UIColor whiteColor]];
     
-    WMGaugeView *gaugeView = [[WMGaugeView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
-    gaugeView.style = [WMGaugeViewStyleFlatThin new];
-    gaugeView.maxValue = 100.0;
-    gaugeView.scaleDivisions = 10;
-    gaugeView.scaleSubdivisions = 5;
-    gaugeView.scaleStartAngle = 30;
-    gaugeView.scaleEndAngle = 280;
-    gaugeView.showScaleShadow = NO;
-    gaugeView.scaleFont = [UIFont fontWithName:@"AvenirNext-UltraLight" size:0.065];
-    gaugeView.scalesubdivisionsAligment = WMGaugeViewSubdivisionsAlignmentCenter;
-    gaugeView.scaleSubdivisionsWidth = 0.002;
-    gaugeView.scaleSubdivisionsLength = 0.04;
-    gaugeView.scaleDivisionsWidth = 0.007;
-    gaugeView.scaleDivisionsLength = 0.07;
+    self.scoreGaugeView.style = [WMGaugeViewStyleFlatThin new];
+    self.scoreGaugeView.maxValue = 100.0;
+    self.scoreGaugeView.scaleDivisions = 10;
+    self.scoreGaugeView.scaleSubdivisions = 5;
+    self.scoreGaugeView.scaleStartAngle = 30;
+    self.scoreGaugeView.scaleEndAngle = 330;
+    self.scoreGaugeView.showScaleShadow = NO;
+    self.scoreGaugeView.scaleFont = [UIFont fontWithName:@"AvenirNext-UltraLight" size:0.065];
+    self.scoreGaugeView.scalesubdivisionsAligment = WMGaugeViewSubdivisionsAlignmentCenter;
+    self.scoreGaugeView.scaleSubdivisionsWidth = 0.002;
+    self.scoreGaugeView.scaleSubdivisionsLength = 0.04;
+    self.scoreGaugeView.scaleDivisionsWidth = 0.007;
+    self.scoreGaugeView.scaleDivisionsLength = 0.07;
     
-    
-    [self.view addSubview:gaugeView];
-    
-    [gaugeView setValue:56.2 animated:YES duration:1.6 completion:^(BOOL finished) {
-        NSLog(@"gaugeView animation complete");
-    }];
+    [self setupScoreLabels];
 }
 
 - (BOOL) prefersStatusBarHidden

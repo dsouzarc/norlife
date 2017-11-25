@@ -79,7 +79,7 @@ static LocationDataManager *dataManager;
         }
         
         if([locationDate timeIntervalSinceReferenceDate] > [endDate timeIntervalSinceReferenceDate]) {
-            exit(1);
+            //exit(1);
         }
         
         static double lastSpeed = -1.0;

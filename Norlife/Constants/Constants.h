@@ -17,6 +17,7 @@
 #import "TGCameraViewController.h"
 #import "ClarifaiApp.h"
 #import "MKDropdownMenu.h"
+#include "WMGaugeView.h"
 
 #import "UIColor+Norlife.h"
 
@@ -52,6 +53,8 @@ static const NSString *NORDEA_BASE_URL = @"https://api.hackathon.developer.norde
 + (double) hoursBetween:(NSDate*)firstDate and:(NSDate*)secondDate;
 
 + (UIImage*)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
+
++ (NSMutableAttributedString*) string:(NSString*)string color:(UIColor*)color;
 
 + (void) addUserToDB;
 

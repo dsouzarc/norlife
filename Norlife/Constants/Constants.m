@@ -38,6 +38,13 @@ static Constants *constants;
     return self;
 }
 
++ (NSMutableAttributedString*) string:(NSString*)string color:(UIColor*)color
+{
+    NSMutableAttributedString *result = [[NSMutableAttributedString alloc] initWithString:string];
+    [result addAttribute:NSForegroundColorAttributeName value:color range:NSMakeRange(0, [string length])];
+    return result;
+}
+
 /*!
  @brief Returns an NSDictionary with the contents of "constants.json"
 */

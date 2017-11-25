@@ -12,7 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DailyScoreViewController">
             <connections>
+                <outlet property="currentScoreLabel" destination="Nwa-XS-yAL" id="PZ0-6O-8pY"/>
                 <outlet property="mainDropdownMenu" destination="wfC-Ec-Q8Z" id="oJp-D7-qcM"/>
+                <outlet property="percentChangeLabel" destination="oFx-qS-kfj" id="Ewl-zB-bF2"/>
+                <outlet property="scoreGaugeView" destination="GEl-Zo-K8i" id="DoG-Cs-JFh"/>
+                <outlet property="valueChangeLabel" destination="NYe-xq-eN0" id="jmT-D7-5K2"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,20 +25,53 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-Ec-Q8Z" customClass="MKDropdownMenu">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-Ec-Q8Z" customClass="MKDropdownMenu">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" red="0.0" green="0.28536528348922729" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="Tgv-5c-Si5"/>
+                    </constraints>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="bRJ-5Z-x7t"/>
                         <outlet property="delegate" destination="-1" id="v7b-G0-bXS"/>
                     </connections>
                 </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GEl-Zo-K8i" customClass="WMGaugeView">
+                    <rect key="frame" x="48" y="122" width="280" height="280"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.28536528348922729" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nwa-XS-yAL">
+                    <rect key="frame" x="48" y="52" width="280" height="38"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Value change" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NYe-xq-eN0">
+                    <rect key="frame" x="219" y="93" width="140" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="% up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oFx-qS-kfj">
+                    <rect key="frame" x="16" y="93" width="140" height="22"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="wfC-Ec-Q8Z" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Wgu-Zl-Vqo"/>
+                <constraint firstItem="wfC-Ec-Q8Z" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="bun-8T-hGe"/>
+                <constraint firstItem="wfC-Ec-Q8Z" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pH8-yq-B5a"/>
+            </constraints>
             <nil key="simulatedTopBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-68" y="-163"/>
+            <point key="canvasLocation" x="-228.5" y="-161.5"/>
         </view>
     </objects>
 </document>
