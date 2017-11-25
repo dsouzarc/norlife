@@ -40,19 +40,35 @@ static Constants *constants;
     return self;
 }
 
+/*!
+ @brief Returns an NSDictionary with the contents of "constants.json"
+*/
++ (NSDictionary*) constantsJSON
+{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"constants" ofType:@"json"];
+    NSData *fileData = [NSData dataWithContentsOfFile:filePath];
+    
+    return [NSJSONSerialization JSONObjectWithData:fileData options:kNilOptions error:nil];
+}
+
 + (NSString*) NORDEA_CLIENT_ID
 {
-    return [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"nordea"] objectForKey:@"client_id"];
+    return [[[Constants constantsJSON] objectForKey:@"nordea"] objectForKey:@"client_id"];
 }
 
 + (NSString*) NORDEA_ACCESS_TOKEN
 {
-    return [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"nordea"] objectForKey:@"access_token"];
+    return [[[Constants constantsJSON] objectForKey:@"nordea"] objectForKey:@"access_token"];
 }
 
 + (NSString*) NORDEA_CLIENT_SECRET
 {
-    return [[[NSBundle mainBundle] objectForInfoDictionaryKey:@"nordea"] objectForKey:@"client_secret"];
+    return [[[Constants constantsJSON] objectForKey:@"nordea"] objectForKey:@"client_secret"];
+}
+
++ (NSString*) MICROSOFT_COMPUTER_VISION_API_KEY
+{
+    return [[Constants constantsJSON] objectForKey:@"microsoft_computer_vision_api_key"];
 }
 
 + (NSDictionary*) userProperties

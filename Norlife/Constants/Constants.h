@@ -32,6 +32,7 @@ static const NSString *NORDEA_BASE_URL = @"https://api.hackathon.developer.norde
 
 + (instancetype) instance;
 
++ (NSString*) MICROSOFT_COMPUTER_VISION_API_KEY;
 + (NSString*) NORDEA_CLIENT_SECRET;
 + (NSString*) NORDEA_CLIENT_ID;
 + (NSString*) NORDEA_ACCESS_TOKEN;

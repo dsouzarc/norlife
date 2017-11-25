@@ -15,6 +15,8 @@
 		94259F8A1FC94AED0067320B /* UIColor+Norlife.m in Sources */ = {isa = PBXBuildFile; fileRef = 94259F891FC94AED0067320B /* UIColor+Norlife.m */; };
 		94259F901FC955B30067320B /* calendar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 94259F8E1FC955B30067320B /* calendar_icon.png */; };
 		94259F911FC955B30067320B /* combo_chart_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 94259F8F1FC955B30067320B /* combo_chart_icon.png */; };
+		94259F941FC957760067320B /* FoodClassifierHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 94259F931FC957760067320B /* FoodClassifierHandler.m */; };
+		94259F961FC957D30067320B /* constants.json in Resources */ = {isa = PBXBuildFile; fileRef = 94259F951FC957D30067320B /* constants.json */; };
 		946662081FC89FFC0033D494 /* SOStepDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662051FC89FFC0033D494 /* SOStepDetector.m */; };
 		946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662061FC89FFC0033D494 /* SOLocationManager.m */; };
 		9466620A1FC89FFC0033D494 /* SOMotionDetector.m in Sources */ = {isa = PBXBuildFile; fileRef = 946662071FC89FFC0033D494 /* SOMotionDetector.m */; };
@@ -58,6 +60,9 @@
 		94259F891FC94AED0067320B /* UIColor+Norlife.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Norlife.m"; sourceTree = "<group>"; };
 		94259F8E1FC955B30067320B /* calendar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar_icon.png; sourceTree = "<group>"; };
 		94259F8F1FC955B30067320B /* combo_chart_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = combo_chart_icon.png; sourceTree = "<group>"; };
+		94259F921FC957760067320B /* FoodClassifierHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodClassifierHandler.h; sourceTree = "<group>"; };
+		94259F931FC957760067320B /* FoodClassifierHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodClassifierHandler.m; sourceTree = "<group>"; };
+		94259F951FC957D30067320B /* constants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = constants.json; sourceTree = "<group>"; };
 		946662021FC89FFC0033D494 /* SOStepDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOStepDetector.h; sourceTree = "<group>"; };
 		946662031FC89FFC0033D494 /* SOMotionDetector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOMotionDetector.h; sourceTree = "<group>"; };
 		946662041FC89FFC0033D494 /* SOLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SOLocationManager.h; sourceTree = "<group>"; };
@@ -203,6 +208,8 @@
 				94C6FB171FC8C7850089DBA8 /* Constants */,
 				94259F851FC94A3B0067320B /* TrendsViewController */,
 				94259F861FC94A460067320B /* DailyViewController */,
+				94259F921FC957760067320B /* FoodClassifierHandler.h */,
+				94259F931FC957760067320B /* FoodClassifierHandler.m */,
 				94A2B7421FC89D2700B84598 /* AppDelegate.h */,
 				94A2B7431FC89D2700B84598 /* AppDelegate.m */,
 				94A2B7451FC89D2700B84598 /* ViewController.h */,
@@ -250,6 +257,7 @@
 			children = (
 				9466620C1FC8A32F0033D494 /* Constants.h */,
 				9466620D1FC8A32F0033D494 /* Constants.m */,
+				94259F951FC957D30067320B /* constants.json */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -350,6 +358,7 @@
 				94259F841FC946460067320B /* TrendsScoreViewController.xib in Resources */,
 				94A2B74F1FC89D2700B84598 /* LaunchScreen.storyboard in Resources */,
 				94A2B74C1FC89D2700B84598 /* Assets.xcassets in Resources */,
+				94259F961FC957D30067320B /* constants.json in Resources */,
 				94259F911FC955B30067320B /* combo_chart_icon.png in Resources */,
 				94A2B74A1FC89D2700B84598 /* Main.storyboard in Resources */,
 				94259F901FC955B30067320B /* calendar_icon.png in Resources */,
@@ -482,6 +491,7 @@
 				94A2B7521FC89D2700B84598 /* main.m in Sources */,
 				94259F8A1FC94AED0067320B /* UIColor+Norlife.m in Sources */,
 				94259F831FC946460067320B /* TrendsScoreViewController.m in Sources */,
+				94259F941FC957760067320B /* FoodClassifierHandler.m in Sources */,
 				94A2B7441FC89D2700B84598 /* AppDelegate.m in Sources */,
 				946662081FC89FFC0033D494 /* SOStepDetector.m in Sources */,
 				946662111FC8AA8F0033D494 /* HealthKitDataManager.m in Sources */,

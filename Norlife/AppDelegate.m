@@ -37,8 +37,6 @@
     [[UITabBarItem appearance] setTitleTextAttributes:@{ NSForegroundColorAttributeName : [UIColor darkNordeaBlue] }
                                              forState:UIControlStateNormal];
     
-    
-    
     NSArray *viewControllers = @[dailyScore, trendsScore];
     
     self.tabBarController.viewControllers = viewControllers;

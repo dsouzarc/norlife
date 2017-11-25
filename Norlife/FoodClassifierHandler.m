@@ -10,4 +10,6 @@
 
 @implementation FoodClassifierHandler
 
+- (instancetype) init;
+
 @end

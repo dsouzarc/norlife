@@ -10,4 +10,6 @@
 
 @interface FoodClassifierHandler : NSObject
 
+- (instancetype) init;
+
 @end
