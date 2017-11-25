@@ -41,7 +41,7 @@ static ClarifaiApp *clarifaiApp;
     return self;
 }
 
-- (NSDictionary*) classifyImage
+- (void) classifyImage
 {
     if(!clarifaiApp) {
         clarifaiApp = [[ClarifaiApp alloc] initWithApiKey:[Constants CLARIFAI_API_KEY]];
@@ -54,13 +54,15 @@ static ClarifaiApp *clarifaiApp;
                         if (!error) {
                             
                             ClarifaiOutput *output = outputs[0];
-                            NSMutableArray *allTags = [[NSMutableArray alloc] init];
+                            NSMutableArray *relevantTags = [[NSMutableArray alloc] init];
                             
                             for (ClarifaiConcept *concept in output.concepts) {
-                                [allTags addObject:concept.conceptName];
+                                if(concept.score >= 0.4) {
+                                    [relevantTags addObject:concept.conceptName];
+                                }
                             }
                             
-                            NSLog(@"%@", [NSString stringWithFormat:@"Tags:\n%@", [allTags componentsJoinedByString:@", "]]);
+                            NSLog(@"%@", [NSString stringWithFormat:@"Tags:\n%@", [relevantTags componentsJoinedByString:@", "]]);
                         }
                         else {
                             NSLog(@"ERROR USING CLARIFAI API: %@", [error description]);
@@ -68,15 +70,9 @@ static ClarifaiApp *clarifaiApp;
                     }
          ];
     }];
-    
-    //Array of dictionaries. Key: food. Value: weight 
-    NSMutableArray *relevantEntries = [[NSMutableArray alloc] init];
-    
-    return nil; //responseDictionary;
 }
 
 @end
-
 
 /**
 OLD MICROSOFT CODE
