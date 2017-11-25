@@ -71,6 +71,11 @@ static Constants *constants;
     return [[Constants constantsJSON] objectForKey:@"microsoft_computer_vision_api_key"];
 }
 
++ (NSString*) CLARIFAI_API_KEY
+{
+    return [[Constants constantsJSON] objectForKey:@"clarifai_api_key"];
+}
+
 + (NSDictionary*) userProperties
 {
     NSMutableDictionary *userProperties = [[NSMutableDictionary alloc] init];

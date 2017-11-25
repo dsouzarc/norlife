@@ -15,7 +15,7 @@
 #import "SOLocationManager.h"
 #import "ObjCMongoDB.h"
 #import "TGCameraViewController.h"
-
+#import "ClarifaiApp.h"
 #import "MKDropdownMenu.h"
 
 #import "UIColor+Norlife.h"
@@ -36,6 +36,7 @@ static const NSString *NORDEA_BASE_URL = @"https://api.hackathon.developer.norde
 
 + (instancetype) instance;
 
++ (NSString*) CLARIFAI_API_KEY;
 + (NSString*) MICROSOFT_COMPUTER_VISION_API_KEY;
 + (NSString*) NORDEA_CLIENT_SECRET;
 + (NSString*) NORDEA_CLIENT_ID;

@@ -1,0 +1,1 @@
+../../../Clarifai/Clarifai/Classes/ClarifaiCrop.h

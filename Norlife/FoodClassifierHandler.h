@@ -16,8 +16,8 @@
 - (instancetype) initWithImage:(UIImage*)image;
 
 /*!
- @brief Executes the URL Request and returns the JSON response. IS SYNCHRONOUS
+ @brief Classifies the image and saves the results to the database
  */
-- (NSDictionary*) classifyImage;
+- (void) classifyImage;
 
 @end

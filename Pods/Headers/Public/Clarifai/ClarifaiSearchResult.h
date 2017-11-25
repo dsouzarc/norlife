@@ -1,0 +1,1 @@
+../../../Clarifai/Clarifai/Classes/ClarifaiSearchResult.h
