@@ -33,6 +33,7 @@
 
 static NSString *MONGO_DB_CONNECTION_STRING = @"138.197.36.15:27017";
 static NSString *MONGO_DB_USERS_COLLECTION_NAME = @"norlife.users";
+static NSString *TODAYS_FEEDBACK_URL = @"http://138.197.36.15/today-review";
 
 static const NSString *NORDEA_BASE_URL = @"https://api.hackathon.developer.nordeaopenbanking.com/v1/";
 

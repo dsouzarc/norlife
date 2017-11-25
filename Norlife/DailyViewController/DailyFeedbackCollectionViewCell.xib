@@ -12,31 +12,43 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DailyFeedbackCellIdentifier" id="gTV-IL-0wX" customClass="DailyFeedbackCollectionViewCell">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+            <rect key="frame" x="0.0" y="0.0" width="355" height="58"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="58"/>
+                <rect key="frame" x="0.0" y="0.0" width="355" height="58"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cross_mark_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="I4z-HB-prU">
-                        <rect key="frame" x="313" y="8" width="42" height="42"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cross_mark_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="I4z-HB-prU">
+                        <rect key="frame" x="293" y="8" width="42" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="42" id="iKR-bN-3Yx"/>
+                            <constraint firstAttribute="height" constant="42" id="oNL-Qp-FSW"/>
+                        </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hss-Pp-nl5">
-                        <rect key="frame" x="8" y="8" width="285" height="42"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hss-Pp-nl5">
+                        <rect key="frame" x="8" y="8" width="257" height="42"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="257" id="iso-38-JZ1"/>
+                        </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
             </view>
-            <size key="customSize" width="279" height="60"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="I4z-HB-prU" secondAttribute="trailing" constant="20" id="A2p-dR-dwk"/>
+                <constraint firstAttribute="bottom" secondItem="Hss-Pp-nl5" secondAttribute="bottom" constant="8" id="JFz-pn-qaW"/>
+                <constraint firstItem="Hss-Pp-nl5" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="MKB-zC-CXz"/>
+                <constraint firstItem="I4z-HB-prU" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="ac7-qE-6Dd"/>
+                <constraint firstItem="Hss-Pp-nl5" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="uKe-9z-jp3"/>
+            </constraints>
+            <size key="customSize" width="259" height="60"/>
             <connections>
                 <outlet property="feedbackImageIcon" destination="I4z-HB-prU" id="qah-5j-YPC"/>
                 <outlet property="feedbackLabel" destination="Hss-Pp-nl5" id="17M-dW-ax1"/>
             </connections>
-            <point key="canvasLocation" x="120" y="18"/>
+            <point key="canvasLocation" x="109.5" y="18"/>
         </collectionViewCell>
     </objects>
     <resources>

@@ -20,7 +20,7 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
 @property (strong, nonatomic) UIImage *chosenImage;
 @property NSInteger lastChosenMenuItem;
 
-@property (strong, nonatomic) NSMutableArray *feedbackArray;
+@property (strong, nonatomic) NSMutableArray<NSDictionary*> *feedbackArray;
 
 @end
 
@@ -49,11 +49,67 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
     [mainLayout setEstimatedItemSize:CGSizeMake(1, 1)];
     
     self.feedbackArray = [[NSMutableArray alloc] init];
-    for(int i = 0; i < 5; i++) {
-        NSString *randomString = [NSString stringWithFormat:@"Hello, World: %d", i];
-        NSLog(@"%@\n\n", randomString);
-        [self.feedbackArray addObject:randomString];
-    }
+    [self refreshFeedbackTable];
+}
+
+- (void) refreshFeedbackTable
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
+        
+        NSMutableURLRequest *urlRequest = [[NSMutableURLRequest alloc] init];
+        [urlRequest setURL:[NSURL URLWithString:TODAYS_FEEDBACK_URL]];
+        [urlRequest setHTTPMethod:@"GET"];
+        
+        NSData *dataResponse = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
+        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:dataResponse options:NSJSONReadingMutableLeaves error:nil];
+        if(responseDictionary) {
+            self.feedbackArray = [[NSMutableArray alloc] init];
+            
+            double highestScore = INT_MIN;
+            NSString *highestKey = @"";
+            double lowestScore = INT_MAX;
+            NSString *lowestKey = @"";
+            
+            NSArray *scoresToCheck = @[@"driving_score", @"food_score", @"transaction_score"];
+            for(NSString *scoreToCheck in scoresToCheck) {
+                if([[responseDictionary objectForKey:scoreToCheck] doubleValue] < lowestScore) {
+                    lowestScore = [[responseDictionary objectForKey:scoreToCheck] doubleValue];
+                    lowestKey = scoreToCheck;
+                }
+                if([[responseDictionary objectForKey:scoreToCheck] doubleValue] > highestScore) {
+                    highestScore = [[responseDictionary objectForKey:scoreToCheck] doubleValue];
+                    highestKey = scoreToCheck;
+                }
+            }
+            
+            NSString *negativeFeedback = @"";
+            NSString *positiveFeedback = @"";
+            
+            if([lowestKey isEqualToString:@"driving_score"]) {
+                negativeFeedback = @"Your driving score impacted you negatively today - try to slow down and accelerate less sharply. Driving accidents are one of the leading causes of death amongst adolescents.";
+            } else if([lowestKey isEqualToString:@"food_score"]) {
+                negativeFeedback = @"Your food choices impacted you negatively today - try to eat healthier in the future. A well-balanced and nutritious diet is essential to having a long and happy life.";
+            } else if([lowestKey isEqualToString:@"transaction_score"]) {
+                negativeFeedback = @"Your purchase choices impacted you negatively today - try to cut back on un-necessary spending. Cheat days are okay, but only when they're occasional.";
+            }
+            
+            if([highestKey isEqualToString:@"driving_score"]) {
+                positiveFeedback = @"Great job on the road today! We've taken notice of your excellent driving abilities and will keep it in mind in the future.";
+            } else if([highestKey isEqualToString:@"food_score"]) {
+                positiveFeedback = @"You've made some great culinary decisions today - keep up the good work!";
+            } else if([highestKey isEqualToString:@"transaction_score"]) {
+                positiveFeedback = @"Nice money management! That takes real strength and discipline. Keep it up and you'll feel the rewards soon enough :)";
+            }
+            
+            NSLog(@"%@", responseDictionary);
+            
+            NSDictionary *positiveFeedbackItem = @{@"feedback": @"positive", @"text": positiveFeedback};
+            NSDictionary *negativeFeedbackItem = @{@"feedback": @"negative", @"text": negativeFeedback};
+            
+            [self.feedbackArray addObject:positiveFeedbackItem];
+            [self.feedbackArray addObject:negativeFeedbackItem];
+        }
+    });
 }
 
 - (BOOL) prefersStatusBarHidden
@@ -109,9 +165,16 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
     
     else if([indexPath section] == 1) {
         DailyFeedbackCollectionViewCell *feedbackCell = [collectionView dequeueReusableCellWithReuseIdentifier:dailyFeedbackIdentifier forIndexPath:indexPath];
-        feedbackCell.feedbackLabel.preferredMaxLayoutWidth = (collectionView.frame.size.width * 0.75);
-        NSString *feedback = [self.feedbackArray objectAtIndex:[indexPath row]];
-        [feedbackCell.feedbackLabel setText:feedback];
+        
+        NSDictionary *feedbackItem = [self.feedbackArray objectAtIndex:[indexPath row]];
+        [feedbackCell.feedbackLabel setText:[feedbackItem objectForKey:@"text"]];
+        
+        if([[feedbackItem objectForKey:@"feedback"] isEqualToString:@"positive"]) {
+            feedbackCell.feedbackImageIcon = [UIImage imageNamed:@"checkmark_icon.png"];
+        } else if([[feedbackItem objectForKey:@"feedback"] isEqualToString:@"negative"]) {
+            feedbackCell.feedbackImageIcon = [UIImage imageNamed:@"cross_mark_icon.png"];
+        }
+        
         return feedbackCell;
     }
     
@@ -126,9 +189,14 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
         return CGSizeMake(CGRectGetWidth(collectionView.frame), 400.0);
     }
     else if([indexPath section] == 1) {
-        //NSString *feedback = [self.feedbackArray objectAtIndex:[indexPath row]];
-        //return [feedback sizeWithAttributes:nil];
-        return CGSizeMake(CGRectGetWidth(collectionView.frame), 60.0);
+        NSDictionary *feedbackItem = [self.feedbackArray objectAtIndex:[indexPath row]];
+        NSString *feedback = [feedbackItem objectForKey:@"text"];
+       
+        
+        
+        return CGSizeMake(CGRectGetWidth(collectionView.frame), [feedback sizeWithAttributes:
+                                                                 @{NSFontAttributeName: [UIFont systemFontOfSize:300.0]}].height);
+        
     }
     
     return CGSizeZero;
