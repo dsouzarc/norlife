@@ -166,9 +166,7 @@
 				94259F7B1FC944C70067320B /* DailyScoreViewController.h */,
 				94259F7C1FC944C70067320B /* DailyScoreViewController.m */,
 				94259F7D1FC944C70067320B /* DailyScoreViewController.xib */,
-				94851B8C1FC9D207009E11B2 /* DailyScoreView.h */,
-				94851B8D1FC9D207009E11B2 /* DailyScoreView.m */,
-				94851B8F1FC9D215009E11B2 /* DailyScoreView.xib */,
+				94851B911FC9E1BE009E11B2 /* Daily Score View */,
 			);
 			path = DailyViewController;
 			sourceTree = "<group>";
@@ -207,6 +205,16 @@
 				94C220A51FC9AFB4009F696D /* WMGaugeViewStyleFlatThin.m */,
 			);
 			path = WMGaugeView;
+			sourceTree = "<group>";
+		};
+		94851B911FC9E1BE009E11B2 /* Daily Score View */ = {
+			isa = PBXGroup;
+			children = (
+				94851B8C1FC9D207009E11B2 /* DailyScoreView.h */,
+				94851B8D1FC9D207009E11B2 /* DailyScoreView.m */,
+				94851B8F1FC9D215009E11B2 /* DailyScoreView.xib */,
+			);
+			path = "Daily Score View";
 			sourceTree = "<group>";
 		};
 		94A2B7361FC89D2700B84598 = {

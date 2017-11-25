@@ -52,7 +52,6 @@
     DailyScoreView *scoreView = [collectionView dequeueReusableCellWithReuseIdentifier:@"DailyScoreViewIdentifier"
                                                                           forIndexPath:indexPath];
     [scoreView setupViewWithYesterdayScore:indexPath.section todayScore:90.7];
-    
     return scoreView;
 }
 
@@ -193,7 +192,6 @@
         
         NSDate *dateIterator = [NSDate date];
         NSCalendar *calendar = [NSCalendar currentCalendar];
-        
         
         for(NSString *foodImageURL in foodImageURLs) {
             [[[FoodClassifierHandler alloc] initWithImageURL:foodImageURL forDate:dateIterator] classifyImage];

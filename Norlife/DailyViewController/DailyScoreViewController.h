@@ -10,6 +10,7 @@
 
 #import "Constants.h"
 
-@interface DailyScoreViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource, TGCameraDelegate, MKDropdownMenuDelegate, MKDropdownMenuDataSource, UICollectionViewDataSource>
+@interface DailyScoreViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource,
+                                                            TGCameraDelegate, MKDropdownMenuDelegate, MKDropdownMenuDataSource>
 
 @end
