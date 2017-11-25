@@ -40,6 +40,12 @@
     [[HealthKitDataManager instance] calculateHeartRate];
 }
 
+- (BOOL) prefersStatusBarHidden
+{
+    return YES;
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

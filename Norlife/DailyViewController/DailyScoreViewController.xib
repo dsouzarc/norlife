@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DailyScoreViewController">
             <connections>
-                <outlet property="mainNavigationBar" destination="nez-av-Pcp" id="Ztt-xc-oB7"/>
+                <outlet property="mainDropdownMenu" destination="wfC-Ec-Q8Z" id="oJp-D7-qcM"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,23 +21,20 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nez-av-Pcp">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                    <items>
-                        <navigationItem title="Title" id="cHG-IC-dP3">
-                            <barButtonItem key="rightBarButtonItem" systemItem="compose" id="vdk-Aw-qmp">
-                                <connections>
-                                    <action selector="pressedComposeButton:" destination="-1" id="ZLb-mx-NXS"/>
-                                </connections>
-                            </barButtonItem>
-                        </navigationItem>
-                    </items>
-                </navigationBar>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wfC-Ec-Q8Z" customClass="MKDropdownMenu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" red="0.0" green="0.28536528348922729" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="bRJ-5Z-x7t"/>
+                        <outlet property="delegate" destination="-1" id="v7b-G0-bXS"/>
+                    </connections>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <nil key="simulatedTopBarMetrics"/>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
-            <point key="canvasLocation" x="-15" y="14"/>
+            <point key="canvasLocation" x="-15.5" y="13.5"/>
         </view>
     </objects>
 </document>

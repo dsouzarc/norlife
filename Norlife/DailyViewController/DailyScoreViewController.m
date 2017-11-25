@@ -10,8 +10,10 @@
 
 @interface DailyScoreViewController ()
 
-@property (strong, nonatomic) IBOutlet UINavigationBar *mainNavigationBar;
+@property (weak, nonatomic) IBOutlet MKDropdownMenu *mainDropdownMenu;
+
 @property (strong, nonatomic) UIImage *chosenImage;
+@property NSInteger lastChosenMenuItem;
 
 @end
 
@@ -20,19 +22,80 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self.mainDropdownMenu setDropdownShowsBorder:YES];
+    [self.mainDropdownMenu setBackgroundColor:[UIColor colorWithRed:0.29 green:0.37 blue:1.00 alpha:1.0]];
 }
 
-- (void)didReceiveMemoryWarning
+- (BOOL) prefersStatusBarHidden
 {
-    [super didReceiveMemoryWarning];
+    return YES;
 }
 
-- (IBAction) pressedComposeButton:(id)sender
+
+/****************************************************************
+ *
+ *              MKDropdownMenu Delegate + Data Source
+ *
+ *****************************************************************/
+
+# pragma mark - MKDropdownMeny Delegate + Data Source
+
+- (NSInteger) numberOfComponentsInDropdownMenu:(MKDropdownMenu *)dropdownMenu
 {
-    TGCameraNavigationController *navigationController = [TGCameraNavigationController newWithCameraDelegate:self];
-    [TGCamera setOption:kTGCameraOptionHiddenFilterButton value:@(YES)];
-    [self presentViewController:navigationController animated:YES completion:nil];
+    return 1;
 }
+
+- (NSInteger) dropdownMenu:(MKDropdownMenu *)dropdownMenu numberOfRowsInComponent:(NSInteger)component
+{
+    return 2;
+}
+
+- (NSString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    if(row == 0) {
+        return @"Upload picture of receipt";
+    } else if(row == 1) {
+        return @"Upload picture of food";
+    }
+    return @"";
+}
+
+- (void) dropdownMenu:(MKDropdownMenu *)dropdownMenu didSelectRow:(NSInteger)row inComponent:(NSInteger)component
+{
+    self.lastChosenMenuItem = row;
+    
+    if(row == 1) {
+        [dropdownMenu closeAllComponentsAnimated:YES];
+        [self pressedComposeButton:nil];
+    }
+}
+
+- (NSAttributedString*) dropdownMenu:(MKDropdownMenu *)dropdownMenu attributedTitleForComponent:(NSInteger)component
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"EEEE"];
+    NSString *dayOfTheWeek = [dateFormatter stringFromDate:[NSDate date]];
+    
+    [dateFormatter setDateStyle:NSDateFormatterLongStyle];
+    NSString *restOfDate = [dateFormatter stringFromDate:[NSDate date]];
+    
+    NSString *entireTitle = [NSString stringWithFormat:@"%@, %@", dayOfTheWeek, restOfDate];
+    NSMutableAttributedString *attributedTitle = [[NSMutableAttributedString alloc] initWithString:entireTitle];
+    [attributedTitle addAttribute:NSForegroundColorAttributeName value:[UIColor whiteColor]
+                            range:NSMakeRange(0, [entireTitle length])];
+    
+    return attributedTitle;
+}
+
+
+/****************************************************************
+ *
+ *              TGCameraDelegate
+ *
+ *****************************************************************/
+
+# pragma mark - TGCameraDelegate
 
 - (void) cameraDidCancel
 {
@@ -53,10 +116,19 @@
 {
     self.chosenImage = image;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
-        NSDictionary *foodAttributes = [[[FoodClassifierHandler alloc] initWithImage:self.chosenImage] classifyImage];
-        NSLog(@"%@", foodAttributes);
+        if(self.lastChosenMenuItem == 1) {
+            NSDictionary *foodAttributes = [[[FoodClassifierHandler alloc] initWithImage:self.chosenImage] classifyImage];
+            NSLog(@"%@", foodAttributes);
+        }
     });
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction) pressedComposeButton:(id)sender
+{
+    TGCameraNavigationController *navigationController = [TGCameraNavigationController newWithCameraDelegate:self];
+    [TGCamera setOption:kTGCameraOptionHiddenFilterButton value:@(YES)];
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 @end

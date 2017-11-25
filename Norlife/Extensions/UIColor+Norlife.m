@@ -10,9 +10,14 @@
 
 @implementation UIColor(Norlife)
 
-+(UIColor*) darkNordeaBlue
++ (UIColor*) darkNordeaBlue
 {
     return [UIColor red:0 green:1 blue:151 alpha:1];
+}
+
++ (UIColor*) lightNordeaBlue
+{
+    return [UIColor red:30 green:30 blue:100 alpha:1];
 }
 
 + (UIColor*) red:(float)red green:(float)green blue:(float)blue alpha:(float)alpha

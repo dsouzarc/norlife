@@ -8,6 +8,7 @@ target 'Norlife' do
   # Pods for Norlife
   pod 'ObjCMongoDB'
   pod 'TGCameraViewController'
+  pod 'MKDropdownMenu'
 
   target 'NorlifeUITests' do
     inherit! :search_paths

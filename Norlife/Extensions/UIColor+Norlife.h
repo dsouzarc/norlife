@@ -14,6 +14,7 @@
  @brief Returns the default dark Nordea blue color
 */
 + (UIColor*) darkNordeaBlue;
++ (UIColor*) lightNordeaBlue;
 
 /*!
  @brief Convenience method to return UIColor when given the RGB values out of 255 (0 to 255)
