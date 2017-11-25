@@ -17,4 +17,6 @@ static const NSString *SITTING_COLLECTION_NAME = @"norlife.sitting";
 
 + (instancetype) instance;
 
+- (void) beginLocationTracking;
+
 @end

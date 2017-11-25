@@ -53,7 +53,28 @@ static LocationDataManager *dataManager;
     [SOLocationManager sharedInstance].allowsBackgroundLocationUpdates = YES;
     [[SOMotionDetector sharedInstance] startDetection];
     
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    dateFormatter.dateFormat = @"dd/MM/yyyy";
+    __block NSDate *locationDate = [dateFormatter dateFromString:@"24/11/2000"];
+    __block NSDate *endDate = [dateFormatter dateFromString:@"24/11/2017"];
+    __block int numEntriesPerDay = 5;
+    __block int counter = 0;
+    BOOL toContinue = YES;
+    
     [SOMotionDetector sharedInstance].locationChangedBlock = ^(CLLocation *location) {
+        
+        if(counter == numEntriesPerDay) {
+            counter = 0;
+            NSCalendar *cal = [NSCalendar currentCalendar];
+            locationDate = [cal dateByAddingUnit:NSCalendarUnitDay
+                                               value:1
+                                              toDate:locationDate
+                                             options:0];
+        }
+        
+        if([locationDate isEqualToDate:endDate]) {
+            exit(1);
+        }
         
         static double lastSpeed = -1.0;
         if([SOMotionDetector sharedInstance].motionType == MotionTypeAutomotive) {
@@ -62,39 +83,39 @@ static LocationDataManager *dataManager;
             if(lastSpeed == -1.0) {
                 lastSpeed = location.speed;
             } else {
+                
                 double speedDifference = fabs(lastSpeed - location.speed);
-                
-                if(!self.drivingCollection) {
-
-                }
-                
                 double speedPercentDifference = speedDifference / lastSpeed;
                 
                 NSString *classification = @"";
                 double influence = 0.0;
                 
-                if(speedPercentDifference <= 0.02) {
-                    classification = @"good";
-                    influence = 0.001;
-                } else if(speedPercentDifference <= 0.1) {
-                    classification = @"mild";
-                    influence = -0.001;
-                } else if(speedPercentDifference <= 0.25) {
-                    classification = @"moderate";
-                    influence = -0.0020;
-                } else if(speedPercentDifference <= 0.35) {
-                    classification = @"severe";
-                    influence = -0.0050;
-                } else if(speedPercentDifference <= 0.45) {
-                    classification = @"drastic";
-                    influence = -0.008;
-                } else {
-                    classification = @"reckless";
-                    influence = -0.015;
+                NSArray *speedThresholds = @[
+                                             @[@(0.001), @"excellent", @(-0.001)],
+                                             @[@(0.005), @"very good", @(-0.0005)],
+                                             @[@(0.055), @"fairly good", @(-0.00015)],
+                                             @[@(0.06), @"pretty good", @(-0.0001)],
+                                             @[@(0.08), @"good", @(-0.00005)],
+                                             @[@(0.1), @"mildest", @(0.001)],
+                                             @[@(0.15), @"milder", @(0.00105)],
+                                             @[@(0.2), @"mild", @(0.00155)],
+                                             @[@(0.25), @"more moderate", @(0.0020)],
+                                             @[@(0.30), @"moderate", @(0.0025)],
+                                             @[@(0.45), @"severe", @(0.0050)],
+                                             @[@(1.00), @"reckless", @(0.015)]];
+                
+                for(NSArray *threshold in speedThresholds) {
+                    
+                    //If we meet the threshold
+                    if(speedPercentDifference < [threshold[0] doubleValue]) {
+                        classification = threshold[1];
+                        influence = [threshold[2] doubleValue];
+                        break;
+                    }
                 }
                 
                 NSDictionary *relevantData = @{
-                                               @"date": [NSDate date],
+                                               @"date": locationDate,
                                                @"last_speed": [NSNumber numberWithDouble:lastSpeed],
                                                @"current_speed": [NSNumber numberWithDouble:location.speed],
                                                @"speed_difference": [NSNumber numberWithDouble:speedDifference],
@@ -112,6 +133,7 @@ static LocationDataManager *dataManager;
                 
                 lastSpeed = location.speed;
             }
+            counter += 1;
             //NSLog(@"Here: %@", location);
         }
     };
