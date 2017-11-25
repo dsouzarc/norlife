@@ -206,8 +206,8 @@
 				94C6FB151FC8C7740089DBA8 /* HealthKit */,
 				94C6FB161FC8C77B0089DBA8 /* Location */,
 				94C6FB171FC8C7850089DBA8 /* Constants */,
-				94259F851FC94A3B0067320B /* TrendsViewController */,
 				94259F861FC94A460067320B /* DailyViewController */,
+				94259F851FC94A3B0067320B /* TrendsViewController */,
 				94259F921FC957760067320B /* FoodClassifierHandler.h */,
 				94259F931FC957760067320B /* FoodClassifierHandler.m */,
 				94A2B7421FC89D2700B84598 /* AppDelegate.h */,
@@ -404,9 +404,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Norlife/Pods-Norlife-resources.sh",
+				"${PODS_ROOT}/TGCameraViewController/TGCameraViewController/Classes/View/Base.lproj/TGCameraAuthorizationViewController.xib",
+				"${PODS_ROOT}/TGCameraViewController/TGCameraViewController/Classes/View/Base.lproj/TGCameraViewController.xib",
+				"${PODS_ROOT}/TGCameraViewController/TGCameraViewController/Classes/View/Base.lproj/TGPhotoViewController.xib",
+				"${PODS_ROOT}/TGCameraViewController/TGCameraViewController/TGCameraViewController.xcassets",
+				"${PODS_ROOT}/TGCameraViewController/TGCameraViewController/Resources/TGCameraViewController.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

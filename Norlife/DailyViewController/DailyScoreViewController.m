@@ -10,28 +10,53 @@
 
 @interface DailyScoreViewController ()
 
+@property (strong, nonatomic) IBOutlet UINavigationBar *mainNavigationBar;
+@property (strong, nonatomic) UIImage *chosenImage;
+
 @end
 
 @implementation DailyScoreViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (IBAction) pressedComposeButton:(id)sender
+{
+    TGCameraNavigationController *navigationController = [TGCameraNavigationController newWithCameraDelegate:self];
+    [TGCamera setOption:kTGCameraOptionHiddenFilterButton value:@(YES)];
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
-*/
+
+- (void) cameraDidCancel
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) cameraDidTakePhoto:(UIImage *)image
+{
+    self.chosenImage = image;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
+        NSDictionary *foodAttributes = [[[FoodClassifierHandler alloc] initWithImage:self.chosenImage] classifyImage];
+        NSLog(@"%@", foodAttributes);
+    });
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)cameraDidSelectAlbumPhoto:(UIImage *)image
+{
+    self.chosenImage = image;
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
+        NSDictionary *foodAttributes = [[[FoodClassifierHandler alloc] initWithImage:self.chosenImage] classifyImage];
+        NSLog(@"%@", foodAttributes);
+    });
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
 
 @end

@@ -7,84 +7,146 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		066BB3DC21AE9B912E681817D4E4D313 /* BSONEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 87A7720806C6F22283E199F4B28C319F /* BSONEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		08DC0F9F4737F75348A07F14F389EC0D /* MongoConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 51A5785DD05DE7E363B6B38386FB1A41 /* MongoConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0AE7B6FE8CF61CE70C9B345FB6655E1E /* BSONEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 7AA8B0100691F49B2A93E7B1826D881F /* BSONEncoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		0D17C9B70BB5C67EFBD7EE12B2056E29 /* MongoUpdateRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FB5CE63C6F9AE95CC1B01EE1CF471B5 /* MongoUpdateRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		170DD6FC7359FE90DA678C80ACF2F5E1 /* BSONCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 00F9F711BE71D52338964B1EDF014DE1 /* BSONCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2163278AC50D402DDF85DDFF754C42B3 /* Mongo_Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 05F6081A473590EC617BAA38A342A578 /* Mongo_Helper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		2240DD666E1C4E6AE1C34D616A4C8209 /* bcon.h in Headers */ = {isa = PBXBuildFile; fileRef = A82AB50A893D828AA69F9099B27F53D4 /* bcon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		226DF671093CF5B267E2896902A22F48 /* NSData+BSONAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F8D893AE34E64EF81E9F67C55E6FE52 /* NSData+BSONAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		27380D6D37997448B7C150D4EEBE9CC5 /* MongoConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = E2AEC75ABE2C7A3373178A9648209578 /* MongoConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		284F5C0E6C2C03FBEED5EDF5CDEF140C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		287AC6AE20DF79C1EC9364D15124D4FF /* Pods-Norlife-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA770A38DA6884E612D352853CCCE5 /* Pods-Norlife-dummy.m */; };
-		2C862704E428411ECE4057D15D8E3ABD /* gridfs.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A30F37DACFD878A649C8816B3D7E50D /* gridfs.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		2FAA14A443E3E88D5A1B0055A9F1BE70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		3015734FD663F1011484532932C9B7CC /* NSManagedObject+BSONCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BA938D8FE5B21300C82DF0662A8B827 /* NSManagedObject+BSONCoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		3179D3B12FC03D6D889D3421DA806E0D /* NSDictionary+BSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6819D6311CCAE43AEC7BBE6A9A0F3F58 /* NSDictionary+BSONAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		33146216A5B83D653BD9BAFAAA7F3A0F /* BSONTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = EE061D62D214F9A39BB6489315052BE0 /* BSONTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		340FFAB8AC1CBA67FAADCF458963C638 /* bson.h in Headers */ = {isa = PBXBuildFile; fileRef = AADF9814A4E863330F82EBBD535FA67E /* bson.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37F6F2D2A02948A7559426225F556572 /* Mongo_Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = F9D5235D8809E79FF80A975CFE77300F /* Mongo_Helper.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		39E9B8188B5A49E907BA9309E4A25D71 /* BSON_PrivateInterfaces.h in Headers */ = {isa = PBXBuildFile; fileRef = 0FBC37918BEE69A7D60471D7618C0DAB /* BSON_PrivateInterfaces.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		3C07342C2C8DB9E70DC99BD6730913BD /* MongoWriteConcern.m in Sources */ = {isa = PBXBuildFile; fileRef = 071E311781380B01FCC24B6F8CAE0765 /* MongoWriteConcern.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		3F6116A66D28CB9945F655CE894AC492 /* MongoPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3180BF6C76710693BCAED6B381B920B3 /* MongoPredicate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		40C37DB5F024A3357D919F011C2D460E /* BSONDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D427114F896D6675770219535CA000A /* BSONDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		424B7DAE6CBFBA8FDFCB42FE79367062 /* MongoWriteConcern.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FE5C3ADC0AEF695162BD35D174E7EFE /* MongoWriteConcern.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		42ECC4D2252E48233FD59AF4C28C4BF4 /* MongoUpdateRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E8B6396C04F750842D6818D25DB8B89 /* MongoUpdateRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		47B5B9756C5C9872A5108E26C7BB1DCB /* mongo.c in Sources */ = {isa = PBXBuildFile; fileRef = 27827108FDB325B84E55023F1C31FBCF /* mongo.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		493F0141C25015417608AE29398A7889 /* BSONIterator.m in Sources */ = {isa = PBXBuildFile; fileRef = E9437C2C6B7D63D74645A61B56333E9F /* BSONIterator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		4A776C071577B45ACECD72283E2009C6 /* ObjCMongoDB.h in Headers */ = {isa = PBXBuildFile; fileRef = D36E32598C28B790AEDC3E738CFE127B /* ObjCMongoDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52689B2CAE8E688F07AA1B88BC5A20BA /* BSONDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 708BFD6B72A4AA6EDA053FD951454DCE /* BSONDecoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		56B08DE50C4AA4CA97716876106A2ED2 /* NSArray+MongoAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D930D482A355545DE0EFC6E23EB59BA3 /* NSArray+MongoAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		59FF6DA34A3BAA65D79E7AC1F016518B /* MongoCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = C92450CE1B9344CA67D5F2D15ABCF627 /* MongoCursor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		649EE1395FEA436508056F8B46BFE05B /* MongoConnection+Diagnostics.h in Headers */ = {isa = PBXBuildFile; fileRef = C4FDA718E9C4E88F6EE990583F725CEA /* MongoConnection+Diagnostics.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		682F85B8FE161C046E1C38DB917C5E7C /* gridfs.c in Sources */ = {isa = PBXBuildFile; fileRef = 66D4452E6772C9CFB1035AFBF96D99DF /* gridfs.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		69AB9E530A6409604A1A6F4D17F628AA /* BSON_Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 231F1BDC50943B2BE98F73A37604B284 /* BSON_Helper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6ECCB8F047C8C6AE5B3A8F12A2EC6FEE /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2197F3163CF1519FEE3901D6074EAF /* md5.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7351D7FC5CD51197696FD01BB2243E64 /* NSDictionary+BSONAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 27A4B62598DAE878AEC0119074B7AE04 /* NSDictionary+BSONAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74DDA21701C3F7AE790748CF8E042EB5 /* BSONIterator.h in Headers */ = {isa = PBXBuildFile; fileRef = D1A12B2E2893FF9E281DD4445735EACF /* BSONIterator.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		767448E060838A73C48C2A3F410F4E96 /* env.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CE902514DB473309CC1AFA993C23F42 /* env.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		066BB3DC21AE9B912E681817D4E4D313 /* BSONEncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B60FB6883B5F61A0906EA4B58B7A2CD7 /* BSONEncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		084C2B0BEA21CB9582784A88F0609123 /* TGCameraGrid.h in Headers */ = {isa = PBXBuildFile; fileRef = EA0DBF400E98E9E5C0478D5B1A0EBE71 /* TGCameraGrid.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		08DC0F9F4737F75348A07F14F389EC0D /* MongoConnection.h in Headers */ = {isa = PBXBuildFile; fileRef = 3590DC97E8A33A7363076EA38340B963 /* MongoConnection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0AE7B6FE8CF61CE70C9B345FB6655E1E /* BSONEncoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 907D30142455C4BCF2E6435CE8BD4046 /* BSONEncoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		0D17C9B70BB5C67EFBD7EE12B2056E29 /* MongoUpdateRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D8B27A58585F45D828FCE3EC3B6E840 /* MongoUpdateRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		108A4366C2F98D40453B67C2D3AF0CCD /* TGTintedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA2F5D40F008C05883DB88B23CF4DA2 /* TGTintedButton.m */; };
+		11AD8147D072F26F44670B8F3049DBBC /* TGCameraToggle.m in Sources */ = {isa = PBXBuildFile; fileRef = 58ED4F40ACC20C5D0038B9E7E4281D40 /* TGCameraToggle.m */; };
+		170DD6FC7359FE90DA678C80ACF2F5E1 /* BSONCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E1D2E4A6EDCA555C7C2EE9F47F7DA98 /* BSONCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AB8BF28C509E02082563FD262FFA1FF /* Pods-Norlife-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09FA770A38DA6884E612D352853CCCE5 /* Pods-Norlife-dummy.m */; };
+		1B1507E0AEF2F9BEA011F9052DC11157 /* TGCameraFocus.h in Headers */ = {isa = PBXBuildFile; fileRef = 60CB5D79184C461B804B1FF69386821F /* TGCameraFocus.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2163278AC50D402DDF85DDFF754C42B3 /* Mongo_Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 9354F391A821C83AD83E1F90E4A62D4C /* Mongo_Helper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		2240DD666E1C4E6AE1C34D616A4C8209 /* bcon.h in Headers */ = {isa = PBXBuildFile; fileRef = 748C199A90CEC45DC895C41B186C5505 /* bcon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		226DF671093CF5B267E2896902A22F48 /* NSData+BSONAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38562D07AE6518CBA21401E2F6FC1920 /* NSData+BSONAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		245F850F458766B2A35F009E4165DD01 /* TGCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = AE53374F40A9BAC070D731A57FEE708E /* TGCamera.m */; };
+		27380D6D37997448B7C150D4EEBE9CC5 /* MongoConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = DEFCCBA6F3AABC1D513B0D2D0ECD2463 /* MongoConnection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		29A4EC9ECEF6AB60C754CA2767515F81 /* TGCameraFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 38A384B92F3E52B6C7EC7B30C14B3FD9 /* TGCameraFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B2BAD6DDDD99E5087962CCA5F820DBD /* TGCameraSlideView.m in Sources */ = {isa = PBXBuildFile; fileRef = AD9E67AF47E1A741D7E96A2ADCA5DD9F /* TGCameraSlideView.m */; };
+		2C862704E428411ECE4057D15D8E3ABD /* gridfs.h in Headers */ = {isa = PBXBuildFile; fileRef = C6C4AC16D4DEAEAC2B88D5B7359143FF /* gridfs.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2FAA14A443E3E88D5A1B0055A9F1BE70 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1702A7757120C4ABB6F482B8AC6B36A4 /* Foundation.framework */; };
+		3015734FD663F1011484532932C9B7CC /* NSManagedObject+BSONCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = BEF1EBFC183D531CEDCEEC5E1996FCF0 /* NSManagedObject+BSONCoding.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3179D3B12FC03D6D889D3421DA806E0D /* NSDictionary+BSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7CFF1CA87C96CCA6DB41DB911B4F47FB /* NSDictionary+BSONAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		33146216A5B83D653BD9BAFAAA7F3A0F /* BSONTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D8898D850DD0DE92FFC5F117CA4308A /* BSONTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		340FFAB8AC1CBA67FAADCF458963C638 /* bson.h in Headers */ = {isa = PBXBuildFile; fileRef = E8D94C4DEBDDC20AE0DC667DA32685DF /* bson.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3716D585FB4BB4E82CD99228F4D3905B /* TGPhotoViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 19DC4596E9C7FE83735BF31125D560CA /* TGPhotoViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		37F6F2D2A02948A7559426225F556572 /* Mongo_Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = EE6E8DEAA999838C318FBFE423F6542E /* Mongo_Helper.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		39E9B8188B5A49E907BA9309E4A25D71 /* BSON_PrivateInterfaces.h in Headers */ = {isa = PBXBuildFile; fileRef = EBCD6AB140181DC400C62D88A39600FB /* BSON_PrivateInterfaces.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		3C07342C2C8DB9E70DC99BD6730913BD /* MongoWriteConcern.m in Sources */ = {isa = PBXBuildFile; fileRef = FABC8E750EF3EA614D0BAF940AA2565A /* MongoWriteConcern.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		3C73D5E44FA53B95B88813E6A3524721 /* TGCameraFocus.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A717CC7104E25E301EA8FC235376227 /* TGCameraFocus.m */; };
+		3EAD01EE94675C0F793C1AF54DD912E7 /* TGCameraSlideView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B9CB657209991E0FCBDF6F553B7BA16 /* TGCameraSlideView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F6116A66D28CB9945F655CE894AC492 /* MongoPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7216B382AEAB9E160F663A3E152FE822 /* MongoPredicate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		40C37DB5F024A3357D919F011C2D460E /* BSONDocument.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE158C06EF6C47347AED21FA9E63E2 /* BSONDocument.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		41B1C8BAF25B587BFF9ABB61752A2B20 /* TGPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33BFD6919E5808D208D985FDFE52C4DE /* TGPhotoViewController.m */; };
+		424B7DAE6CBFBA8FDFCB42FE79367062 /* MongoWriteConcern.h in Headers */ = {isa = PBXBuildFile; fileRef = DF3680FAE907C6735E9378955FA15B04 /* MongoWriteConcern.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		42ECC4D2252E48233FD59AF4C28C4BF4 /* MongoUpdateRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2303C4ABF34AE1433734A8E53306B665 /* MongoUpdateRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		44D1EDEE701855986CCEFBEFDC7A13AF /* TGCameraFilterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 22BC4BE5DC3D53AFB55676376EAD96DC /* TGCameraFilterView.m */; };
+		46FA70A8A86D8565E31899DF0937C72B /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 541D522E713C3259B9D78290E72E7596 /* CoreImage.framework */; };
+		47B5B9756C5C9872A5108E26C7BB1DCB /* mongo.c in Sources */ = {isa = PBXBuildFile; fileRef = 46D97A07A24E9122C0AAB638A3A63D41 /* mongo.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		493F0141C25015417608AE29398A7889 /* BSONIterator.m in Sources */ = {isa = PBXBuildFile; fileRef = FAD6BF1ACCCF45AF7F144FC71F719BF0 /* BSONIterator.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4A776C071577B45ACECD72283E2009C6 /* ObjCMongoDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A1D3A9870D0F8F542FB3EE465B8162B /* ObjCMongoDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		501983C127E5C91542573590D931D4AF /* TGCameraNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 97CE3C86126661EE8D9972A391F85F21 /* TGCameraNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		521EB0D3816A3DF794BBEFE0921C6135 /* TGCameraGridView.h in Headers */ = {isa = PBXBuildFile; fileRef = 129CDC78D36324611714EACE843C141B /* TGCameraGridView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52689B2CAE8E688F07AA1B88BC5A20BA /* BSONDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 5DB24DAE99F8BEC2B71FE5B3E34C1C30 /* BSONDecoder.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		56B08DE50C4AA4CA97716876106A2ED2 /* NSArray+MongoAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = FB8C877D9A49DF1D793069FC117B0E4D /* NSArray+MongoAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		59FF6DA34A3BAA65D79E7AC1F016518B /* MongoCursor.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CAC1B4DDDD1943CD6A5177D22ACA111 /* MongoCursor.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		62495D6590CEB7E0E050EF8698920BA1 /* TGAssetImageFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B59D8E579795B4FD64E68F51E04BFA1 /* TGAssetImageFile.m */; };
+		649EE1395FEA436508056F8B46BFE05B /* MongoConnection+Diagnostics.h in Headers */ = {isa = PBXBuildFile; fileRef = 968C8371C54A0D4F9737CB91604F103A /* MongoConnection+Diagnostics.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		682F85B8FE161C046E1C38DB917C5E7C /* gridfs.c in Sources */ = {isa = PBXBuildFile; fileRef = 6CED822B3ED64F85ED9C437F79EBF3A4 /* gridfs.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		69AB9E530A6409604A1A6F4D17F628AA /* BSON_Helper.m in Sources */ = {isa = PBXBuildFile; fileRef = 483F4E9167A160D79BADDB86E1AB8DB9 /* BSON_Helper.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6AADF30EF1DD42FC7D02D5C277DAD851 /* TGCameraFocusView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FCB412D80F230578429FDFB9C0FDA0B /* TGCameraFocusView.m */; };
+		6ECCB8F047C8C6AE5B3A8F12A2EC6FEE /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 319D2ED1136D922E3F8AADBD84DF5CA6 /* md5.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6F26C2DC7DFDAFB5DC1DF09647D33EEB /* TGCameraFocusView.h in Headers */ = {isa = PBXBuildFile; fileRef = D07BC696056A471C79D1AE4DAB3B96C7 /* TGCameraFocusView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7351D7FC5CD51197696FD01BB2243E64 /* NSDictionary+BSONAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 950989C5C744E594319293BA87FDA555 /* NSDictionary+BSONAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74DDA21701C3F7AE790748CF8E042EB5 /* BSONIterator.h in Headers */ = {isa = PBXBuildFile; fileRef = 293D50ED0BBF8533B16930D9EF055815 /* BSONIterator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		767448E060838A73C48C2A3F410F4E96 /* env.h in Headers */ = {isa = PBXBuildFile; fileRef = 86ED966B32FE593E80B21E5793F4C190 /* env.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		78D58D9D674FF574DD2C623F4841C4B5 /* TGCamera.h in Headers */ = {isa = PBXBuildFile; fileRef = 0F1C56FEC1EB1ABFF18E671FAF260A53 /* TGCamera.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7BA434EB3D0AAA8AA5717DDADC4E7BED /* Pods-NorlifeUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 62F27691ACE18768A35108FCE1065C45 /* Pods-NorlifeUITests-dummy.m */; };
-		7F9F041875D07DE472E5B275CB1F46DC /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = 8EAD77A7F1DA725783BB20D7AC728B4F /* md5.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		82F8C8CB6BBF9FE2EF083DBA2DFCFCE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		852ACF04213FBCB4B387DFD0913D386A /* ObjCBSON.h in Headers */ = {isa = PBXBuildFile; fileRef = 16A3042AD7FC2D6C8C415D42A538E648 /* ObjCBSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		85475F013F6B204AE9826FDE6F635E30 /* MongoTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = D801DFCCE6DE53B963351B2C4ECA427C /* MongoTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8619ECE3683194C72BDF157B47D6D58A /* NSString+BSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C81D2B254F5BC4D0F5ADF693C5BB14C /* NSString+BSONAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		8EB26DB323DAE598DFEC226B84072818 /* BSONDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 267BFB5847F3968DB2CC357F6FCDFD01 /* BSONDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		932D3436C2C4862320A92B392652BDC3 /* OrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = CF5C73C12FC6A45F9CEE30DB298480C8 /* OrderedDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		933CB91F628D7486476E2E16646387DF /* bson.c in Sources */ = {isa = PBXBuildFile; fileRef = A1E83929C1D88F3207D59C8E4146F7EE /* bson.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		93F2B33D125CE38D984836578F2D2C24 /* MongoKeyedPredicate.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C1253FC926638E4E57B905D31FC487B /* MongoKeyedPredicate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		948FCAFC2FE9D082A770219012CBBA7E /* MongoCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E2D85DD96EABB31FB9C1FEAE38AD2E0 /* MongoCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		98DBA1894B5A9DA74E2A695FD2B67430 /* ObjCMongoDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 96CC60B2F372D0A10CC1E43A73251C1A /* ObjCMongoDB-dummy.m */; };
-		9ACCDBA4FB8F8D20F43E8EB3CB7023AE /* MongoTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = A34C6369D71E8508A641508CDF32F135 /* MongoTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9B183DF245B228E2A524FF5276D862A3 /* MongoFindRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AB60F869A82CB747D68EF8688436416 /* MongoFindRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		9C1EFDF1509D5FEC47D8911CCE4FE1D3 /* bcon.c in Sources */ = {isa = PBXBuildFile; fileRef = 73BEF8E8885268C2542A7399F5F68133 /* bcon.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		AA891F1D16F649800C05D48B683CE3D4 /* NSArray+MongoAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9FF154863B3290193F3E8B626E762F /* NSArray+MongoAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		B097A6047B04724FD1682E259A85ECCB /* mongo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4613D335C55372E6E83B41322E6C5E9C /* mongo.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B5D0FA08AE47862945A1BA06D1A8B62B /* NSData+BSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 420448D0DCE958932C689FE4F14F014F /* NSData+BSONAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		BDF1EEAEEECBBA33EF9C2B31D26F1ADE /* MongoPredicate.h in Headers */ = {isa = PBXBuildFile; fileRef = D946E5D0D03EBC8EC0E3A9DF618653F0 /* MongoPredicate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE4557A070ED959BF6258F55CC150B8F /* MongoFindRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = FE5A325D22F68EB820B83540F0ACF840 /* MongoFindRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BF57B3FA488D8DD86895AF66BAA054D2 /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = E3B8FDD2AC33E003D94F560BF0CE1CEF /* encoding.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		BF9229F6E1711B6D5BF5EBA4CEFEF755 /* numbers.c in Sources */ = {isa = PBXBuildFile; fileRef = 74A518488AB3F6EA6889979DEFF8098E /* numbers.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		BFCE587EAB66C2C19BE0E694295FE44C /* MongoDBCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E997ABBD1694338BCB9D1BB1044B4FF /* MongoDBCollection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		C2905BE0DC09DE6C42D3ABD21ED64B97 /* Mongo_PrivateInterfaces.h in Headers */ = {isa = PBXBuildFile; fileRef = B1F16C20919055E189E8903D26ED8E8B /* Mongo_PrivateInterfaces.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		CA0F257F7624826AC24AFD83A6F54791 /* MongoDBCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = C5CD3661AE940AC0C8929DA46D0B8F16 /* MongoDBCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CD31291E3920D0671589F4E257F48314 /* MongoConnection+Diagnostics.m in Sources */ = {isa = PBXBuildFile; fileRef = C1935477C64D705F5211E674D12F9427 /* MongoConnection+Diagnostics.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D1E29BE0B712DE3C3AEA0B2D4D26B08F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		D3291BCDAEB3F7FA41601D3462291513 /* env.c in Sources */ = {isa = PBXBuildFile; fileRef = C2E0B39B88F1B4422CF60844B90A5520 /* env.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D35238DE78E53DF186ABE3091A325A4A /* BSON_Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E1AF93E26D8E3B105A7B1B1B6F15058 /* BSON_Helper.h */; settings = {ATTRIBUTES = (Private, ); }; };
-		D37BA75679504A46FF927D38229BF302 /* BSONDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 111C633010D41F841CFB102D977300DD /* BSONDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D38AB09FD124018E5897E8A9A7A77E68 /* encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = A048D9F9F4F61AFB8E45E81A7FEB10AE /* encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E01E8CED3901084FF734A84500A74B63 /* NSManagedObject+BSONCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BCD3360C5ADD5BD601695C6C72F6DF4 /* NSManagedObject+BSONCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E13D65D79DCEFC110E094739C39AB5DF /* mongo-c-driver-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D8EB18177BB1152F6CEBD164D3052AE7 /* mongo-c-driver-dummy.m */; };
-		ECA30558D2421A316FF855CA3AF9835D /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BB4E58E2BA840A86D42D1E22D81A27E /* OrderedDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EE2AEC37C8430C9CFD9B741F3AF3021E /* BSONTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 03BF140BBF5929541708976E0490C68C /* BSONTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		EFAF4FDF32355CC88B857508011ABB8B /* ObjCBSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 76815C07C3DC5D015C299B7710CCACC4 /* ObjCBSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		F76DA0CBD03F5965310506316EF11C89 /* MongoKeyedPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DACD8B85A484733DCADB76BA6CBF08D /* MongoKeyedPredicate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		FF4A8814F97C62BEC2B85AC0A5655A32 /* NSString+BSONAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = BD3D0462B09BC0AEFDED8E1E252DD91A /* NSString+BSONAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7D593420E656C4ED5DFEE6E33690A2AC /* TGTintedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B167E048CF61E16506EBCE65694601A /* TGTintedLabel.m */; };
+		7F9F041875D07DE472E5B275CB1F46DC /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = 2A5EA5E31566E5C8C9918988D31A56FF /* md5.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		801F909745C024AA205DCBF495D64A9A /* TGCameraViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F03E97BB6E8D8737AF7275EADAE73E44 /* TGCameraViewController-dummy.m */; };
+		82F8C8CB6BBF9FE2EF083DBA2DFCFCE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1702A7757120C4ABB6F482B8AC6B36A4 /* Foundation.framework */; };
+		852ACF04213FBCB4B387DFD0913D386A /* ObjCBSON.h in Headers */ = {isa = PBXBuildFile; fileRef = E1EE18DB193C9665BCD41D0F67DE55F5 /* ObjCBSON.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		85475F013F6B204AE9826FDE6F635E30 /* MongoTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7FDEC07CC62B38BDF9173F500610F7 /* MongoTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8619ECE3683194C72BDF157B47D6D58A /* NSString+BSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7218FB4FE8F276BBBA04552A718FE713 /* NSString+BSONAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		8638768BF537EA8D81B9C21EE60B6142 /* TGCameraSlideDownView.h in Headers */ = {isa = PBXBuildFile; fileRef = 59D07CBE4F3884B3745C1956A507EC17 /* TGCameraSlideDownView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8EB26DB323DAE598DFEC226B84072818 /* BSONDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E932DB694C8FA77F722693F2726FAD4 /* BSONDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		917A72920ED7616FA44CEBA98811745C /* TGAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = C050DC77C6C6B014940FDD543E759C35 /* TGAlbum.m */; };
+		92BCC344D3473A3C13572D0C62033A6B /* TGCameraColor.m in Sources */ = {isa = PBXBuildFile; fileRef = DB230AED95C0CE74FD8ED3E4B2AFD7FE /* TGCameraColor.m */; };
+		932D3436C2C4862320A92B392652BDC3 /* OrderedDictionary.h in Headers */ = {isa = PBXBuildFile; fileRef = 152B5F601B3443E153FE892353585608 /* OrderedDictionary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		933CB91F628D7486476E2E16646387DF /* bson.c in Sources */ = {isa = PBXBuildFile; fileRef = 64EF0A23B41D2F37605895EBC63C8FCB /* bson.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		93F2B33D125CE38D984836578F2D2C24 /* MongoKeyedPredicate.h in Headers */ = {isa = PBXBuildFile; fileRef = EF2F3D388C2631A00CEF5DDB952F3B6C /* MongoKeyedPredicate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		948A1C38FA8EAB9CB685C82172F93BE0 /* TGCameraToggle.h in Headers */ = {isa = PBXBuildFile; fileRef = 44575835DE13A9394CDD414B55380302 /* TGCameraToggle.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		948FCAFC2FE9D082A770219012CBBA7E /* MongoCursor.h in Headers */ = {isa = PBXBuildFile; fileRef = 6832476BDFCCD975EA79438B23486241 /* MongoCursor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98DAB2B9CE0C8C590BF6FACFD5D5ECB4 /* TGTintedLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = 602F4CBA91052F09666978E1551F9346 /* TGTintedLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		98DBA1894B5A9DA74E2A695FD2B67430 /* ObjCMongoDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 75DAA0E2A7CE3E901B9B541DEC249393 /* ObjCMongoDB-dummy.m */; };
+		9ACCDBA4FB8F8D20F43E8EB3CB7023AE /* MongoTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 397FF44937D16C6F0959168AE9DC4929 /* MongoTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9B1288A69D2A4B61224F507A6EB5EA38 /* TGCameraFlash.m in Sources */ = {isa = PBXBuildFile; fileRef = 69EAEC34FE7DA478A8E8F1C8BECC54A7 /* TGCameraFlash.m */; };
+		9B183DF245B228E2A524FF5276D862A3 /* MongoFindRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F2C9768495BFCDCCDA70C1388FEC123 /* MongoFindRequest.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9B8CE1A541ABBE5C618946784EC79D2A /* TGAssetImageFile.h in Headers */ = {isa = PBXBuildFile; fileRef = DF88FAFA9E56FD3896EFC39D827C6AF6 /* TGAssetImageFile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C1EFDF1509D5FEC47D8911CCE4FE1D3 /* bcon.c in Sources */ = {isa = PBXBuildFile; fileRef = BD5E9F10045D3B117AB25A100C18D917 /* bcon.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		A381E879630C897CDB25D77FAA51437C /* TGCameraFlash.h in Headers */ = {isa = PBXBuildFile; fileRef = 74BE6EFA3F92640C6D17F09DA83AB83D /* TGCameraFlash.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A3E29588D49F0F542DE6749E2B90341C /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5763AC1EFA71C5159E3CA0FCCCC3683 /* AVFoundation.framework */; };
+		AA891F1D16F649800C05D48B683CE3D4 /* NSArray+MongoAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 77CF7E7D1DC8D902DCBFDE8278A6ECBC /* NSArray+MongoAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ADC7FC5DC0EEA9F7E3E7DA2AF3E9BFDA /* TGCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D229D7998677C7F8ACA42F87D1B69477 /* TGCameraViewController.m */; };
+		B097A6047B04724FD1682E259A85ECCB /* mongo.h in Headers */ = {isa = PBXBuildFile; fileRef = 3EC31A878229BA9D0EE8C0B1473774F8 /* mongo.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B4F922FD92E0705CA5AC0342CA896A97 /* TGCameraFilterView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0931BCDB9C1BD159DB465662527EB4F /* TGCameraFilterView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B5D0FA08AE47862945A1BA06D1A8B62B /* NSData+BSONAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 998E082F3D7E66A2C067920886335A86 /* NSData+BSONAdditions.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		B6F3CFCCBEA6F3AB7F419FE77416B8A2 /* TGCameraAuthorizationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9808A17DE46EF4B0CBBC9925FEA0C9FC /* TGCameraAuthorizationViewController.m */; };
+		BDF1EEAEEECBBA33EF9C2B31D26F1ADE /* MongoPredicate.h in Headers */ = {isa = PBXBuildFile; fileRef = 42AC0A7CADF96E3FC8564085ED23789A /* MongoPredicate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE4557A070ED959BF6258F55CC150B8F /* MongoFindRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 78ECA8AD7CED7F7E68699E1B8B34C1FD /* MongoFindRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF57B3FA488D8DD86895AF66BAA054D2 /* encoding.c in Sources */ = {isa = PBXBuildFile; fileRef = 05F1422CB3C54023C375BF8713FDBD06 /* encoding.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BF9229F6E1711B6D5BF5EBA4CEFEF755 /* numbers.c in Sources */ = {isa = PBXBuildFile; fileRef = 0B1368B100BD57DC69AFC313E0DCEF3E /* numbers.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BFCE587EAB66C2C19BE0E694295FE44C /* MongoDBCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 833CD38001845DFC26B788E04EA04597 /* MongoDBCollection.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		C06CF113DBBF5C69576AC3535765A1F6 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1307499B8DB7AB4A610BDBFBB9151C /* MobileCoreServices.framework */; };
+		C1DB9841A8B2FAAEEC0A2A469DEE17CC /* TGCameraSlideUpView.h in Headers */ = {isa = PBXBuildFile; fileRef = D0B66A824D9B3FF3DF6B5AFF18DF517E /* TGCameraSlideUpView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2905BE0DC09DE6C42D3ABD21ED64B97 /* Mongo_PrivateInterfaces.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B465891882464B70FC6EABA5C8C3C89 /* Mongo_PrivateInterfaces.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		C5FF5F162D1B6E87DF56A2AC9D74CE1E /* UIImage+CameraFilters.h in Headers */ = {isa = PBXBuildFile; fileRef = 62C1C3DF63A6AF8DA108D6F16C44AEC5 /* UIImage+CameraFilters.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C657EFD38C134740A7FDA911E5DB5688 /* TGCameraNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48087B4FBD77C98BB352FE7F28555391 /* TGCameraNavigationController.m */; };
+		CA0F257F7624826AC24AFD83A6F54791 /* MongoDBCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = CFA922B2C559759C24F8FF091982AF71 /* MongoDBCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CD31291E3920D0671589F4E257F48314 /* MongoConnection+Diagnostics.m in Sources */ = {isa = PBXBuildFile; fileRef = F092F0D1B886382517AD0FDE783D0D4D /* MongoConnection+Diagnostics.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		CD69BB5D5AD03C17B7C50C93F8642528 /* TGCameraGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 750B8B0E475B9DC1AEB8DFD40ECB6AAA /* TGCameraGrid.m */; };
+		CF409DED6719D7C9CA22FB57BB93E13C /* TGCameraSlideUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = FCC547766A460BC070F9D9CB570EB3E0 /* TGCameraSlideUpView.m */; };
+		CF81E63C3B645D0C89B2356DD022F02E /* TGAssetsLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = ABEDA8119D6AC93E2480B2E7CA5CE683 /* TGAssetsLibrary.m */; };
+		D1E29BE0B712DE3C3AEA0B2D4D26B08F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1702A7757120C4ABB6F482B8AC6B36A4 /* Foundation.framework */; };
+		D3291BCDAEB3F7FA41601D3462291513 /* env.c in Sources */ = {isa = PBXBuildFile; fileRef = 040F875D747D2E58EF1CD160202BE117 /* env.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D35238DE78E53DF186ABE3091A325A4A /* BSON_Helper.h in Headers */ = {isa = PBXBuildFile; fileRef = BA90DA30744E5C5A561ABA077248D8AD /* BSON_Helper.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		D37BA75679504A46FF927D38229BF302 /* BSONDocument.h in Headers */ = {isa = PBXBuildFile; fileRef = 0CFAB069A188952EA1C2B3608C36C557 /* BSONDocument.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D38AB09FD124018E5897E8A9A7A77E68 /* encoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 85D436FD99DED33285ABCAB22C97F6E6 /* encoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D75FD481F5D63835997F003AD54A7F01 /* TGAlbum.h in Headers */ = {isa = PBXBuildFile; fileRef = 09F513865DEDF0F40484AE617C69509B /* TGAlbum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D99080965AB150643BCEDEA1F3DE19C5 /* TGCameraViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = C3DD8EF7B06E167A6D0454803E0A160D /* TGCameraViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC77260A5B1DF18B7F7D6832660EB23C /* TGCameraColor.h in Headers */ = {isa = PBXBuildFile; fileRef = 3FF27C526AC989B46BDBE16BA5167121 /* TGCameraColor.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DE7F168F0E0D00FAD3574B7B3C010282 /* TGCameraFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = CB77BF1B7F3D2ACC68E4030EEE40DB78 /* TGCameraFunctions.m */; };
+		E01E8CED3901084FF734A84500A74B63 /* NSManagedObject+BSONCoding.h in Headers */ = {isa = PBXBuildFile; fileRef = 206A36DE703BE8ECBCC8A80CAF9D9369 /* NSManagedObject+BSONCoding.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E13D65D79DCEFC110E094739C39AB5DF /* mongo-c-driver-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B25BFC9BAEC7BF9DBC828DFA2F4F814 /* mongo-c-driver-dummy.m */; };
+		E4578797A7AD0697E0DE5424CEA9FC14 /* UIImage+CameraFilters.m in Sources */ = {isa = PBXBuildFile; fileRef = F94C569B181726ABB10FB2166EE8CFA2 /* UIImage+CameraFilters.m */; };
+		E459EAB9D164EEAC0C6E80F6B417D895 /* TGAssetsLibrary.h in Headers */ = {isa = PBXBuildFile; fileRef = 1F8AB4D276357AEAF137D56D1DF56DBB /* TGAssetsLibrary.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC353FB5C2818DD6A4354825880874A0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EF3F1F690EC4B8F38ACD2C8BEF02A24 /* UIKit.framework */; };
+		ECA30558D2421A316FF855CA3AF9835D /* OrderedDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DEA31E03BB4FEFE1A5FA9B3AE076AFC /* OrderedDictionary.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		ED1080379974287A3E209733FA0CA5FC /* TGTintedButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 5B264283058C685AC685A5E0143727E1 /* TGTintedButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE2AEC37C8430C9CFD9B741F3AF3021E /* BSONTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = B43B0E5EB3C9E64260BEB2585A73C896 /* BSONTypes.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		EFAF4FDF32355CC88B857508011ABB8B /* ObjCBSON.m in Sources */ = {isa = PBXBuildFile; fileRef = EB95D05D359A41D0420C9ED0F1C1E15A /* ObjCBSON.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F4105C9AC8B6C133CEE71C9CC68466D3 /* TGCameraSlideDownView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7759F67E09839DC90CAD82FEB4D931CB /* TGCameraSlideDownView.m */; };
+		F5D5DA12C0B08BEE5D3C11DAC3D90665 /* TGCameraShot.h in Headers */ = {isa = PBXBuildFile; fileRef = A2620C7B3DAD17E93E9E7B7F1E09965A /* TGCameraShot.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F61BFF5274CD3FF5582161A466674BC9 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD9DB3B213C43525C2D8EE990A796091 /* AssetsLibrary.framework */; };
+		F76DA0CBD03F5965310506316EF11C89 /* MongoKeyedPredicate.m in Sources */ = {isa = PBXBuildFile; fileRef = E35EFAE4D4ECC4E6E8C415EB20CC2BE7 /* MongoKeyedPredicate.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		F7BCB12DCD63426643CC27F0111C3D07 /* TGCameraAuthorizationViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = BD64654FEB33B4099D1B171B181A4D99 /* TGCameraAuthorizationViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F9D131DB45099005295CA091A4CD154A /* TGCameraShot.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3445F134980202B321D5717F293EE9 /* TGCameraShot.m */; };
+		FBA3FA6805329A2E0EA4F99F6A9FF6D1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1702A7757120C4ABB6F482B8AC6B36A4 /* Foundation.framework */; };
+		FC5A6104E448D06D352321AB49F48CFE /* TGCameraGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = 80C61B9ED913187B24B0AE55D86DE9A5 /* TGCameraGridView.m */; };
+		FD2F99073A558EB59A59A07DB4E15EDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1702A7757120C4ABB6F482B8AC6B36A4 /* Foundation.framework */; };
+		FF4A8814F97C62BEC2B85AC0A5655A32 /* NSString+BSONAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 5C7FF5584ED6F96B4A930F6F1506F672 /* NSString+BSONAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4AC3707C137BFBB2EFC59529D61957F2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E3C20043DBFBE214319FA15FC48DDB5;
+			remoteInfo = TGCameraViewController;
+		};
 		8F06DA39A678ACD64AE0ECC4657DBB69 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -92,127 +154,181 @@
 			remoteGlobalIDString = 6892035F3272CD5F3468B2DA13EB12D6;
 			remoteInfo = "mongo-c-driver";
 		};
-		9022D470CA6B3007843ABD5F6071C374 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 6892035F3272CD5F3468B2DA13EB12D6;
-			remoteInfo = "mongo-c-driver";
-		};
-		CD2489CDADA9A8AA24A6FC5D213D31B7 /* PBXContainerItemProxy */ = {
+		A7155DB32EA1B740B2A31C9A1F6A9DFF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 0FA0E0CA9346F162B9704B53B8AD73FB;
 			remoteInfo = ObjCMongoDB;
 		};
+		BCA31CA0237D55309D7B546BEE6AAE03 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6892035F3272CD5F3468B2DA13EB12D6;
+			remoteInfo = "mongo-c-driver";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00F9F711BE71D52338964B1EDF014DE1 /* BSONCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSONCoding.h; path = BSON/BSONCoding.h; sourceTree = "<group>"; };
-		03BF140BBF5929541708976E0490C68C /* BSONTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSONTypes.m; path = BSON/BSONTypes.m; sourceTree = "<group>"; };
-		05F6081A473590EC617BAA38A342A578 /* Mongo_Helper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Mongo_Helper.m; path = Mongo/Mongo_Helper.m; sourceTree = "<group>"; };
-		071E311781380B01FCC24B6F8CAE0765 /* MongoWriteConcern.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoWriteConcern.m; path = Mongo/MongoWriteConcern.m; sourceTree = "<group>"; };
+		02EBE68315E05B352DE77D286DBDB0C7 /* ObjCMongoDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjCMongoDB.xcconfig; sourceTree = "<group>"; };
+		040F875D747D2E58EF1CD160202BE117 /* env.c */ = {isa = PBXFileReference; includeInIndex = 1; name = env.c; path = src/env.c; sourceTree = "<group>"; };
+		05F1422CB3C54023C375BF8713FDBD06 /* encoding.c */ = {isa = PBXFileReference; includeInIndex = 1; name = encoding.c; path = src/encoding.c; sourceTree = "<group>"; };
 		084342A8E8D30878C3AA61250EF02B50 /* Pods-Norlife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Norlife.debug.xcconfig"; sourceTree = "<group>"; };
+		09F513865DEDF0F40484AE617C69509B /* TGAlbum.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGAlbum.h; path = TGCameraViewController/Classes/Helper/TGAlbum.h; sourceTree = "<group>"; };
 		09FA770A38DA6884E612D352853CCCE5 /* Pods-Norlife-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Norlife-dummy.m"; sourceTree = "<group>"; };
-		0FBC37918BEE69A7D60471D7618C0DAB /* BSON_PrivateInterfaces.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSON_PrivateInterfaces.h; path = BSON/BSON_PrivateInterfaces.h; sourceTree = "<group>"; };
-		111C633010D41F841CFB102D977300DD /* BSONDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSONDocument.h; path = BSON/BSONDocument.h; sourceTree = "<group>"; };
+		0B1368B100BD57DC69AFC313E0DCEF3E /* numbers.c */ = {isa = PBXFileReference; includeInIndex = 1; name = numbers.c; path = src/numbers.c; sourceTree = "<group>"; };
+		0B59D8E579795B4FD64E68F51E04BFA1 /* TGAssetImageFile.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGAssetImageFile.m; path = TGCameraViewController/Classes/Model/TGAssetImageFile.m; sourceTree = "<group>"; };
+		0B9CB657209991E0FCBDF6F553B7BA16 /* TGCameraSlideView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraSlideView.h; path = TGCameraViewController/Classes/UI/TGCameraSlideView.h; sourceTree = "<group>"; };
+		0CFAB069A188952EA1C2B3608C36C557 /* BSONDocument.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSONDocument.h; path = BSON/BSONDocument.h; sourceTree = "<group>"; };
+		0F1C56FEC1EB1ABFF18E671FAF260A53 /* TGCamera.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCamera.h; path = TGCameraViewController/Classes/Helper/TGCamera.h; sourceTree = "<group>"; };
+		116BB7E2D0CB48B1428C3E89ED3BB8FA /* mongo-c-driver-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "mongo-c-driver-prefix.pch"; sourceTree = "<group>"; };
+		129CDC78D36324611714EACE843C141B /* TGCameraGridView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraGridView.h; path = TGCameraViewController/Classes/UI/TGCameraGridView.h; sourceTree = "<group>"; };
+		152B5F601B3443E153FE892353585608 /* OrderedDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OrderedDictionary.h; path = OrderedDictionary/OrderedDictionary.h; sourceTree = "<group>"; };
 		163EDF0E912E10F34894AD1165973B54 /* Pods-NorlifeUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NorlifeUITests-resources.sh"; sourceTree = "<group>"; };
-		16A3042AD7FC2D6C8C415D42A538E648 /* ObjCBSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjCBSON.h; path = BSON/ObjCBSON.h; sourceTree = "<group>"; };
-		19DFAAF1141785C507B7186E9123F389 /* mongo-c-driver-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "mongo-c-driver-prefix.pch"; sourceTree = "<group>"; };
-		1BCD3360C5ADD5BD601695C6C72F6DF4 /* NSManagedObject+BSONCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+BSONCoding.h"; path = "BSON/NSManagedObject+BSONCoding.h"; sourceTree = "<group>"; };
-		1E2D85DD96EABB31FB9C1FEAE38AD2E0 /* MongoCursor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoCursor.h; path = Mongo/MongoCursor.h; sourceTree = "<group>"; };
-		231F1BDC50943B2BE98F73A37604B284 /* BSON_Helper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSON_Helper.m; path = BSON/BSON_Helper.m; sourceTree = "<group>"; };
+		16F8C2AAB3722DF43E02C1D6CFC74AFC /* TGCameraViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TGCameraViewController.xcconfig; sourceTree = "<group>"; };
+		1702A7757120C4ABB6F482B8AC6B36A4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		19DC4596E9C7FE83735BF31125D560CA /* TGPhotoViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGPhotoViewController.h; path = TGCameraViewController/Classes/Control/TGPhotoViewController.h; sourceTree = "<group>"; };
+		1A717CC7104E25E301EA8FC235376227 /* TGCameraFocus.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraFocus.m; path = TGCameraViewController/Classes/Helper/TGCameraFocus.m; sourceTree = "<group>"; };
+		1ABE158C06EF6C47347AED21FA9E63E2 /* BSONDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSONDocument.m; path = BSON/BSONDocument.m; sourceTree = "<group>"; };
+		1F8AB4D276357AEAF137D56D1DF56DBB /* TGAssetsLibrary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGAssetsLibrary.h; path = TGCameraViewController/Classes/Helper/TGAssetsLibrary.h; sourceTree = "<group>"; };
+		206A36DE703BE8ECBCC8A80CAF9D9369 /* NSManagedObject+BSONCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSManagedObject+BSONCoding.h"; path = "BSON/NSManagedObject+BSONCoding.h"; sourceTree = "<group>"; };
+		22BC4BE5DC3D53AFB55676376EAD96DC /* TGCameraFilterView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraFilterView.m; path = TGCameraViewController/Classes/UI/TGCameraFilterView.m; sourceTree = "<group>"; };
+		2303C4ABF34AE1433734A8E53306B665 /* MongoUpdateRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoUpdateRequest.m; path = Mongo/MongoUpdateRequest.m; sourceTree = "<group>"; };
 		259A902FA96821D521D90B148B2C7E1C /* Pods-Norlife-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Norlife-resources.sh"; sourceTree = "<group>"; };
-		267BFB5847F3968DB2CC357F6FCDFD01 /* BSONDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSONDecoder.h; path = BSON/BSONDecoder.h; sourceTree = "<group>"; };
-		27827108FDB325B84E55023F1C31FBCF /* mongo.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mongo.c; path = src/mongo.c; sourceTree = "<group>"; };
-		27A4B62598DAE878AEC0119074B7AE04 /* NSDictionary+BSONAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+BSONAdditions.h"; path = "BSON/NSDictionary+BSONAdditions.h"; sourceTree = "<group>"; };
+		293D50ED0BBF8533B16930D9EF055815 /* BSONIterator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSONIterator.h; path = BSON/BSONIterator.h; sourceTree = "<group>"; };
+		2A5EA5E31566E5C8C9918988D31A56FF /* md5.c */ = {isa = PBXFileReference; includeInIndex = 1; name = md5.c; path = src/md5.c; sourceTree = "<group>"; };
+		2B25BFC9BAEC7BF9DBC828DFA2F4F814 /* mongo-c-driver-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "mongo-c-driver-dummy.m"; sourceTree = "<group>"; };
 		2CA943EBB448B63FD3EEBF33982D76D5 /* Pods-Norlife-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Norlife-acknowledgements.plist"; sourceTree = "<group>"; };
-		2DACD8B85A484733DCADB76BA6CBF08D /* MongoKeyedPredicate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoKeyedPredicate.m; path = Mongo/MongoKeyedPredicate.m; sourceTree = "<group>"; };
-		2F8D893AE34E64EF81E9F67C55E6FE52 /* NSData+BSONAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+BSONAdditions.h"; path = "BSON/NSData+BSONAdditions.h"; sourceTree = "<group>"; };
-		3180BF6C76710693BCAED6B381B920B3 /* MongoPredicate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoPredicate.m; path = Mongo/MongoPredicate.m; sourceTree = "<group>"; };
-		3D427114F896D6675770219535CA000A /* BSONDocument.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSONDocument.m; path = BSON/BSONDocument.m; sourceTree = "<group>"; };
+		2D8B27A58585F45D828FCE3EC3B6E840 /* MongoUpdateRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoUpdateRequest.h; path = Mongo/MongoUpdateRequest.h; sourceTree = "<group>"; };
+		2F2C9768495BFCDCCDA70C1388FEC123 /* MongoFindRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoFindRequest.m; path = Mongo/MongoFindRequest.m; sourceTree = "<group>"; };
+		319D2ED1136D922E3F8AADBD84DF5CA6 /* md5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = md5.h; path = src/md5.h; sourceTree = "<group>"; };
+		33BFD6919E5808D208D985FDFE52C4DE /* TGPhotoViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGPhotoViewController.m; path = TGCameraViewController/Classes/Control/TGPhotoViewController.m; sourceTree = "<group>"; };
+		3590DC97E8A33A7363076EA38340B963 /* MongoConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoConnection.h; path = Mongo/MongoConnection.h; sourceTree = "<group>"; };
+		3708465C856302C1392EA0595082DD57 /* TGCameraViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TGCameraViewController.xib; path = Base.lproj/TGCameraViewController.xib; sourceTree = "<group>"; };
+		38562D07AE6518CBA21401E2F6FC1920 /* NSData+BSONAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSData+BSONAdditions.h"; path = "BSON/NSData+BSONAdditions.h"; sourceTree = "<group>"; };
+		38A384B92F3E52B6C7EC7B30C14B3FD9 /* TGCameraFunctions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraFunctions.h; path = TGCameraViewController/Classes/Helper/TGCameraFunctions.h; sourceTree = "<group>"; };
+		397FF44937D16C6F0959168AE9DC4929 /* MongoTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoTypes.h; path = Mongo/MongoTypes.h; sourceTree = "<group>"; };
+		39F14AF6E80C32126358DAF11DEAC948 /* libObjCMongoDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libObjCMongoDB.a; path = libObjCMongoDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CAC1B4DDDD1943CD6A5177D22ACA111 /* MongoCursor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoCursor.m; path = Mongo/MongoCursor.m; sourceTree = "<group>"; };
+		3DEA31E03BB4FEFE1A5FA9B3AE076AFC /* OrderedDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OrderedDictionary.m; path = OrderedDictionary/OrderedDictionary.m; sourceTree = "<group>"; };
 		3E7C6ADBFEBC3819DE01EDAC8523248D /* Pods-NorlifeUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NorlifeUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		3FB5CE63C6F9AE95CC1B01EE1CF471B5 /* MongoUpdateRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoUpdateRequest.h; path = Mongo/MongoUpdateRequest.h; sourceTree = "<group>"; };
-		420448D0DCE958932C689FE4F14F014F /* NSData+BSONAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+BSONAdditions.m"; path = "BSON/NSData+BSONAdditions.m"; sourceTree = "<group>"; };
-		4613D335C55372E6E83B41322E6C5E9C /* mongo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mongo.h; path = src/mongo.h; sourceTree = "<group>"; };
+		3E932DB694C8FA77F722693F2726FAD4 /* BSONDecoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSONDecoder.h; path = BSON/BSONDecoder.h; sourceTree = "<group>"; };
+		3EC31A878229BA9D0EE8C0B1473774F8 /* mongo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = mongo.h; path = src/mongo.h; sourceTree = "<group>"; };
+		3FA2F5D40F008C05883DB88B23CF4DA2 /* TGTintedButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGTintedButton.m; path = TGCameraViewController/Classes/UI/TGTintedButton.m; sourceTree = "<group>"; };
+		3FF27C526AC989B46BDBE16BA5167121 /* TGCameraColor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraColor.h; path = TGCameraViewController/Classes/Helper/TGCameraColor.h; sourceTree = "<group>"; };
+		42AC0A7CADF96E3FC8564085ED23789A /* MongoPredicate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoPredicate.h; path = Mongo/MongoPredicate.h; sourceTree = "<group>"; };
+		44575835DE13A9394CDD414B55380302 /* TGCameraToggle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraToggle.h; path = TGCameraViewController/Classes/Helper/TGCameraToggle.h; sourceTree = "<group>"; };
+		46D97A07A24E9122C0AAB638A3A63D41 /* mongo.c */ = {isa = PBXFileReference; includeInIndex = 1; name = mongo.c; path = src/mongo.c; sourceTree = "<group>"; };
+		48087B4FBD77C98BB352FE7F28555391 /* TGCameraNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraNavigationController.m; path = TGCameraViewController/Classes/Control/TGCameraNavigationController.m; sourceTree = "<group>"; };
+		483F4E9167A160D79BADDB86E1AB8DB9 /* BSON_Helper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSON_Helper.m; path = BSON/BSON_Helper.m; sourceTree = "<group>"; };
+		4A7FDEC07CC62B38BDF9173F500610F7 /* MongoTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoTypes.m; path = Mongo/MongoTypes.m; sourceTree = "<group>"; };
 		4BC65313A8F0386C766EC0E63D5104DE /* Pods-Norlife.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Norlife.release.xcconfig"; sourceTree = "<group>"; };
-		4CE902514DB473309CC1AFA993C23F42 /* env.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = env.h; path = src/env.h; sourceTree = "<group>"; };
-		4E8B6396C04F750842D6818D25DB8B89 /* MongoUpdateRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoUpdateRequest.m; path = Mongo/MongoUpdateRequest.m; sourceTree = "<group>"; };
-		51A5785DD05DE7E363B6B38386FB1A41 /* MongoConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoConnection.h; path = Mongo/MongoConnection.h; sourceTree = "<group>"; };
-		5C1253FC926638E4E57B905D31FC487B /* MongoKeyedPredicate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoKeyedPredicate.h; path = Mongo/MongoKeyedPredicate.h; sourceTree = "<group>"; };
-		5E9FF154863B3290193F3E8B626E762F /* NSArray+MongoAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MongoAdditions.m"; path = "Mongo/NSArray+MongoAdditions.m"; sourceTree = "<group>"; };
+		4E7CCF55AE2293027FF004BA1A8DED84 /* libTGCameraViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libTGCameraViewController.a; path = libTGCameraViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FCB412D80F230578429FDFB9C0FDA0B /* TGCameraFocusView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraFocusView.m; path = TGCameraViewController/Classes/UI/TGCameraFocusView.m; sourceTree = "<group>"; };
+		53DC77A9611CDE123F49802245F43501 /* TGCameraViewController.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = TGCameraViewController.bundle; path = TGCameraViewController/Resources/TGCameraViewController.bundle; sourceTree = "<group>"; };
+		541D522E713C3259B9D78290E72E7596 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/CoreImage.framework; sourceTree = DEVELOPER_DIR; };
+		58ED4F40ACC20C5D0038B9E7E4281D40 /* TGCameraToggle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraToggle.m; path = TGCameraViewController/Classes/Helper/TGCameraToggle.m; sourceTree = "<group>"; };
+		59D07CBE4F3884B3745C1956A507EC17 /* TGCameraSlideDownView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraSlideDownView.h; path = TGCameraViewController/Classes/UI/TGCameraSlideDownView.h; sourceTree = "<group>"; };
+		5B264283058C685AC685A5E0143727E1 /* TGTintedButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGTintedButton.h; path = TGCameraViewController/Classes/UI/TGTintedButton.h; sourceTree = "<group>"; };
+		5BBFE11AD3A66351CA50B1A6E661B187 /* libPods-Norlife.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Norlife.a"; path = "libPods-Norlife.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7FF5584ED6F96B4A930F6F1506F672 /* NSString+BSONAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+BSONAdditions.h"; path = "BSON/NSString+BSONAdditions.h"; sourceTree = "<group>"; };
+		5DB24DAE99F8BEC2B71FE5B3E34C1C30 /* BSONDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSONDecoder.m; path = BSON/BSONDecoder.m; sourceTree = "<group>"; };
+		602F4CBA91052F09666978E1551F9346 /* TGTintedLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGTintedLabel.h; path = TGCameraViewController/Classes/UI/TGTintedLabel.h; sourceTree = "<group>"; };
+		60CB5D79184C461B804B1FF69386821F /* TGCameraFocus.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraFocus.h; path = TGCameraViewController/Classes/Helper/TGCameraFocus.h; sourceTree = "<group>"; };
+		61C36FFADF5F8357FCB5BFD997381089 /* mongo-c-driver.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "mongo-c-driver.xcconfig"; sourceTree = "<group>"; };
+		62C1C3DF63A6AF8DA108D6F16C44AEC5 /* UIImage+CameraFilters.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIImage+CameraFilters.h"; path = "TGCameraViewController/Classes/Category/UIImage+CameraFilters.h"; sourceTree = "<group>"; };
 		62F27691ACE18768A35108FCE1065C45 /* Pods-NorlifeUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NorlifeUITests-dummy.m"; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		66D4452E6772C9CFB1035AFBF96D99DF /* gridfs.c */ = {isa = PBXFileReference; includeInIndex = 1; name = gridfs.c; path = src/gridfs.c; sourceTree = "<group>"; };
-		6819D6311CCAE43AEC7BBE6A9A0F3F58 /* NSDictionary+BSONAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+BSONAdditions.m"; path = "BSON/NSDictionary+BSONAdditions.m"; sourceTree = "<group>"; };
-		6BB4E58E2BA840A86D42D1E22D81A27E /* OrderedDictionary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = OrderedDictionary.m; path = OrderedDictionary/OrderedDictionary.m; sourceTree = "<group>"; };
-		6C81D2B254F5BC4D0F5ADF693C5BB14C /* NSString+BSONAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+BSONAdditions.m"; path = "BSON/NSString+BSONAdditions.m"; sourceTree = "<group>"; };
-		6FE5C3ADC0AEF695162BD35D174E7EFE /* MongoWriteConcern.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoWriteConcern.h; path = Mongo/MongoWriteConcern.h; sourceTree = "<group>"; };
-		708BFD6B72A4AA6EDA053FD951454DCE /* BSONDecoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSONDecoder.m; path = BSON/BSONDecoder.m; sourceTree = "<group>"; };
+		64EF0A23B41D2F37605895EBC63C8FCB /* bson.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bson.c; path = src/bson.c; sourceTree = "<group>"; };
+		66A2CA0AF9C94201CE8F4985175B7C46 /* libmongo-c-driver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libmongo-c-driver.a"; path = "libmongo-c-driver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6832476BDFCCD975EA79438B23486241 /* MongoCursor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoCursor.h; path = Mongo/MongoCursor.h; sourceTree = "<group>"; };
+		69EAEC34FE7DA478A8E8F1C8BECC54A7 /* TGCameraFlash.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraFlash.m; path = TGCameraViewController/Classes/Helper/TGCameraFlash.m; sourceTree = "<group>"; };
+		6B167E048CF61E16506EBCE65694601A /* TGTintedLabel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGTintedLabel.m; path = TGCameraViewController/Classes/UI/TGTintedLabel.m; sourceTree = "<group>"; };
+		6CED822B3ED64F85ED9C437F79EBF3A4 /* gridfs.c */ = {isa = PBXFileReference; includeInIndex = 1; name = gridfs.c; path = src/gridfs.c; sourceTree = "<group>"; };
+		6EF3F1F690EC4B8F38ACD2C8BEF02A24 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		7062BF9DB7FA9F9E9292965A043074BF /* TGCameraViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TGCameraViewController-prefix.pch"; sourceTree = "<group>"; };
 		7195A765E682BBD07705EC02FF6BCFA1 /* Pods-Norlife-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Norlife-frameworks.sh"; sourceTree = "<group>"; };
-		73BEF8E8885268C2542A7399F5F68133 /* bcon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bcon.c; path = src/bcon.c; sourceTree = "<group>"; };
-		74A518488AB3F6EA6889979DEFF8098E /* numbers.c */ = {isa = PBXFileReference; includeInIndex = 1; name = numbers.c; path = src/numbers.c; sourceTree = "<group>"; };
-		76815C07C3DC5D015C299B7710CCACC4 /* ObjCBSON.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ObjCBSON.m; path = BSON/ObjCBSON.m; sourceTree = "<group>"; };
-		7AA8B0100691F49B2A93E7B1826D881F /* BSONEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSONEncoder.m; path = BSON/BSONEncoder.m; sourceTree = "<group>"; };
+		7216B382AEAB9E160F663A3E152FE822 /* MongoPredicate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoPredicate.m; path = Mongo/MongoPredicate.m; sourceTree = "<group>"; };
+		7218FB4FE8F276BBBA04552A718FE713 /* NSString+BSONAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+BSONAdditions.m"; path = "BSON/NSString+BSONAdditions.m"; sourceTree = "<group>"; };
+		748C199A90CEC45DC895C41B186C5505 /* bcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bcon.h; path = src/bcon.h; sourceTree = "<group>"; };
+		74BE6EFA3F92640C6D17F09DA83AB83D /* TGCameraFlash.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraFlash.h; path = TGCameraViewController/Classes/Helper/TGCameraFlash.h; sourceTree = "<group>"; };
+		750B8B0E475B9DC1AEB8DFD40ECB6AAA /* TGCameraGrid.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraGrid.m; path = TGCameraViewController/Classes/Helper/TGCameraGrid.m; sourceTree = "<group>"; };
+		75DAA0E2A7CE3E901B9B541DEC249393 /* ObjCMongoDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjCMongoDB-dummy.m"; sourceTree = "<group>"; };
+		7759F67E09839DC90CAD82FEB4D931CB /* TGCameraSlideDownView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraSlideDownView.m; path = TGCameraViewController/Classes/UI/TGCameraSlideDownView.m; sourceTree = "<group>"; };
+		77CF7E7D1DC8D902DCBFDE8278A6ECBC /* NSArray+MongoAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+MongoAdditions.m"; path = "Mongo/NSArray+MongoAdditions.m"; sourceTree = "<group>"; };
+		78ECA8AD7CED7F7E68699E1B8B34C1FD /* MongoFindRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoFindRequest.h; path = Mongo/MongoFindRequest.h; sourceTree = "<group>"; };
+		7B465891882464B70FC6EABA5C8C3C89 /* Mongo_PrivateInterfaces.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mongo_PrivateInterfaces.h; path = Mongo/Mongo_PrivateInterfaces.h; sourceTree = "<group>"; };
+		7CFF1CA87C96CCA6DB41DB911B4F47FB /* NSDictionary+BSONAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDictionary+BSONAdditions.m"; path = "BSON/NSDictionary+BSONAdditions.m"; sourceTree = "<group>"; };
 		7D4D894C78969A26550757E36C3A000B /* Pods-NorlifeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NorlifeUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		7E1D2E4A6EDCA555C7C2EE9F47F7DA98 /* BSONCoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSONCoding.h; path = BSON/BSONCoding.h; sourceTree = "<group>"; };
+		80C61B9ED913187B24B0AE55D86DE9A5 /* TGCameraGridView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraGridView.m; path = TGCameraViewController/Classes/UI/TGCameraGridView.m; sourceTree = "<group>"; };
+		833CD38001845DFC26B788E04EA04597 /* MongoDBCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoDBCollection.m; path = Mongo/MongoDBCollection.m; sourceTree = "<group>"; };
 		8439E8888FFF7027B04C1D2B92EE55E8 /* Pods-Norlife-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Norlife-acknowledgements.markdown"; sourceTree = "<group>"; };
-		87A7720806C6F22283E199F4B28C319F /* BSONEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSONEncoder.h; path = BSON/BSONEncoder.h; sourceTree = "<group>"; };
-		8AB60F869A82CB747D68EF8688436416 /* MongoFindRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoFindRequest.m; path = Mongo/MongoFindRequest.m; sourceTree = "<group>"; };
-		8BA938D8FE5B21300C82DF0662A8B827 /* NSManagedObject+BSONCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+BSONCoding.m"; path = "BSON/NSManagedObject+BSONCoding.m"; sourceTree = "<group>"; };
-		8E1AF93E26D8E3B105A7B1B1B6F15058 /* BSON_Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSON_Helper.h; path = BSON/BSON_Helper.h; sourceTree = "<group>"; };
-		8E997ABBD1694338BCB9D1BB1044B4FF /* MongoDBCollection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoDBCollection.m; path = Mongo/MongoDBCollection.m; sourceTree = "<group>"; };
-		8EAD77A7F1DA725783BB20D7AC728B4F /* md5.c */ = {isa = PBXFileReference; includeInIndex = 1; name = md5.c; path = src/md5.c; sourceTree = "<group>"; };
+		85D436FD99DED33285ABCAB22C97F6E6 /* encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = encoding.h; path = src/encoding.h; sourceTree = "<group>"; };
+		86ED966B32FE593E80B21E5793F4C190 /* env.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = env.h; path = src/env.h; sourceTree = "<group>"; };
 		8F534FD86DA33DA0B4F0DB30CF39DF88 /* Pods-NorlifeUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NorlifeUITests-frameworks.sh"; sourceTree = "<group>"; };
-		922286F211FFFE85E4973C812260E506 /* libmongo-c-driver.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libmongo-c-driver.a"; path = "libmongo-c-driver.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		907D30142455C4BCF2E6435CE8BD4046 /* BSONEncoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSONEncoder.m; path = BSON/BSONEncoder.m; sourceTree = "<group>"; };
+		9354F391A821C83AD83E1F90E4A62D4C /* Mongo_Helper.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = Mongo_Helper.m; path = Mongo/Mongo_Helper.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		948BAE893385D3FCD4725A73722CD04B /* Pods-NorlifeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NorlifeUITests.release.xcconfig"; sourceTree = "<group>"; };
-		96CC60B2F372D0A10CC1E43A73251C1A /* ObjCMongoDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ObjCMongoDB-dummy.m"; sourceTree = "<group>"; };
-		9A30F37DACFD878A649C8816B3D7E50D /* gridfs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = gridfs.h; path = src/gridfs.h; sourceTree = "<group>"; };
-		A048D9F9F4F61AFB8E45E81A7FEB10AE /* encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = encoding.h; path = src/encoding.h; sourceTree = "<group>"; };
-		A1E83929C1D88F3207D59C8E4146F7EE /* bson.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bson.c; path = src/bson.c; sourceTree = "<group>"; };
-		A34C6369D71E8508A641508CDF32F135 /* MongoTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoTypes.h; path = Mongo/MongoTypes.h; sourceTree = "<group>"; };
-		A82AB50A893D828AA69F9099B27F53D4 /* bcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bcon.h; path = src/bcon.h; sourceTree = "<group>"; };
-		AA3F895387679CD8798352BA4B550F2B /* libObjCMongoDB.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libObjCMongoDB.a; path = libObjCMongoDB.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AADF9814A4E863330F82EBBD535FA67E /* bson.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bson.h; path = src/bson.h; sourceTree = "<group>"; };
-		B0DE2D8B192920D32F6B0FD68A31155F /* mongo-c-driver.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "mongo-c-driver.xcconfig"; sourceTree = "<group>"; };
-		B1F16C20919055E189E8903D26ED8E8B /* Mongo_PrivateInterfaces.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mongo_PrivateInterfaces.h; path = Mongo/Mongo_PrivateInterfaces.h; sourceTree = "<group>"; };
-		BD3D0462B09BC0AEFDED8E1E252DD91A /* NSString+BSONAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+BSONAdditions.h"; path = "BSON/NSString+BSONAdditions.h"; sourceTree = "<group>"; };
-		C1935477C64D705F5211E674D12F9427 /* MongoConnection+Diagnostics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MongoConnection+Diagnostics.m"; path = "Mongo/MongoConnection+Diagnostics.m"; sourceTree = "<group>"; };
-		C2E0B39B88F1B4422CF60844B90A5520 /* env.c */ = {isa = PBXFileReference; includeInIndex = 1; name = env.c; path = src/env.c; sourceTree = "<group>"; };
-		C4FDA718E9C4E88F6EE990583F725CEA /* MongoConnection+Diagnostics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MongoConnection+Diagnostics.h"; path = "Mongo/MongoConnection+Diagnostics.h"; sourceTree = "<group>"; };
-		C5CD3661AE940AC0C8929DA46D0B8F16 /* MongoDBCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoDBCollection.h; path = Mongo/MongoDBCollection.h; sourceTree = "<group>"; };
-		C92450CE1B9344CA67D5F2D15ABCF627 /* MongoCursor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoCursor.m; path = Mongo/MongoCursor.m; sourceTree = "<group>"; };
-		CC01EBC84BDFE12F62AA9A0806663601 /* ObjCMongoDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjCMongoDB-prefix.pch"; sourceTree = "<group>"; };
-		CF5C73C12FC6A45F9CEE30DB298480C8 /* OrderedDictionary.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = OrderedDictionary.h; path = OrderedDictionary/OrderedDictionary.h; sourceTree = "<group>"; };
-		D1A12B2E2893FF9E281DD4445735EACF /* BSONIterator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSONIterator.h; path = BSON/BSONIterator.h; sourceTree = "<group>"; };
-		D36E32598C28B790AEDC3E738CFE127B /* ObjCMongoDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjCMongoDB.h; path = Mongo/ObjCMongoDB.h; sourceTree = "<group>"; };
-		D692FFC8EF60135C5475CEDB2BF8A853 /* ObjCMongoDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ObjCMongoDB.xcconfig; sourceTree = "<group>"; };
-		D801DFCCE6DE53B963351B2C4ECA427C /* MongoTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoTypes.m; path = Mongo/MongoTypes.m; sourceTree = "<group>"; };
-		D8EB18177BB1152F6CEBD164D3052AE7 /* mongo-c-driver-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "mongo-c-driver-dummy.m"; sourceTree = "<group>"; };
-		D90B680FF54E0377057F41FEE58D5FC6 /* libPods-Norlife.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-Norlife.a"; path = "libPods-Norlife.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D930D482A355545DE0EFC6E23EB59BA3 /* NSArray+MongoAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MongoAdditions.h"; path = "Mongo/NSArray+MongoAdditions.h"; sourceTree = "<group>"; };
-		D946E5D0D03EBC8EC0E3A9DF618653F0 /* MongoPredicate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoPredicate.h; path = Mongo/MongoPredicate.h; sourceTree = "<group>"; };
-		E2AEC75ABE2C7A3373178A9648209578 /* MongoConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoConnection.m; path = Mongo/MongoConnection.m; sourceTree = "<group>"; };
-		E3B8FDD2AC33E003D94F560BF0CE1CEF /* encoding.c */ = {isa = PBXFileReference; includeInIndex = 1; name = encoding.c; path = src/encoding.c; sourceTree = "<group>"; };
+		950989C5C744E594319293BA87FDA555 /* NSDictionary+BSONAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+BSONAdditions.h"; path = "BSON/NSDictionary+BSONAdditions.h"; sourceTree = "<group>"; };
+		968C8371C54A0D4F9737CB91604F103A /* MongoConnection+Diagnostics.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MongoConnection+Diagnostics.h"; path = "Mongo/MongoConnection+Diagnostics.h"; sourceTree = "<group>"; };
+		97CE3C86126661EE8D9972A391F85F21 /* TGCameraNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraNavigationController.h; path = TGCameraViewController/Classes/Control/TGCameraNavigationController.h; sourceTree = "<group>"; };
+		9808A17DE46EF4B0CBBC9925FEA0C9FC /* TGCameraAuthorizationViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraAuthorizationViewController.m; path = TGCameraViewController/Classes/Control/TGCameraAuthorizationViewController.m; sourceTree = "<group>"; };
+		998E082F3D7E66A2C067920886335A86 /* NSData+BSONAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSData+BSONAdditions.m"; path = "BSON/NSData+BSONAdditions.m"; sourceTree = "<group>"; };
+		9A1D3A9870D0F8F542FB3EE465B8162B /* ObjCMongoDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjCMongoDB.h; path = Mongo/ObjCMongoDB.h; sourceTree = "<group>"; };
+		9D8898D850DD0DE92FFC5F117CA4308A /* BSONTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSONTypes.h; path = BSON/BSONTypes.h; sourceTree = "<group>"; };
+		A2620C7B3DAD17E93E9E7B7F1E09965A /* TGCameraShot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraShot.h; path = TGCameraViewController/Classes/Helper/TGCameraShot.h; sourceTree = "<group>"; };
+		A822D252D1B42DB606EBF4DB44377F27 /* TGCameraViewController.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; name = TGCameraViewController.xcassets; path = TGCameraViewController/TGCameraViewController.xcassets; sourceTree = "<group>"; };
+		A9E5B3EB6A881DD91B23925CFAD50DFC /* ObjCMongoDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ObjCMongoDB-prefix.pch"; sourceTree = "<group>"; };
+		ABEDA8119D6AC93E2480B2E7CA5CE683 /* TGAssetsLibrary.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGAssetsLibrary.m; path = TGCameraViewController/Classes/Helper/TGAssetsLibrary.m; sourceTree = "<group>"; };
+		AD9E67AF47E1A741D7E96A2ADCA5DD9F /* TGCameraSlideView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraSlideView.m; path = TGCameraViewController/Classes/UI/TGCameraSlideView.m; sourceTree = "<group>"; };
+		AE53374F40A9BAC070D731A57FEE708E /* TGCamera.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCamera.m; path = TGCameraViewController/Classes/Helper/TGCamera.m; sourceTree = "<group>"; };
+		B43B0E5EB3C9E64260BEB2585A73C896 /* BSONTypes.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSONTypes.m; path = BSON/BSONTypes.m; sourceTree = "<group>"; };
+		B60FB6883B5F61A0906EA4B58B7A2CD7 /* BSONEncoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSONEncoder.h; path = BSON/BSONEncoder.h; sourceTree = "<group>"; };
+		BA90DA30744E5C5A561ABA077248D8AD /* BSON_Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSON_Helper.h; path = BSON/BSON_Helper.h; sourceTree = "<group>"; };
+		BD5E9F10045D3B117AB25A100C18D917 /* bcon.c */ = {isa = PBXFileReference; includeInIndex = 1; name = bcon.c; path = src/bcon.c; sourceTree = "<group>"; };
+		BD64654FEB33B4099D1B171B181A4D99 /* TGCameraAuthorizationViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraAuthorizationViewController.h; path = TGCameraViewController/Classes/Control/TGCameraAuthorizationViewController.h; sourceTree = "<group>"; };
+		BEF1EBFC183D531CEDCEEC5E1996FCF0 /* NSManagedObject+BSONCoding.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSManagedObject+BSONCoding.m"; path = "BSON/NSManagedObject+BSONCoding.m"; sourceTree = "<group>"; };
+		C050DC77C6C6B014940FDD543E759C35 /* TGAlbum.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGAlbum.m; path = TGCameraViewController/Classes/Helper/TGAlbum.m; sourceTree = "<group>"; };
+		C3DD8EF7B06E167A6D0454803E0A160D /* TGCameraViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraViewController.h; path = TGCameraViewController/Classes/Control/TGCameraViewController.h; sourceTree = "<group>"; };
+		C6C4AC16D4DEAEAC2B88D5B7359143FF /* gridfs.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = gridfs.h; path = src/gridfs.h; sourceTree = "<group>"; };
+		CB77BF1B7F3D2ACC68E4030EEE40DB78 /* TGCameraFunctions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraFunctions.m; path = TGCameraViewController/Classes/Helper/TGCameraFunctions.m; sourceTree = "<group>"; };
+		CD9DB3B213C43525C2D8EE990A796091 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		CE95D3B0D4B8329F39642DA7F86F967E /* TGPhotoViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TGPhotoViewController.xib; path = Base.lproj/TGPhotoViewController.xib; sourceTree = "<group>"; };
+		CFA922B2C559759C24F8FF091982AF71 /* MongoDBCollection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoDBCollection.h; path = Mongo/MongoDBCollection.h; sourceTree = "<group>"; };
+		D07BC696056A471C79D1AE4DAB3B96C7 /* TGCameraFocusView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraFocusView.h; path = TGCameraViewController/Classes/UI/TGCameraFocusView.h; sourceTree = "<group>"; };
+		D0931BCDB9C1BD159DB465662527EB4F /* TGCameraFilterView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraFilterView.h; path = TGCameraViewController/Classes/UI/TGCameraFilterView.h; sourceTree = "<group>"; };
+		D0B66A824D9B3FF3DF6B5AFF18DF517E /* TGCameraSlideUpView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraSlideUpView.h; path = TGCameraViewController/Classes/UI/TGCameraSlideUpView.h; sourceTree = "<group>"; };
+		D229D7998677C7F8ACA42F87D1B69477 /* TGCameraViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraViewController.m; path = TGCameraViewController/Classes/Control/TGCameraViewController.m; sourceTree = "<group>"; };
+		DB230AED95C0CE74FD8ED3E4B2AFD7FE /* TGCameraColor.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraColor.m; path = TGCameraViewController/Classes/Helper/TGCameraColor.m; sourceTree = "<group>"; };
+		DE1307499B8DB7AB4A610BDBFBB9151C /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		DEFCCBA6F3AABC1D513B0D2D0ECD2463 /* MongoConnection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoConnection.m; path = Mongo/MongoConnection.m; sourceTree = "<group>"; };
+		DF3680FAE907C6735E9378955FA15B04 /* MongoWriteConcern.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoWriteConcern.h; path = Mongo/MongoWriteConcern.h; sourceTree = "<group>"; };
+		DF88FAFA9E56FD3896EFC39D827C6AF6 /* TGAssetImageFile.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGAssetImageFile.h; path = TGCameraViewController/Classes/Model/TGAssetImageFile.h; sourceTree = "<group>"; };
+		E1EE18DB193C9665BCD41D0F67DE55F5 /* ObjCBSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ObjCBSON.h; path = BSON/ObjCBSON.h; sourceTree = "<group>"; };
+		E35EFAE4D4ECC4E6E8C415EB20CC2BE7 /* MongoKeyedPredicate.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoKeyedPredicate.m; path = Mongo/MongoKeyedPredicate.m; sourceTree = "<group>"; };
 		E3CCCFDECE0DCD85CEAC8A486E0B0041 /* Pods-NorlifeUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NorlifeUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		E9437C2C6B7D63D74645A61B56333E9F /* BSONIterator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSONIterator.m; path = BSON/BSONIterator.m; sourceTree = "<group>"; };
-		EE061D62D214F9A39BB6489315052BE0 /* BSONTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSONTypes.h; path = BSON/BSONTypes.h; sourceTree = "<group>"; };
-		EF2197F3163CF1519FEE3901D6074EAF /* md5.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = md5.h; path = src/md5.h; sourceTree = "<group>"; };
-		F9D5235D8809E79FF80A975CFE77300F /* Mongo_Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mongo_Helper.h; path = Mongo/Mongo_Helper.h; sourceTree = "<group>"; };
-		FC22F5B83BEB18A92E37C64B3CBB9A0A /* libPods-NorlifeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NorlifeUITests.a"; path = "libPods-NorlifeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FE5A325D22F68EB820B83540F0ACF840 /* MongoFindRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoFindRequest.h; path = Mongo/MongoFindRequest.h; sourceTree = "<group>"; };
+		E5763AC1EFA71C5159E3CA0FCCCC3683 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		E8D94C4DEBDDC20AE0DC667DA32685DF /* bson.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = bson.h; path = src/bson.h; sourceTree = "<group>"; };
+		EA0DBF400E98E9E5C0478D5B1A0EBE71 /* TGCameraGrid.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = TGCameraGrid.h; path = TGCameraViewController/Classes/Helper/TGCameraGrid.h; sourceTree = "<group>"; };
+		EB95D05D359A41D0420C9ED0F1C1E15A /* ObjCBSON.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ObjCBSON.m; path = BSON/ObjCBSON.m; sourceTree = "<group>"; };
+		EBCD6AB140181DC400C62D88A39600FB /* BSON_PrivateInterfaces.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BSON_PrivateInterfaces.h; path = BSON/BSON_PrivateInterfaces.h; sourceTree = "<group>"; };
+		EC622637665E410307C726E41F60CF55 /* libPods-NorlifeUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-NorlifeUITests.a"; path = "libPods-NorlifeUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE6E8DEAA999838C318FBFE423F6542E /* Mongo_Helper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Mongo_Helper.h; path = Mongo/Mongo_Helper.h; sourceTree = "<group>"; };
+		EF2F3D388C2631A00CEF5DDB952F3B6C /* MongoKeyedPredicate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MongoKeyedPredicate.h; path = Mongo/MongoKeyedPredicate.h; sourceTree = "<group>"; };
+		F03E97BB6E8D8737AF7275EADAE73E44 /* TGCameraViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TGCameraViewController-dummy.m"; sourceTree = "<group>"; };
+		F092F0D1B886382517AD0FDE783D0D4D /* MongoConnection+Diagnostics.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "MongoConnection+Diagnostics.m"; path = "Mongo/MongoConnection+Diagnostics.m"; sourceTree = "<group>"; };
+		F6AD8A9295116B81646068DAD8A33B13 /* TGCameraAuthorizationViewController.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = TGCameraAuthorizationViewController.xib; path = Base.lproj/TGCameraAuthorizationViewController.xib; sourceTree = "<group>"; };
+		F94C569B181726ABB10FB2166EE8CFA2 /* UIImage+CameraFilters.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIImage+CameraFilters.m"; path = "TGCameraViewController/Classes/Category/UIImage+CameraFilters.m"; sourceTree = "<group>"; };
+		FA3445F134980202B321D5717F293EE9 /* TGCameraShot.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraShot.m; path = TGCameraViewController/Classes/Helper/TGCameraShot.m; sourceTree = "<group>"; };
+		FABC8E750EF3EA614D0BAF940AA2565A /* MongoWriteConcern.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = MongoWriteConcern.m; path = Mongo/MongoWriteConcern.m; sourceTree = "<group>"; };
+		FAD6BF1ACCCF45AF7F144FC71F719BF0 /* BSONIterator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BSONIterator.m; path = BSON/BSONIterator.m; sourceTree = "<group>"; };
+		FB8C877D9A49DF1D793069FC117B0E4D /* NSArray+MongoAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+MongoAdditions.h"; path = "Mongo/NSArray+MongoAdditions.h"; sourceTree = "<group>"; };
+		FCC547766A460BC070F9D9CB570EB3E0 /* TGCameraSlideUpView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = TGCameraSlideUpView.m; path = TGCameraViewController/Classes/UI/TGCameraSlideUpView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		05DB3505EBB1767AA4551A4EA6D571AC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				284F5C0E6C2C03FBEED5EDF5CDEF140C /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		0D272BC4AB527C2A125E111E92F87CBC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -229,6 +345,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		2F2BF5E69E698C30FFD40086F924E17E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBA3FA6805329A2E0EA4F99F6A9FF6D1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0D23CFD4C6DD73CC32D90D555E0878F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F61BFF5274CD3FF5582161A466674BC9 /* AssetsLibrary.framework in Frameworks */,
+				A3E29588D49F0F542DE6749E2B90341C /* AVFoundation.framework in Frameworks */,
+				46FA70A8A86D8565E31899DF0937C72B /* CoreImage.framework in Frameworks */,
+				FD2F99073A558EB59A59A07DB4E15EDD /* Foundation.framework in Frameworks */,
+				C06CF113DBBF5C69576AC3535765A1F6 /* MobileCoreServices.framework in Frameworks */,
+				EC353FB5C2818DD6A4354825880874A0 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E3F5693A042131BBEF54CB029ED8D0A3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -240,35 +377,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		264A89B01330DA5554CBDC64EA4DB936 /* BSON */ = {
+		0A11CF6331CF0176F3363195B2FE75B5 /* OrderedDictionary */ = {
 			isa = PBXGroup;
 			children = (
-				8E1AF93E26D8E3B105A7B1B1B6F15058 /* BSON_Helper.h */,
-				231F1BDC50943B2BE98F73A37604B284 /* BSON_Helper.m */,
-				0FBC37918BEE69A7D60471D7618C0DAB /* BSON_PrivateInterfaces.h */,
-				00F9F711BE71D52338964B1EDF014DE1 /* BSONCoding.h */,
-				267BFB5847F3968DB2CC357F6FCDFD01 /* BSONDecoder.h */,
-				708BFD6B72A4AA6EDA053FD951454DCE /* BSONDecoder.m */,
-				111C633010D41F841CFB102D977300DD /* BSONDocument.h */,
-				3D427114F896D6675770219535CA000A /* BSONDocument.m */,
-				87A7720806C6F22283E199F4B28C319F /* BSONEncoder.h */,
-				7AA8B0100691F49B2A93E7B1826D881F /* BSONEncoder.m */,
-				D1A12B2E2893FF9E281DD4445735EACF /* BSONIterator.h */,
-				E9437C2C6B7D63D74645A61B56333E9F /* BSONIterator.m */,
-				EE061D62D214F9A39BB6489315052BE0 /* BSONTypes.h */,
-				03BF140BBF5929541708976E0490C68C /* BSONTypes.m */,
-				2F8D893AE34E64EF81E9F67C55E6FE52 /* NSData+BSONAdditions.h */,
-				420448D0DCE958932C689FE4F14F014F /* NSData+BSONAdditions.m */,
-				27A4B62598DAE878AEC0119074B7AE04 /* NSDictionary+BSONAdditions.h */,
-				6819D6311CCAE43AEC7BBE6A9A0F3F58 /* NSDictionary+BSONAdditions.m */,
-				1BCD3360C5ADD5BD601695C6C72F6DF4 /* NSManagedObject+BSONCoding.h */,
-				8BA938D8FE5B21300C82DF0662A8B827 /* NSManagedObject+BSONCoding.m */,
-				BD3D0462B09BC0AEFDED8E1E252DD91A /* NSString+BSONAdditions.h */,
-				6C81D2B254F5BC4D0F5ADF693C5BB14C /* NSString+BSONAdditions.m */,
-				16A3042AD7FC2D6C8C415D42A538E648 /* ObjCBSON.h */,
-				76815C07C3DC5D015C299B7710CCACC4 /* ObjCBSON.m */,
+				152B5F601B3443E153FE892353585608 /* OrderedDictionary.h */,
+				3DEA31E03BB4FEFE1A5FA9B3AE076AFC /* OrderedDictionary.m */,
 			);
-			name = BSON;
+			name = OrderedDictionary;
+			sourceTree = "<group>";
+		};
+		0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EE6D19366A97DAC8E6781241D363F0EB /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1563DC64884566E51FBD8C0E652F5252 /* Mongo */ = {
+			isa = PBXGroup;
+			children = (
+				EE6E8DEAA999838C318FBFE423F6542E /* Mongo_Helper.h */,
+				9354F391A821C83AD83E1F90E4A62D4C /* Mongo_Helper.m */,
+				7B465891882464B70FC6EABA5C8C3C89 /* Mongo_PrivateInterfaces.h */,
+				3590DC97E8A33A7363076EA38340B963 /* MongoConnection.h */,
+				DEFCCBA6F3AABC1D513B0D2D0ECD2463 /* MongoConnection.m */,
+				968C8371C54A0D4F9737CB91604F103A /* MongoConnection+Diagnostics.h */,
+				F092F0D1B886382517AD0FDE783D0D4D /* MongoConnection+Diagnostics.m */,
+				6832476BDFCCD975EA79438B23486241 /* MongoCursor.h */,
+				3CAC1B4DDDD1943CD6A5177D22ACA111 /* MongoCursor.m */,
+				CFA922B2C559759C24F8FF091982AF71 /* MongoDBCollection.h */,
+				833CD38001845DFC26B788E04EA04597 /* MongoDBCollection.m */,
+				78ECA8AD7CED7F7E68699E1B8B34C1FD /* MongoFindRequest.h */,
+				2F2C9768495BFCDCCDA70C1388FEC123 /* MongoFindRequest.m */,
+				EF2F3D388C2631A00CEF5DDB952F3B6C /* MongoKeyedPredicate.h */,
+				E35EFAE4D4ECC4E6E8C415EB20CC2BE7 /* MongoKeyedPredicate.m */,
+				42AC0A7CADF96E3FC8564085ED23789A /* MongoPredicate.h */,
+				7216B382AEAB9E160F663A3E152FE822 /* MongoPredicate.m */,
+				397FF44937D16C6F0959168AE9DC4929 /* MongoTypes.h */,
+				4A7FDEC07CC62B38BDF9173F500610F7 /* MongoTypes.m */,
+				2D8B27A58585F45D828FCE3EC3B6E840 /* MongoUpdateRequest.h */,
+				2303C4ABF34AE1433734A8E53306B665 /* MongoUpdateRequest.m */,
+				DF3680FAE907C6735E9378955FA15B04 /* MongoWriteConcern.h */,
+				FABC8E750EF3EA614D0BAF940AA2565A /* MongoWriteConcern.m */,
+				FB8C877D9A49DF1D793069FC117B0E4D /* NSArray+MongoAdditions.h */,
+				77CF7E7D1DC8D902DCBFDE8278A6ECBC /* NSArray+MongoAdditions.m */,
+				9A1D3A9870D0F8F542FB3EE465B8162B /* ObjCMongoDB.h */,
+			);
+			name = Mongo;
 			sourceTree = "<group>";
 		};
 		2B12A83CEE63DF81EF190C1E4BC0FACA /* Pods-Norlife */ = {
@@ -286,6 +442,76 @@
 			path = "Target Support Files/Pods-Norlife";
 			sourceTree = "<group>";
 		};
+		350C10C318658191D2DB07A3E0E4F19E /* TGCameraViewController */ = {
+			isa = PBXGroup;
+			children = (
+				09F513865DEDF0F40484AE617C69509B /* TGAlbum.h */,
+				C050DC77C6C6B014940FDD543E759C35 /* TGAlbum.m */,
+				DF88FAFA9E56FD3896EFC39D827C6AF6 /* TGAssetImageFile.h */,
+				0B59D8E579795B4FD64E68F51E04BFA1 /* TGAssetImageFile.m */,
+				1F8AB4D276357AEAF137D56D1DF56DBB /* TGAssetsLibrary.h */,
+				ABEDA8119D6AC93E2480B2E7CA5CE683 /* TGAssetsLibrary.m */,
+				0F1C56FEC1EB1ABFF18E671FAF260A53 /* TGCamera.h */,
+				AE53374F40A9BAC070D731A57FEE708E /* TGCamera.m */,
+				BD64654FEB33B4099D1B171B181A4D99 /* TGCameraAuthorizationViewController.h */,
+				9808A17DE46EF4B0CBBC9925FEA0C9FC /* TGCameraAuthorizationViewController.m */,
+				3FF27C526AC989B46BDBE16BA5167121 /* TGCameraColor.h */,
+				DB230AED95C0CE74FD8ED3E4B2AFD7FE /* TGCameraColor.m */,
+				D0931BCDB9C1BD159DB465662527EB4F /* TGCameraFilterView.h */,
+				22BC4BE5DC3D53AFB55676376EAD96DC /* TGCameraFilterView.m */,
+				74BE6EFA3F92640C6D17F09DA83AB83D /* TGCameraFlash.h */,
+				69EAEC34FE7DA478A8E8F1C8BECC54A7 /* TGCameraFlash.m */,
+				60CB5D79184C461B804B1FF69386821F /* TGCameraFocus.h */,
+				1A717CC7104E25E301EA8FC235376227 /* TGCameraFocus.m */,
+				D07BC696056A471C79D1AE4DAB3B96C7 /* TGCameraFocusView.h */,
+				4FCB412D80F230578429FDFB9C0FDA0B /* TGCameraFocusView.m */,
+				38A384B92F3E52B6C7EC7B30C14B3FD9 /* TGCameraFunctions.h */,
+				CB77BF1B7F3D2ACC68E4030EEE40DB78 /* TGCameraFunctions.m */,
+				EA0DBF400E98E9E5C0478D5B1A0EBE71 /* TGCameraGrid.h */,
+				750B8B0E475B9DC1AEB8DFD40ECB6AAA /* TGCameraGrid.m */,
+				129CDC78D36324611714EACE843C141B /* TGCameraGridView.h */,
+				80C61B9ED913187B24B0AE55D86DE9A5 /* TGCameraGridView.m */,
+				97CE3C86126661EE8D9972A391F85F21 /* TGCameraNavigationController.h */,
+				48087B4FBD77C98BB352FE7F28555391 /* TGCameraNavigationController.m */,
+				A2620C7B3DAD17E93E9E7B7F1E09965A /* TGCameraShot.h */,
+				FA3445F134980202B321D5717F293EE9 /* TGCameraShot.m */,
+				59D07CBE4F3884B3745C1956A507EC17 /* TGCameraSlideDownView.h */,
+				7759F67E09839DC90CAD82FEB4D931CB /* TGCameraSlideDownView.m */,
+				D0B66A824D9B3FF3DF6B5AFF18DF517E /* TGCameraSlideUpView.h */,
+				FCC547766A460BC070F9D9CB570EB3E0 /* TGCameraSlideUpView.m */,
+				0B9CB657209991E0FCBDF6F553B7BA16 /* TGCameraSlideView.h */,
+				AD9E67AF47E1A741D7E96A2ADCA5DD9F /* TGCameraSlideView.m */,
+				44575835DE13A9394CDD414B55380302 /* TGCameraToggle.h */,
+				58ED4F40ACC20C5D0038B9E7E4281D40 /* TGCameraToggle.m */,
+				C3DD8EF7B06E167A6D0454803E0A160D /* TGCameraViewController.h */,
+				D229D7998677C7F8ACA42F87D1B69477 /* TGCameraViewController.m */,
+				19DC4596E9C7FE83735BF31125D560CA /* TGPhotoViewController.h */,
+				33BFD6919E5808D208D985FDFE52C4DE /* TGPhotoViewController.m */,
+				5B264283058C685AC685A5E0143727E1 /* TGTintedButton.h */,
+				3FA2F5D40F008C05883DB88B23CF4DA2 /* TGTintedButton.m */,
+				602F4CBA91052F09666978E1551F9346 /* TGTintedLabel.h */,
+				6B167E048CF61E16506EBCE65694601A /* TGTintedLabel.m */,
+				62C1C3DF63A6AF8DA108D6F16C44AEC5 /* UIImage+CameraFilters.h */,
+				F94C569B181726ABB10FB2166EE8CFA2 /* UIImage+CameraFilters.m */,
+				9AE7CFDCD4B6F6C784CCE9F73D04CC9C /* Resources */,
+				7DC547A50755F2662A1A637F1A8802CF /* Support Files */,
+			);
+			name = TGCameraViewController;
+			path = TGCameraViewController;
+			sourceTree = "<group>";
+		};
+		351B80F2A033D6BC90C1AAE153A65298 /* ObjCMongoDB */ = {
+			isa = PBXGroup;
+			children = (
+				47585784ED580EAC36E0656AF9ADD68E /* BSON */,
+				1563DC64884566E51FBD8C0E652F5252 /* Mongo */,
+				0A11CF6331CF0176F3363195B2FE75B5 /* OrderedDictionary */,
+				AB5969811D69E669B3A49A1A686F4EE5 /* Support Files */,
+			);
+			name = ObjCMongoDB;
+			path = ObjCMongoDB;
+			sourceTree = "<group>";
+		};
 		42A397975ED42ED4CC7C5E3C2DBD74CA /* Pods-NorlifeUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,78 +527,104 @@
 			path = "Target Support Files/Pods-NorlifeUITests";
 			sourceTree = "<group>";
 		};
-		42CFC913E191F8F1E4187FB12C51CA78 /* OrderedDictionary */ = {
+		47585784ED580EAC36E0656AF9ADD68E /* BSON */ = {
 			isa = PBXGroup;
 			children = (
-				CF5C73C12FC6A45F9CEE30DB298480C8 /* OrderedDictionary.h */,
-				6BB4E58E2BA840A86D42D1E22D81A27E /* OrderedDictionary.m */,
+				BA90DA30744E5C5A561ABA077248D8AD /* BSON_Helper.h */,
+				483F4E9167A160D79BADDB86E1AB8DB9 /* BSON_Helper.m */,
+				EBCD6AB140181DC400C62D88A39600FB /* BSON_PrivateInterfaces.h */,
+				7E1D2E4A6EDCA555C7C2EE9F47F7DA98 /* BSONCoding.h */,
+				3E932DB694C8FA77F722693F2726FAD4 /* BSONDecoder.h */,
+				5DB24DAE99F8BEC2B71FE5B3E34C1C30 /* BSONDecoder.m */,
+				0CFAB069A188952EA1C2B3608C36C557 /* BSONDocument.h */,
+				1ABE158C06EF6C47347AED21FA9E63E2 /* BSONDocument.m */,
+				B60FB6883B5F61A0906EA4B58B7A2CD7 /* BSONEncoder.h */,
+				907D30142455C4BCF2E6435CE8BD4046 /* BSONEncoder.m */,
+				293D50ED0BBF8533B16930D9EF055815 /* BSONIterator.h */,
+				FAD6BF1ACCCF45AF7F144FC71F719BF0 /* BSONIterator.m */,
+				9D8898D850DD0DE92FFC5F117CA4308A /* BSONTypes.h */,
+				B43B0E5EB3C9E64260BEB2585A73C896 /* BSONTypes.m */,
+				38562D07AE6518CBA21401E2F6FC1920 /* NSData+BSONAdditions.h */,
+				998E082F3D7E66A2C067920886335A86 /* NSData+BSONAdditions.m */,
+				950989C5C744E594319293BA87FDA555 /* NSDictionary+BSONAdditions.h */,
+				7CFF1CA87C96CCA6DB41DB911B4F47FB /* NSDictionary+BSONAdditions.m */,
+				206A36DE703BE8ECBCC8A80CAF9D9369 /* NSManagedObject+BSONCoding.h */,
+				BEF1EBFC183D531CEDCEEC5E1996FCF0 /* NSManagedObject+BSONCoding.m */,
+				5C7FF5584ED6F96B4A930F6F1506F672 /* NSString+BSONAdditions.h */,
+				7218FB4FE8F276BBBA04552A718FE713 /* NSString+BSONAdditions.m */,
+				E1EE18DB193C9665BCD41D0F67DE55F5 /* ObjCBSON.h */,
+				EB95D05D359A41D0420C9ED0F1C1E15A /* ObjCBSON.m */,
 			);
-			name = OrderedDictionary;
-			sourceTree = "<group>";
-		};
-		6732A7FD537B707D7530DE9E8B7F50E8 /* Mongo */ = {
-			isa = PBXGroup;
-			children = (
-				F9D5235D8809E79FF80A975CFE77300F /* Mongo_Helper.h */,
-				05F6081A473590EC617BAA38A342A578 /* Mongo_Helper.m */,
-				B1F16C20919055E189E8903D26ED8E8B /* Mongo_PrivateInterfaces.h */,
-				51A5785DD05DE7E363B6B38386FB1A41 /* MongoConnection.h */,
-				E2AEC75ABE2C7A3373178A9648209578 /* MongoConnection.m */,
-				C4FDA718E9C4E88F6EE990583F725CEA /* MongoConnection+Diagnostics.h */,
-				C1935477C64D705F5211E674D12F9427 /* MongoConnection+Diagnostics.m */,
-				1E2D85DD96EABB31FB9C1FEAE38AD2E0 /* MongoCursor.h */,
-				C92450CE1B9344CA67D5F2D15ABCF627 /* MongoCursor.m */,
-				C5CD3661AE940AC0C8929DA46D0B8F16 /* MongoDBCollection.h */,
-				8E997ABBD1694338BCB9D1BB1044B4FF /* MongoDBCollection.m */,
-				FE5A325D22F68EB820B83540F0ACF840 /* MongoFindRequest.h */,
-				8AB60F869A82CB747D68EF8688436416 /* MongoFindRequest.m */,
-				5C1253FC926638E4E57B905D31FC487B /* MongoKeyedPredicate.h */,
-				2DACD8B85A484733DCADB76BA6CBF08D /* MongoKeyedPredicate.m */,
-				D946E5D0D03EBC8EC0E3A9DF618653F0 /* MongoPredicate.h */,
-				3180BF6C76710693BCAED6B381B920B3 /* MongoPredicate.m */,
-				A34C6369D71E8508A641508CDF32F135 /* MongoTypes.h */,
-				D801DFCCE6DE53B963351B2C4ECA427C /* MongoTypes.m */,
-				3FB5CE63C6F9AE95CC1B01EE1CF471B5 /* MongoUpdateRequest.h */,
-				4E8B6396C04F750842D6818D25DB8B89 /* MongoUpdateRequest.m */,
-				6FE5C3ADC0AEF695162BD35D174E7EFE /* MongoWriteConcern.h */,
-				071E311781380B01FCC24B6F8CAE0765 /* MongoWriteConcern.m */,
-				D930D482A355545DE0EFC6E23EB59BA3 /* NSArray+MongoAdditions.h */,
-				5E9FF154863B3290193F3E8B626E762F /* NSArray+MongoAdditions.m */,
-				D36E32598C28B790AEDC3E738CFE127B /* ObjCMongoDB.h */,
-			);
-			name = Mongo;
-			sourceTree = "<group>";
-		};
-		72463974CE3E9429D2DFB7B53D44F878 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				E69D6BC6DB58171534C272268048C12E /* mongo-c-driver */,
-				8F99B6AAA647B777DC673CDBD9791266 /* ObjCMongoDB */,
-			);
-			name = Pods;
+			name = BSON;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				72463974CE3E9429D2DFB7B53D44F878 /* Pods */,
-				D552F586DBBC80F5794BA935B57D9D2F /* Products */,
+				0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */,
+				C35580CFDF136BBA80FC6C62CBF71E4A /* Pods */,
+				E4B7B32267FE9BEC5EA37ABF0251922F /* Products */,
 				AF7CEEFC9AB45FC9CA91772E4C53DD6B /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8F99B6AAA647B777DC673CDBD9791266 /* ObjCMongoDB */ = {
+		7DC547A50755F2662A1A637F1A8802CF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				264A89B01330DA5554CBDC64EA4DB936 /* BSON */,
-				6732A7FD537B707D7530DE9E8B7F50E8 /* Mongo */,
-				42CFC913E191F8F1E4187FB12C51CA78 /* OrderedDictionary */,
-				D917D1100EF28BACC4B1BAA7E36165DD /* Support Files */,
+				16F8C2AAB3722DF43E02C1D6CFC74AFC /* TGCameraViewController.xcconfig */,
+				F03E97BB6E8D8737AF7275EADAE73E44 /* TGCameraViewController-dummy.m */,
+				7062BF9DB7FA9F9E9292965A043074BF /* TGCameraViewController-prefix.pch */,
 			);
-			name = ObjCMongoDB;
-			path = ObjCMongoDB;
+			name = "Support Files";
+			path = "../Target Support Files/TGCameraViewController";
+			sourceTree = "<group>";
+		};
+		99BF4C709A1DD8BC18F51F430B9D2696 /* mongo-c-driver */ = {
+			isa = PBXGroup;
+			children = (
+				BD5E9F10045D3B117AB25A100C18D917 /* bcon.c */,
+				748C199A90CEC45DC895C41B186C5505 /* bcon.h */,
+				64EF0A23B41D2F37605895EBC63C8FCB /* bson.c */,
+				E8D94C4DEBDDC20AE0DC667DA32685DF /* bson.h */,
+				05F1422CB3C54023C375BF8713FDBD06 /* encoding.c */,
+				85D436FD99DED33285ABCAB22C97F6E6 /* encoding.h */,
+				040F875D747D2E58EF1CD160202BE117 /* env.c */,
+				86ED966B32FE593E80B21E5793F4C190 /* env.h */,
+				6CED822B3ED64F85ED9C437F79EBF3A4 /* gridfs.c */,
+				C6C4AC16D4DEAEAC2B88D5B7359143FF /* gridfs.h */,
+				2A5EA5E31566E5C8C9918988D31A56FF /* md5.c */,
+				319D2ED1136D922E3F8AADBD84DF5CA6 /* md5.h */,
+				46D97A07A24E9122C0AAB638A3A63D41 /* mongo.c */,
+				3EC31A878229BA9D0EE8C0B1473774F8 /* mongo.h */,
+				0B1368B100BD57DC69AFC313E0DCEF3E /* numbers.c */,
+				F07939A6CDFCF405EA273A25222DE9E7 /* Support Files */,
+			);
+			name = "mongo-c-driver";
+			path = "mongo-c-driver";
+			sourceTree = "<group>";
+		};
+		9AE7CFDCD4B6F6C784CCE9F73D04CC9C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7E12FC02EB08809B68065B8117EB9FAE /* TGCameraAuthorizationViewController.xib */,
+				53DC77A9611CDE123F49802245F43501 /* TGCameraViewController.bundle */,
+				A822D252D1B42DB606EBF4DB44377F27 /* TGCameraViewController.xcassets */,
+				09255D5CA8AC97DB3BCE3482C7E915AF /* TGCameraViewController.xib */,
+				2309B90F8A63F88319A9032FC156BC73 /* TGPhotoViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		AB5969811D69E669B3A49A1A686F4EE5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				02EBE68315E05B352DE77D286DBDB0C7 /* ObjCMongoDB.xcconfig */,
+				75DAA0E2A7CE3E901B9B541DEC249393 /* ObjCMongoDB-dummy.m */,
+				A9E5B3EB6A881DD91B23925CFAD50DFC /* ObjCMongoDB-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ObjCMongoDB";
 			sourceTree = "<group>";
 		};
 		AF7CEEFC9AB45FC9CA91772E4C53DD6B /* Targets Support Files */ = {
@@ -384,74 +636,47 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		C35580CFDF136BBA80FC6C62CBF71E4A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				99BF4C709A1DD8BC18F51F430B9D2696 /* mongo-c-driver */,
+				351B80F2A033D6BC90C1AAE153A65298 /* ObjCMongoDB */,
+				350C10C318658191D2DB07A3E0E4F19E /* TGCameraViewController */,
 			);
-			name = Frameworks;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		E4B7B32267FE9BEC5EA37ABF0251922F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		D552F586DBBC80F5794BA935B57D9D2F /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				922286F211FFFE85E4973C812260E506 /* libmongo-c-driver.a */,
-				AA3F895387679CD8798352BA4B550F2B /* libObjCMongoDB.a */,
-				D90B680FF54E0377057F41FEE58D5FC6 /* libPods-Norlife.a */,
-				FC22F5B83BEB18A92E37C64B3CBB9A0A /* libPods-NorlifeUITests.a */,
+				66A2CA0AF9C94201CE8F4985175B7C46 /* libmongo-c-driver.a */,
+				39F14AF6E80C32126358DAF11DEAC948 /* libObjCMongoDB.a */,
+				5BBFE11AD3A66351CA50B1A6E661B187 /* libPods-Norlife.a */,
+				EC622637665E410307C726E41F60CF55 /* libPods-NorlifeUITests.a */,
+				4E7CCF55AE2293027FF004BA1A8DED84 /* libTGCameraViewController.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D917D1100EF28BACC4B1BAA7E36165DD /* Support Files */ = {
+		EE6D19366A97DAC8E6781241D363F0EB /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				D692FFC8EF60135C5475CEDB2BF8A853 /* ObjCMongoDB.xcconfig */,
-				96CC60B2F372D0A10CC1E43A73251C1A /* ObjCMongoDB-dummy.m */,
-				CC01EBC84BDFE12F62AA9A0806663601 /* ObjCMongoDB-prefix.pch */,
+				CD9DB3B213C43525C2D8EE990A796091 /* AssetsLibrary.framework */,
+				E5763AC1EFA71C5159E3CA0FCCCC3683 /* AVFoundation.framework */,
+				541D522E713C3259B9D78290E72E7596 /* CoreImage.framework */,
+				1702A7757120C4ABB6F482B8AC6B36A4 /* Foundation.framework */,
+				DE1307499B8DB7AB4A610BDBFBB9151C /* MobileCoreServices.framework */,
+				6EF3F1F690EC4B8F38ACD2C8BEF02A24 /* UIKit.framework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/ObjCMongoDB";
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		E69D6BC6DB58171534C272268048C12E /* mongo-c-driver */ = {
+		F07939A6CDFCF405EA273A25222DE9E7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				73BEF8E8885268C2542A7399F5F68133 /* bcon.c */,
-				A82AB50A893D828AA69F9099B27F53D4 /* bcon.h */,
-				A1E83929C1D88F3207D59C8E4146F7EE /* bson.c */,
-				AADF9814A4E863330F82EBBD535FA67E /* bson.h */,
-				E3B8FDD2AC33E003D94F560BF0CE1CEF /* encoding.c */,
-				A048D9F9F4F61AFB8E45E81A7FEB10AE /* encoding.h */,
-				C2E0B39B88F1B4422CF60844B90A5520 /* env.c */,
-				4CE902514DB473309CC1AFA993C23F42 /* env.h */,
-				66D4452E6772C9CFB1035AFBF96D99DF /* gridfs.c */,
-				9A30F37DACFD878A649C8816B3D7E50D /* gridfs.h */,
-				8EAD77A7F1DA725783BB20D7AC728B4F /* md5.c */,
-				EF2197F3163CF1519FEE3901D6074EAF /* md5.h */,
-				27827108FDB325B84E55023F1C31FBCF /* mongo.c */,
-				4613D335C55372E6E83B41322E6C5E9C /* mongo.h */,
-				74A518488AB3F6EA6889979DEFF8098E /* numbers.c */,
-				E812C813C9EF7351B766064A047FC395 /* Support Files */,
-			);
-			name = "mongo-c-driver";
-			path = "mongo-c-driver";
-			sourceTree = "<group>";
-		};
-		E812C813C9EF7351B766064A047FC395 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B0DE2D8B192920D32F6B0FD68A31155F /* mongo-c-driver.xcconfig */,
-				D8EB18177BB1152F6CEBD164D3052AE7 /* mongo-c-driver-dummy.m */,
-				19DFAAF1141785C507B7186E9123F389 /* mongo-c-driver-prefix.pch */,
+				61C36FFADF5F8357FCB5BFD997381089 /* mongo-c-driver.xcconfig */,
+				2B25BFC9BAEC7BF9DBC828DFA2F4F814 /* mongo-c-driver-dummy.m */,
+				116BB7E2D0CB48B1428C3E89ED3BB8FA /* mongo-c-driver-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/mongo-c-driver";
@@ -460,6 +685,37 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		003007B7AF96F9E0CE28B47171C9A779 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D75FD481F5D63835997F003AD54A7F01 /* TGAlbum.h in Headers */,
+				9B8CE1A541ABBE5C618946784EC79D2A /* TGAssetImageFile.h in Headers */,
+				E459EAB9D164EEAC0C6E80F6B417D895 /* TGAssetsLibrary.h in Headers */,
+				78D58D9D674FF574DD2C623F4841C4B5 /* TGCamera.h in Headers */,
+				F7BCB12DCD63426643CC27F0111C3D07 /* TGCameraAuthorizationViewController.h in Headers */,
+				DC77260A5B1DF18B7F7D6832660EB23C /* TGCameraColor.h in Headers */,
+				B4F922FD92E0705CA5AC0342CA896A97 /* TGCameraFilterView.h in Headers */,
+				A381E879630C897CDB25D77FAA51437C /* TGCameraFlash.h in Headers */,
+				1B1507E0AEF2F9BEA011F9052DC11157 /* TGCameraFocus.h in Headers */,
+				6F26C2DC7DFDAFB5DC1DF09647D33EEB /* TGCameraFocusView.h in Headers */,
+				29A4EC9ECEF6AB60C754CA2767515F81 /* TGCameraFunctions.h in Headers */,
+				084C2B0BEA21CB9582784A88F0609123 /* TGCameraGrid.h in Headers */,
+				521EB0D3816A3DF794BBEFE0921C6135 /* TGCameraGridView.h in Headers */,
+				501983C127E5C91542573590D931D4AF /* TGCameraNavigationController.h in Headers */,
+				F5D5DA12C0B08BEE5D3C11DAC3D90665 /* TGCameraShot.h in Headers */,
+				8638768BF537EA8D81B9C21EE60B6142 /* TGCameraSlideDownView.h in Headers */,
+				C1DB9841A8B2FAAEEC0A2A469DEE17CC /* TGCameraSlideUpView.h in Headers */,
+				3EAD01EE94675C0F793C1AF54DD912E7 /* TGCameraSlideView.h in Headers */,
+				948A1C38FA8EAB9CB685C82172F93BE0 /* TGCameraToggle.h in Headers */,
+				D99080965AB150643BCEDEA1F3DE19C5 /* TGCameraViewController.h in Headers */,
+				3716D585FB4BB4E82CD99228F4D3905B /* TGPhotoViewController.h in Headers */,
+				ED1080379974287A3E209733FA0CA5FC /* TGTintedButton.h in Headers */,
+				98DAB2B9CE0C8C590BF6FACFD5D5ECB4 /* TGTintedLabel.h in Headers */,
+				C5FF5F162D1B6E87DF56A2AC9D74CE1E /* UIImage+CameraFilters.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1C52E15028D83938E10A76E930C0235A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -527,7 +783,43 @@
 			);
 			name = ObjCMongoDB;
 			productName = ObjCMongoDB;
-			productReference = AA3F895387679CD8798352BA4B550F2B /* libObjCMongoDB.a */;
+			productReference = 39F14AF6E80C32126358DAF11DEAC948 /* libObjCMongoDB.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		2C57B8EAFCBDE62D8175C5514D349414 /* Pods-Norlife */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F3DD6D0E8E6799146ABDA4955FB94DD /* Build configuration list for PBXNativeTarget "Pods-Norlife" */;
+			buildPhases = (
+				A5E25CC8FBAF4935721D6E1628254CE7 /* Sources */,
+				2F2BF5E69E698C30FFD40086F924E17E /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				705507E1FE2EEB73A52AF2309E94EDFE /* PBXTargetDependency */,
+				A0B3395244D2CF50B30A010D40A8A06B /* PBXTargetDependency */,
+				C614F2F57758636193F3B34DDBA53B39 /* PBXTargetDependency */,
+			);
+			name = "Pods-Norlife";
+			productName = "Pods-Norlife";
+			productReference = 5BBFE11AD3A66351CA50B1A6E661B187 /* libPods-Norlife.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		4E3C20043DBFBE214319FA15FC48DDB5 /* TGCameraViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D70705EE03A01CD9FA0848B216CA3A05 /* Build configuration list for PBXNativeTarget "TGCameraViewController" */;
+			buildPhases = (
+				B9A61F8A82267AC2E2E9C4CE0E0BF42D /* Sources */,
+				A0D23CFD4C6DD73CC32D90D555E0878F /* Frameworks */,
+				003007B7AF96F9E0CE28B47171C9A779 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TGCameraViewController;
+			productName = TGCameraViewController;
+			productReference = 4E7CCF55AE2293027FF004BA1A8DED84 /* libTGCameraViewController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		6892035F3272CD5F3468B2DA13EB12D6 /* mongo-c-driver */ = {
@@ -544,25 +836,7 @@
 			);
 			name = "mongo-c-driver";
 			productName = "mongo-c-driver";
-			productReference = 922286F211FFFE85E4973C812260E506 /* libmongo-c-driver.a */;
-			productType = "com.apple.product-type.library.static";
-		};
-		90DCEB91A404AA4AABC2A7F81F3C837D /* Pods-Norlife */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 74529191EF4D2CB8015F930E53487344 /* Build configuration list for PBXNativeTarget "Pods-Norlife" */;
-			buildPhases = (
-				B3209EB7B3730588C0D26EFBDF279A2D /* Sources */,
-				05DB3505EBB1767AA4551A4EA6D571AC /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				6684E3395C0DB635E56F043CB5C7D203 /* PBXTargetDependency */,
-				D7DB1CDC2A00C451B1FAB2482D3046E6 /* PBXTargetDependency */,
-			);
-			name = "Pods-Norlife";
-			productName = "Pods-Norlife";
-			productReference = D90B680FF54E0377057F41FEE58D5FC6 /* libPods-Norlife.a */;
+			productReference = 66A2CA0AF9C94201CE8F4985175B7C46 /* libmongo-c-driver.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 		E490F13ADD68B4798D6EA02BA7936F13 /* Pods-NorlifeUITests */ = {
@@ -578,7 +852,7 @@
 			);
 			name = "Pods-NorlifeUITests";
 			productName = "Pods-NorlifeUITests";
-			productReference = FC22F5B83BEB18A92E37C64B3CBB9A0A /* libPods-NorlifeUITests.a */;
+			productReference = EC622637665E410307C726E41F60CF55 /* libPods-NorlifeUITests.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -598,14 +872,15 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = D552F586DBBC80F5794BA935B57D9D2F /* Products */;
+			productRefGroup = E4B7B32267FE9BEC5EA37ABF0251922F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				6892035F3272CD5F3468B2DA13EB12D6 /* mongo-c-driver */,
 				0FA0E0CA9346F162B9704B53B8AD73FB /* ObjCMongoDB */,
-				90DCEB91A404AA4AABC2A7F81F3C837D /* Pods-Norlife */,
+				2C57B8EAFCBDE62D8175C5514D349414 /* Pods-Norlife */,
 				E490F13ADD68B4798D6EA02BA7936F13 /* Pods-NorlifeUITests */,
+				4E3C20043DBFBE214319FA15FC48DDB5 /* TGCameraViewController */,
 			);
 		};
 /* End PBXProject section */
@@ -667,11 +942,43 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B3209EB7B3730588C0D26EFBDF279A2D /* Sources */ = {
+		A5E25CC8FBAF4935721D6E1628254CE7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				287AC6AE20DF79C1EC9364D15124D4FF /* Pods-Norlife-dummy.m in Sources */,
+				1AB8BF28C509E02082563FD262FFA1FF /* Pods-Norlife-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B9A61F8A82267AC2E2E9C4CE0E0BF42D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				917A72920ED7616FA44CEBA98811745C /* TGAlbum.m in Sources */,
+				62495D6590CEB7E0E050EF8698920BA1 /* TGAssetImageFile.m in Sources */,
+				CF81E63C3B645D0C89B2356DD022F02E /* TGAssetsLibrary.m in Sources */,
+				245F850F458766B2A35F009E4165DD01 /* TGCamera.m in Sources */,
+				B6F3CFCCBEA6F3AB7F419FE77416B8A2 /* TGCameraAuthorizationViewController.m in Sources */,
+				92BCC344D3473A3C13572D0C62033A6B /* TGCameraColor.m in Sources */,
+				44D1EDEE701855986CCEFBEFDC7A13AF /* TGCameraFilterView.m in Sources */,
+				9B1288A69D2A4B61224F507A6EB5EA38 /* TGCameraFlash.m in Sources */,
+				3C73D5E44FA53B95B88813E6A3524721 /* TGCameraFocus.m in Sources */,
+				6AADF30EF1DD42FC7D02D5C277DAD851 /* TGCameraFocusView.m in Sources */,
+				DE7F168F0E0D00FAD3574B7B3C010282 /* TGCameraFunctions.m in Sources */,
+				CD69BB5D5AD03C17B7C50C93F8642528 /* TGCameraGrid.m in Sources */,
+				FC5A6104E448D06D352321AB49F48CFE /* TGCameraGridView.m in Sources */,
+				C657EFD38C134740A7FDA911E5DB5688 /* TGCameraNavigationController.m in Sources */,
+				F9D131DB45099005295CA091A4CD154A /* TGCameraShot.m in Sources */,
+				F4105C9AC8B6C133CEE71C9CC68466D3 /* TGCameraSlideDownView.m in Sources */,
+				CF409DED6719D7C9CA22FB57BB93E13C /* TGCameraSlideUpView.m in Sources */,
+				2B2BAD6DDDD99E5087962CCA5F820DBD /* TGCameraSlideView.m in Sources */,
+				11AD8147D072F26F44670B8F3049DBBC /* TGCameraToggle.m in Sources */,
+				801F909745C024AA205DCBF495D64A9A /* TGCameraViewController-dummy.m in Sources */,
+				ADC7FC5DC0EEA9F7E3E7DA2AF3E9BFDA /* TGCameraViewController.m in Sources */,
+				41B1C8BAF25B587BFF9ABB61752A2B20 /* TGPhotoViewController.m in Sources */,
+				108A4366C2F98D40453B67C2D3AF0CCD /* TGTintedButton.m in Sources */,
+				7D593420E656C4ED5DFEE6E33690A2AC /* TGTintedLabel.m in Sources */,
+				E4578797A7AD0697E0DE5424CEA9FC14 /* UIImage+CameraFilters.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,21 +991,78 @@
 			target = 6892035F3272CD5F3468B2DA13EB12D6 /* mongo-c-driver */;
 			targetProxy = 8F06DA39A678ACD64AE0ECC4657DBB69 /* PBXContainerItemProxy */;
 		};
-		6684E3395C0DB635E56F043CB5C7D203 /* PBXTargetDependency */ = {
+		705507E1FE2EEB73A52AF2309E94EDFE /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ObjCMongoDB;
 			target = 0FA0E0CA9346F162B9704B53B8AD73FB /* ObjCMongoDB */;
-			targetProxy = CD2489CDADA9A8AA24A6FC5D213D31B7 /* PBXContainerItemProxy */;
+			targetProxy = A7155DB32EA1B740B2A31C9A1F6A9DFF /* PBXContainerItemProxy */;
 		};
-		D7DB1CDC2A00C451B1FAB2482D3046E6 /* PBXTargetDependency */ = {
+		A0B3395244D2CF50B30A010D40A8A06B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = TGCameraViewController;
+			target = 4E3C20043DBFBE214319FA15FC48DDB5 /* TGCameraViewController */;
+			targetProxy = 4AC3707C137BFBB2EFC59529D61957F2 /* PBXContainerItemProxy */;
+		};
+		C614F2F57758636193F3B34DDBA53B39 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "mongo-c-driver";
 			target = 6892035F3272CD5F3468B2DA13EB12D6 /* mongo-c-driver */;
-			targetProxy = 9022D470CA6B3007843ABD5F6071C374 /* PBXContainerItemProxy */;
+			targetProxy = BCA31CA0237D55309D7B546BEE6AAE03 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		09255D5CA8AC97DB3BCE3482C7E915AF /* TGCameraViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3708465C856302C1392EA0595082DD57 /* TGCameraViewController.xib */,
+			);
+			name = TGCameraViewController.xib;
+			path = TGCameraViewController/Classes/View;
+			sourceTree = "<group>";
+		};
+		2309B90F8A63F88319A9032FC156BC73 /* TGPhotoViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CE95D3B0D4B8329F39642DA7F86F967E /* TGPhotoViewController.xib */,
+			);
+			name = TGPhotoViewController.xib;
+			path = TGCameraViewController/Classes/View;
+			sourceTree = "<group>";
+		};
+		7E12FC02EB08809B68065B8117EB9FAE /* TGCameraAuthorizationViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F6AD8A9295116B81646068DAD8A33B13 /* TGCameraAuthorizationViewController.xib */,
+			);
+			name = TGCameraAuthorizationViewController.xib;
+			path = TGCameraViewController/Classes/View;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		01788A7DC11762C464617F362B9C2914 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BC65313A8F0386C766EC0E63D5104DE /* Pods-Norlife.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		1D23278938ADF334174C5BF2A4B6B1B8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -774,26 +1138,6 @@
 			};
 			name = Debug;
 		};
-		3B79E21B53DC383A23B63C2637041592 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 084342A8E8D30878C3AA61250EF02B50 /* Pods-Norlife.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
 		7EB643AF1A61F957E610D58950FE1433 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 948BAE893385D3FCD4725A73722CD04B /* Pods-NorlifeUITests.release.xcconfig */;
@@ -817,7 +1161,7 @@
 		};
 		85E8130BBD1441DAD91732F29641F979 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0DE2D8B192920D32F6B0FD68A31155F /* mongo-c-driver.xcconfig */;
+			baseConfigurationReference = 61C36FFADF5F8357FCB5BFD997381089 /* mongo-c-driver.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -832,6 +1176,26 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		973794197AE3D042DE462B5DFE3891EA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 084342A8E8D30878C3AA61250EF02B50 /* Pods-Norlife.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -896,9 +1260,30 @@
 			};
 			name = Debug;
 		};
+		9F4129ED3D234184125239EF60138E4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16F8C2AAB3722DF43E02C1D6CFC74AFC /* TGCameraViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TGCameraViewController/TGCameraViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		A97DD47FE48584F49A2D58AE109E9DDD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D692FFC8EF60135C5475CEDB2BF8A853 /* ObjCMongoDB.xcconfig */;
+			baseConfigurationReference = 02EBE68315E05B352DE77D286DBDB0C7 /* ObjCMongoDB.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -920,7 +1305,7 @@
 		};
 		B04FAE7A0F3F919BDA7C6D094A46981F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D692FFC8EF60135C5475CEDB2BF8A853 /* ObjCMongoDB.xcconfig */;
+			baseConfigurationReference = 02EBE68315E05B352DE77D286DBDB0C7 /* ObjCMongoDB.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -939,9 +1324,31 @@
 			};
 			name = Debug;
 		};
+		B5C06F2827F801BEE5CE05382196FCE3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16F8C2AAB3722DF43E02C1D6CFC74AFC /* TGCameraViewController.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				GCC_PREFIX_HEADER = "Target Support Files/TGCameraViewController/TGCameraViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 		D0D4A0C52484EBC8800357C265B0048E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B0DE2D8B192920D32F6B0FD68A31155F /* mongo-c-driver.xcconfig */;
+			baseConfigurationReference = 61C36FFADF5F8357FCB5BFD997381089 /* mongo-c-driver.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -961,30 +1368,18 @@
 			};
 			name = Release;
 		};
-		E0E82746EBBEF55C79A4A7F69DE6A45A /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4BC65313A8F0386C766EC0E63D5104DE /* Pods-Norlife.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
-				MACH_O_TYPE = staticlib;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0F3DD6D0E8E6799146ABDA4955FB94DD /* Build configuration list for PBXNativeTarget "Pods-Norlife" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				973794197AE3D042DE462B5DFE3891EA /* Debug */,
+				01788A7DC11762C464617F362B9C2914 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1012,20 +1407,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74529191EF4D2CB8015F930E53487344 /* Build configuration list for PBXNativeTarget "Pods-Norlife" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3B79E21B53DC383A23B63C2637041592 /* Debug */,
-				E0E82746EBBEF55C79A4A7F69DE6A45A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		90AB264CFE22F3117177CA7952F6FD5C /* Build configuration list for PBXNativeTarget "Pods-NorlifeUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2A9BD1892E6788444B1A90108B435457 /* Debug */,
 				7EB643AF1A61F957E610D58950FE1433 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D70705EE03A01CD9FA0848B216CA3A05 /* Build configuration list for PBXNativeTarget "TGCameraViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F4129ED3D234184125239EF60138E4F /* Debug */,
+				B5C06F2827F801BEE5CE05382196FCE3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

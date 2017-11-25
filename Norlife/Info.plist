@@ -30,6 +30,10 @@
 	<string>We&apos;d like to more accurately and fairly calculate your insurance premiums.</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>We&apos;d like to more accurately and fairly calculate your insurance premiums.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>We&apos;d like to more accurately and fairly calculate your insurance premiums.</string>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>We&apos;d like to more accurately and fairly calculate your insurance premiums.</string>
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>

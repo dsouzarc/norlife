@@ -14,6 +14,7 @@
 #import "SOStepDetector.h"
 #import "SOLocationManager.h"
 #import "ObjCMongoDB.h"
+#import "TGCameraViewController.h"
 
 #import "UIColor+Norlife.h"
 

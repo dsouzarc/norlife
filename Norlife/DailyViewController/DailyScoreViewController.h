@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DailyScoreViewController : UIViewController
+#import "Constants.h"
+
+@interface DailyScoreViewController : UIViewController <TGCameraDelegate>
 
 @end
