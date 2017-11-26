@@ -241,7 +241,7 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
     self.lastChosenMenuItem = row;
     [dropdownMenu closeAllComponentsAnimated:YES];
     
-    if(row == 1 || row == 2) {
+    if(row == 0 || row == 1) {
         [self pressedComposeButton:nil];
     }
 }

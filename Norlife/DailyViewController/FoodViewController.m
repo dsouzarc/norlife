@@ -128,24 +128,24 @@
     self.graphView.dataPointSpacing = 70;
     
     ReferenceLines *referenceLines = [[ReferenceLines alloc] init];
-    
-    referenceLines.referenceLineLabelFont = [UIFont boldSystemFontOfSize:8.0];
+
+    referenceLines.referenceLineLabelFont = [UIFont boldSystemFontOfSize:7.0];
     referenceLines.referenceLineColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
     referenceLines.referenceLineLabelColor = [UIColor blackColor];
     referenceLines.referenceLinePosition = ScrollableGraphViewReferenceLinePositionLeft;
     referenceLines.positionType = ReferenceLinePositioningTypeRelative;
     referenceLines.shouldAddLabelsToIntermediateReferenceLines = YES;
-    referenceLines.dataPointLabelsSparsity = 2;
+    referenceLines.dataPointLabelsSparsity = 1;
     referenceLines.dataPointLabelColor = [UIColor blackColor];
     referenceLines.shouldShowReferenceLineUnits = YES;
-    
     referenceLines.dataPointLabelFont = [UIFont systemFontOfSize:10.0];
     referenceLines.shouldShowLabels = YES;
-    [referenceLines setShouldShowReferenceLines:YES];
-    [referenceLines setReferenceLineUnits:@"%%"];
+    referenceLines.shouldShowReferenceLines = YES;
+    [referenceLines setReferenceLineUnits:@"%"];
     referenceLines.dataPointLabelColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
     referenceLines.shouldShowLabels = YES;
     
+    self.graphView.topMargin = 2.0;
     self.graphView.shouldAnimateOnStartup = YES;
     self.graphView.shouldRangeAlwaysStartAtZero = YES;
     self.graphView.showsVerticalScrollIndicator = YES;

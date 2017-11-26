@@ -20,31 +20,33 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meal Composition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="udl-cx-s7Y">
-                    <rect key="frame" x="16" y="32" width="343" height="42"/>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8n-tH-qeh">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="42" id="PJg-nv-VLV"/>
+                        <constraint firstAttribute="height" constant="44" id="hCa-Zd-qFD"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                    <items>
+                        <navigationItem title="Meal Composition" id="Rh8-wg-Evc">
+                            <barButtonItem key="rightBarButtonItem" systemItem="done" id="GO3-e2-hrg"/>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nQ6-8T-hKZ">
-                    <rect key="frame" x="16" y="90" width="343" height="308"/>
+                    <rect key="frame" x="16" y="68" width="343" height="358"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="308" id="DXr-yN-S8q"/>
+                        <constraint firstAttribute="height" constant="358" id="QzU-jb-wZS"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="udl-cx-s7Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="EXl-WV-7F7"/>
-                <constraint firstAttribute="trailing" secondItem="udl-cx-s7Y" secondAttribute="trailing" constant="16" id="IWu-Wa-8gR"/>
-                <constraint firstItem="udl-cx-s7Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Nfv-aM-o7a"/>
-                <constraint firstItem="nQ6-8T-hKZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="Rjz-Qs-17b"/>
-                <constraint firstAttribute="trailing" secondItem="nQ6-8T-hKZ" secondAttribute="trailing" constant="16" id="c38-WS-9e3"/>
-                <constraint firstItem="nQ6-8T-hKZ" firstAttribute="top" secondItem="udl-cx-s7Y" secondAttribute="bottom" constant="16" id="d6h-Qr-gR9"/>
+                <constraint firstItem="N8n-tH-qeh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9l2-BN-vGM"/>
+                <constraint firstItem="N8n-tH-qeh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="beK-ky-JFJ"/>
+                <constraint firstItem="nQ6-8T-hKZ" firstAttribute="top" secondItem="N8n-tH-qeh" secondAttribute="bottom" constant="24" id="blw-ec-kuM"/>
+                <constraint firstAttribute="trailing" secondItem="N8n-tH-qeh" secondAttribute="trailing" id="rlV-bb-hAG"/>
+                <constraint firstItem="nQ6-8T-hKZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="16" id="vF9-pg-eGU"/>
+                <constraint firstAttribute="trailing" secondItem="nQ6-8T-hKZ" secondAttribute="trailing" constant="16" id="ypd-QW-2Eh"/>
             </constraints>
             <point key="canvasLocation" x="32.5" y="85.5"/>
         </view>

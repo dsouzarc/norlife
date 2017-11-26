@@ -10,6 +10,7 @@
 #import "Norlife-Swift.h"
 
 @interface TrendsScoreViewController ()
+
 @property (weak, nonatomic) IBOutlet MKDropdownMenu *dropdownMenu;
 
 @property (weak, nonatomic) IBOutlet UIView *viewForMainGraph;
