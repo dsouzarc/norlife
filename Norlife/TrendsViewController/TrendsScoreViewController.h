@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+
 #import "Norlife-Swift.h"
 
-@interface TrendsScoreViewController : UIViewController
+#import "Constants.h"
+
+@interface TrendsScoreViewController : UIViewController <ScrollableGraphViewDataSource>
 
 @end

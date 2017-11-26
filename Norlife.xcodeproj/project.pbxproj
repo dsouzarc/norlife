@@ -263,6 +263,15 @@
 			path = Animation;
 			sourceTree = "<group>";
 		};
+		940A296D1FCA2B20005DA001 /* Scrollable Graph View */ = {
+			isa = PBXGroup;
+			children = (
+				940A29411FCA2770005DA001 /* Random.swift */,
+				940A29421FCA2771005DA001 /* SwiftCode */,
+			);
+			path = "Scrollable Graph View";
+			sourceTree = "<group>";
+		};
 		942244171FCA131100A83A62 /* Feedback View */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,6 +379,7 @@
 				946662011FC89FFC0033D494 /* SOMotionDetector */,
 				94C6FB151FC8C7740089DBA8 /* HealthKit */,
 				94C6FB161FC8C77B0089DBA8 /* Location */,
+				940A296D1FCA2B20005DA001 /* Scrollable Graph View */,
 				94C6FB171FC8C7850089DBA8 /* Constants */,
 				94259F861FC94A460067320B /* DailyViewController */,
 				94259F851FC94A3B0067320B /* TrendsViewController */,
@@ -425,8 +435,6 @@
 				9466620C1FC8A32F0033D494 /* Constants.h */,
 				9466620D1FC8A32F0033D494 /* Constants.m */,
 				94259F951FC957D30067320B /* constants.json */,
-				940A29411FCA2770005DA001 /* Random.swift */,
-				940A29421FCA2771005DA001 /* SwiftCode */,
 				940A29401FCA2770005DA001 /* Norlife-Bridging-Header.h */,
 			);
 			path = Constants;
