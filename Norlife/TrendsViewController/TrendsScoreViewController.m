@@ -94,7 +94,7 @@
         
         for(BSONDocument *dailyReviewResult in dailyReviewsResults) {
             
-            NSDictionary *decodedObject = [BSONDecoder decodeDictionaryWithDocument:dailyReviewResult];
+            NSMutableDictionary *decodedObject = [NSMutableDictionary dictionaryWithDictionary:[BSONDecoder decodeDictionaryWithDocument:dailyReviewResult]];
             
             if(![tempDates containsObject:[decodedObject objectForKey:@"date"]]) {
                 [dailyReviewsDicts addObject:decodedObject];
@@ -102,6 +102,8 @@
                 
                 for(NSString *key in [decodedObject allKeys]) {
                     if([key containsString:@"score"]) {
+                        
+                        [decodedObject setValue:(@([[decodedObject objectForKey:key] floatValue] * 100.0)) forKey:key];
                         
                         if([[decodedObject objectForKey:key] floatValue] > self.plotMaxY) {
                             self.plotMaxY = [[decodedObject objectForKey:key] floatValue];
@@ -130,7 +132,7 @@
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             [self initializePlots];
             [self showPlotWithIdentifier:@"total_score"];
-            [self.graphTitleLabel setText:@"Your Score"];
+            [self.graphTitleLabel setText:@"% Change in Total Score"];
         });
     });
 }
@@ -159,27 +161,37 @@
     dotPlot.dataPointFillColor = [UIColor whiteColor];
     dotPlot.adaptAnimationType = ScrollableGraphViewAnimationTypeElastic;
     
+    
     ReferenceLines *referenceLines = [[ReferenceLines alloc] init];
-    referenceLines.referenceLineLabelFont = [UIFont boldSystemFontOfSize:8];
-    referenceLines.referenceLineColor = [[UIColor whiteColor] colorWithAlphaComponent:0.2];
-    referenceLines.referenceLineLabelColor = [UIColor whiteColor];
-    referenceLines.positionType = ReferenceLinePositioningTypeAbsolute;
-    referenceLines.absolutePositions = @[@(10), @(20), @(25), @(30)];
+    referenceLines.referenceLineLabelFont = [UIFont boldSystemFontOfSize:10];
+    referenceLines.referenceLineUnits = @"%";
+    referenceLines.shouldShowReferenceLineUnits = YES;
+    referenceLines.referenceLineColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
+    referenceLines.referenceLineLabelColor = [UIColor blackColor];
+    referenceLines.positionType = ReferenceLinePositioningTypeRelative;
+    referenceLines.absolutePositions = @[@(self.plotMinY), @(self.plotMaxY), @(0.0)];
+    referenceLines.referenceLinePosition = ScrollableGraphViewReferenceLinePositionLeft;
+    referenceLines.shouldAddLabelsToIntermediateReferenceLines = YES;
+    //referenceLines.dataPointLabelsSparsity = 5;
+    referenceLines.shouldShowLabels = YES;
+    referenceLines.dataPointLabelColor = [UIColor blackColor];
     referenceLines.includeMinMax = NO;
     referenceLines.dataPointLabelColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
     
     self.mainGraph.backgroundFillColor = [UIColor whiteColor]; //colorFromHexCode:@"#333333"];
     self.mainGraph.dataPointSpacing = self.viewForMainGraph.frame.size.width / (int)[self.dailyAggregatesData count];
     self.mainGraph.shouldAnimateOnStartup = YES;
-    //self.mainGraph.shouldAdaptRange = YES;
     self.mainGraph.shouldRangeAlwaysStartAtZero = YES;
+    self.mainGraph.showsVerticalScrollIndicator = YES;
+    self.mainGraph.showsHorizontalScrollIndicator = YES;
+    //self.mainGraph.shouldAdaptRange = YES;
     
     self.mainGraph.rangeMin = (self.plotMinY * 0.1) + self.plotMinY;
     self.mainGraph.rangeMax = (self.plotMaxY * 0.1) + self.plotMaxY;
     
-    //[self.mainGraph addReferenceLinesWithReferenceLines:referenceLines];
     [self.mainGraph addPlotWithPlot:dotPlot];
     [self.mainGraph addPlotWithPlot:linePlot];
+    [self.mainGraph addReferenceLinesWithReferenceLines:referenceLines];
     
     [self.mainGraph setTopMargin:0.02];
     [self.mainGraph setZoomScale:0.9];
@@ -208,11 +220,19 @@
 - (double) valueForPlot:(Plot * _Nonnull)plot atIndex:(NSInteger)pointIndex
 {
     NSDictionary *dailyAggregate = [self.dailyAggregatesData objectAtIndex:pointIndex];
-    return [[dailyAggregate objectForKey:[plot identifier]] doubleValue];
+    
+    NSString *plotIdentifier = [plot identifier];
+    if(![dailyAggregate objectForKey:plotIdentifier]) {
+        plotIdentifier = [plotIdentifier stringByReplacingOccurrencesOfString:@"Plot" withString:@""];
+    }
+    return [[dailyAggregate objectForKey:plotIdentifier] doubleValue];
 }
 
 - (NSString * _Nonnull) labelAtIndex:(NSInteger)pointIndex
 {
+    if(pointIndex % 7 != 0) {
+        return @"";
+    }
     NSDate *date = [[self.dailyAggregatesData objectAtIndex:pointIndex] objectForKey:@"date"];
     static NSDateFormatter *dateFormatter;
     if(!dateFormatter) {
