@@ -17,7 +17,7 @@
 
 + (UIColor*) lightNordeaBlue
 {
-    return [UIColor red:30 green:30 blue:100 alpha:1];
+    return [UIColor colorWithRed:0.29 green:0.37 blue:1.00 alpha:1.0];
 }
 
 + (UIColor*) red:(float)red green:(float)green blue:(float)blue alpha:(float)alpha

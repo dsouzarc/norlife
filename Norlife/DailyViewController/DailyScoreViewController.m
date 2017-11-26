@@ -31,7 +31,7 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
     [super viewDidLoad];
     
     [self.mainDropdownMenu setDropdownShowsBorder:YES];
-    [self.mainDropdownMenu setBackgroundColor:[UIColor colorWithRed:0.29 green:0.37 blue:1.00 alpha:1.0]];
+    [self.mainDropdownMenu setBackgroundColor:[UIColor lightNordeaBlue]];
     
     [self.mainCollectionView registerNib:[UINib nibWithNibName:@"DailyScoreView"
                                                         bundle:[NSBundle mainBundle]]

@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TrendsScoreViewController">
             <connections>
+                <outlet property="dropdownMenu" destination="Jkh-mY-vz3" id="c8K-ti-c1U"/>
+                <outlet property="graphTitleLabel" destination="0Pq-wr-JTN" id="beh-WM-0wK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewForMainGraph" destination="Hiy-dH-Qay" id="kqz-BI-K1w"/>
             </connections>
@@ -21,13 +23,44 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hiy-dH-Qay">
-                    <rect key="frame" x="16" y="20" width="343" height="374"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jkh-mY-vz3" customClass="MKDropdownMenu">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="48"/>
+                    <color key="backgroundColor" red="0.0" green="0.28536528350000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="48" id="sfh-ee-kWW"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="ZlV-bh-De6"/>
+                        <outlet property="delegate" destination="-1" id="iV4-C8-KcK"/>
+                    </connections>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Graph Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Pq-wr-JTN">
+                    <rect key="frame" x="16" y="64" width="343" height="23"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hiy-dH-Qay">
+                    <rect key="frame" x="16" y="95" width="343" height="360"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="343" id="PEa-Bz-911"/>
+                        <constraint firstAttribute="height" constant="360" id="Urk-XW-qdJ"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="0Pq-wr-JTN" firstAttribute="top" secondItem="Jkh-mY-vz3" secondAttribute="bottom" constant="16" id="9ww-dP-Hc2"/>
+                <constraint firstItem="0Pq-wr-JTN" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="DIS-i4-nCZ"/>
+                <constraint firstItem="Jkh-mY-vz3" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="VC7-Nt-lXI"/>
+                <constraint firstItem="Hiy-dH-Qay" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="16" id="Vah-nJ-ohh"/>
+                <constraint firstItem="Hiy-dH-Qay" firstAttribute="top" secondItem="0Pq-wr-JTN" secondAttribute="bottom" constant="8" id="Y9G-XI-lQR"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="0Pq-wr-JTN" secondAttribute="trailing" constant="16" id="qBi-6S-uzO"/>
+                <constraint firstItem="Jkh-mY-vz3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="qnM-a9-F1l"/>
+                <constraint firstItem="Jkh-mY-vz3" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="uYi-mc-RHl"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="Hiy-dH-Qay" secondAttribute="trailing" constant="16" id="xS8-iA-vdf"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="32.5" y="118.5"/>
         </view>
