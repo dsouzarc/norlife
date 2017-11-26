@@ -277,10 +277,17 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+static MBProgressHUD *hud;
+
 - (void) cameraDidTakePhoto:(UIImage *)image
 {
+    hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeAnnularDeterminate;
+    hud.label.text = @"Processing photo";
+    
     self.chosenImage = image;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
+    
         self.foodClassifierHandler = [[FoodClassifierHandler alloc] initWithImage:self.chosenImage forDate:[NSDate date]];
         self.foodClassifierHandler.delegate = self;
         [self.foodClassifierHandler classifyImage];
@@ -291,9 +298,14 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
 
 - (void)cameraDidSelectAlbumPhoto:(UIImage *)image
 {
+    hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    hud.mode = MBProgressHUDModeAnnularDeterminate;
+    hud.label.text = @"Processing photo";
+    
     self.chosenImage = image;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
         if(self.lastChosenMenuItem == 1) {
+            
             self.foodClassifierHandler = [[FoodClassifierHandler alloc] initWithImage:self.chosenImage forDate:[NSDate date]];
             self.foodClassifierHandler.delegate = self;
             [self.foodClassifierHandler classifyImage];
@@ -305,6 +317,12 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
 - (void) finishedWithFoodScores:(NSMutableArray *)foodScores
 {
     dispatch_async(dispatch_get_main_queue(), ^(void) {
+        
+        if(hud) {
+            [hud hideAnimated:YES];
+            hud = nil;
+        }
+        
         self.foodViewController = [[FoodViewController alloc] initWithNibName:@"FoodViewController"
                                                                        bundle:[NSBundle mainBundle] foodScores:foodScores];
         [self presentViewController:self.foodViewController animated:YES completion:nil];

@@ -10,6 +10,7 @@ target 'Norlife' do
   pod 'TGCameraViewController'
   pod 'MKDropdownMenu'
   pod 'Clarifai'
+  pod 'CBZSplashView'
 
   target 'NorlifeUITests' do
     inherit! :search_paths

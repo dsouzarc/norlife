@@ -27,7 +27,11 @@
                     </constraints>
                     <items>
                         <navigationItem title="Meal Composition" id="Rh8-wg-Evc">
-                            <barButtonItem key="rightBarButtonItem" systemItem="done" id="GO3-e2-hrg"/>
+                            <barButtonItem key="rightBarButtonItem" systemItem="done" id="GO3-e2-hrg">
+                                <connections>
+                                    <action selector="doneButtonPressed:" destination="-1" id="t10-Ka-70t"/>
+                                </connections>
+                            </barButtonItem>
                         </navigationItem>
                     </items>
                 </navigationBar>

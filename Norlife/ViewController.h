@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import <CBZSplashView/CBZSplashView.h>
+
 #import "Constants.h"
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate>

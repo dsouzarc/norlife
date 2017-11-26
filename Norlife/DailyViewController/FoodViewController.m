@@ -202,6 +202,10 @@
     NSString *relevantKey = [[self.totalPerCategory allKeys] objectAtIndex:pointIndex];
     return [relevantKey stringByReplacingOccurrencesOfString:@"nf_" withString:@""];
 }
+- (IBAction)doneButtonPressed:(id)sender
+{
+    [self dismissViewControllerAnimated:NO completion:nil];
+}
 
 - (NSInteger) numberOfPoints
 {

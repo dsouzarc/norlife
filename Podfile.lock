@@ -14,6 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - CBZSplashView (1.0.0)
   - Clarifai (2.3.2):
     - AFNetworking (~> 3.1)
   - MKDropdownMenu (1.4)
@@ -35,6 +36,7 @@ PODS:
   - TGCameraViewController (2.2.8)
 
 DEPENDENCIES:
+  - CBZSplashView
   - Clarifai
   - MKDropdownMenu
   - ObjCMongoDB
@@ -42,12 +44,13 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  CBZSplashView: 9ce4cba22024476ff4a97d6433e7347da6376016
   Clarifai: 6d6cce2b31aefcf33893f2c3a18588b266771d11
   MKDropdownMenu: 269df4a41d21a1db684ce8bc709befe419fc5bae
   mongo-c-driver: 56558b8009f8d27549b23b62ce64fe33b9818703
   ObjCMongoDB: 465dffcaf56a852381ee34bef0f98828398c8cfc
   TGCameraViewController: 0768b534800e6136e70dd3cc5aafe1310b448480
 
-PODFILE CHECKSUM: 61c22d010f4b7e7280b42a2243d16fe3fb9147e2
+PODFILE CHECKSUM: 61fd2518aa4fed74b0ad67657e1b105e6527eb4c
 
 COCOAPODS: 1.3.1

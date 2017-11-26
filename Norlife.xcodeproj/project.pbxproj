@@ -61,6 +61,8 @@
 		94C220A71FC9AFB4009F696D /* WMGaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C220A01FC9AFB3009F696D /* WMGaugeView.m */; };
 		94C220A81FC9AFB4009F696D /* WMGaugeViewStyle3D.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C220A31FC9AFB4009F696D /* WMGaugeViewStyle3D.m */; };
 		94C220A91FC9AFB4009F696D /* WMGaugeViewStyleFlatThin.m in Sources */ = {isa = PBXBuildFile; fileRef = 94C220A51FC9AFB4009F696D /* WMGaugeViewStyleFlatThin.m */; };
+		94DE634F1FCAA9C0004B649F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 94DE634E1FCAA9C0004B649F /* MBProgressHUD.m */; };
+		94DE63521FCAABBB004B649F /* main_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 94DE63511FCAABBB004B649F /* main_icon.png */; };
 		CFD1CB240428949FE5D34FE1 /* libPods-Norlife.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CAB9369446DC6B02F7ABF5D /* libPods-Norlife.a */; };
 /* End PBXBuildFile section */
 
@@ -158,6 +160,9 @@
 		94C220A41FC9AFB4009F696D /* WMGaugeViewStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGaugeViewStyle.h; sourceTree = "<group>"; };
 		94C220A51FC9AFB4009F696D /* WMGaugeViewStyleFlatThin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMGaugeViewStyleFlatThin.m; sourceTree = "<group>"; };
 		94C220A61FC9AFB4009F696D /* WMGaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMGaugeView.h; sourceTree = "<group>"; };
+		94DE634D1FCAA9BF004B649F /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		94DE634E1FCAA9C0004B649F /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		94DE63511FCAABBB004B649F /* main_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main_icon.png; sourceTree = "<group>"; };
 		9BC903D39E2E479F8EBFC58C /* Pods-Norlife.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Norlife.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Norlife/Pods-Norlife.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -389,6 +394,7 @@
 				94C6FB161FC8C77B0089DBA8 /* Location */,
 				940A296D1FCA2B20005DA001 /* Scrollable Graph View */,
 				94C6FB171FC8C7850089DBA8 /* Constants */,
+				94DE63501FCAAB22004B649F /* MBProgressHUD */,
 				94259F861FC94A460067320B /* DailyViewController */,
 				94259F851FC94A3B0067320B /* TrendsViewController */,
 				94259F921FC957760067320B /* FoodClassifierHandler.h */,
@@ -401,6 +407,7 @@
 				94A2B74B1FC89D2700B84598 /* Assets.xcassets */,
 				94A2B74D1FC89D2700B84598 /* LaunchScreen.storyboard */,
 				94A2B7501FC89D2700B84598 /* Info.plist */,
+				94DE63511FCAABBB004B649F /* main_icon.png */,
 				942244131FC9FE5900A83A62 /* checkmark_icon.png */,
 				942244141FC9FE5900A83A62 /* cross_mark_icon.png */,
 				94259F8E1FC955B30067320B /* calendar_icon.png */,
@@ -446,6 +453,15 @@
 				940A29401FCA2770005DA001 /* Norlife-Bridging-Header.h */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		94DE63501FCAAB22004B649F /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				94DE634D1FCAA9BF004B649F /* MBProgressHUD.h */,
+				94DE634E1FCAA9C0004B649F /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -554,6 +570,7 @@
 				94259F7F1FC944C70067320B /* DailyScoreViewController.xib in Resources */,
 				942244161FC9FE5A00A83A62 /* cross_mark_icon.png in Resources */,
 				94851B901FC9D215009E11B2 /* DailyScoreView.xib in Resources */,
+				94DE63521FCAABBB004B649F /* main_icon.png in Resources */,
 				940A29721FCA843B005DA001 /* FoodViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -707,6 +724,7 @@
 				940A29631FCA2771005DA001 /* ScrollableGraphViewDrawingDelegate.swift in Sources */,
 				946662111FC8AA8F0033D494 /* HealthKitDataManager.m in Sources */,
 				94C220A81FC9AFB4009F696D /* WMGaugeViewStyle3D.m in Sources */,
+				94DE634F1FCAA9C0004B649F /* MBProgressHUD.m in Sources */,
 				940A295E1FCA2771005DA001 /* DotDrawingLayer.swift in Sources */,
 				940A29681FCA2771005DA001 /* GraphPointAnimation.swift in Sources */,
 				942244111FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m in Sources */,

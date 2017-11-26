@@ -10,6 +10,7 @@
 
 #import "FoodClassifierHandler.h"
 #import "Constants.h"
+#import "MBProgressHUD.h"
 
 @interface DailyScoreViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource,
                                                             TGCameraDelegate, MKDropdownMenuDelegate, MKDropdownMenuDataSource,

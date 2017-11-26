@@ -19,6 +19,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+    //Initialize with the customizability option of your choice. See Customizability for more.
+    
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.delegate = self;
     
