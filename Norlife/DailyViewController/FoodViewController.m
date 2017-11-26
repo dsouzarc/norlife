@@ -73,18 +73,18 @@
             }
         }
         
-        for(NSString *key in [self.totalPerCategory allKeys]) {
-            //NSLog(@"KEY: %@\tVAL: %@", key, [self.totalPerCategory objectForKey:key]);
+        /*for(NSString *key in [self.totalPerCategory allKeys]) {
+            NSLog(@"KEY: %@\tVAL: %@", key, [self.totalPerCategory objectForKey:key]);
         }
-        //NSLog(@"DONE HERE");
+        NSLog(@"DONE HERE");
         
         for(NSString *foodGroup in [self.allItems allKeys]) {
             NSMutableArray *item = [self.allItems objectForKey:foodGroup];
             for(NSDictionary *it in item) {
-                //NSLog(@"SUBGROUPS %@", it);
+                NSLog(@"SUBGROUPS %@", it);
             }
-            //NSLog(@"\n\n");
-        }
+            NSLog(@"\n\n");
+        }*/
     }
     
     return self;
@@ -106,24 +106,6 @@
     barPlot.adaptAnimationType = ScrollableGraphViewAnimationTypeElastic;
     barPlot.animationDuration = 1.5;
     
-    // Setup the reference lines
-    ReferenceLines *referenceLines = [[ReferenceLines alloc] init];
-    
-    referenceLines.referenceLineLabelFont = [UIFont boldSystemFontOfSize:8.0];
-    referenceLines.referenceLineColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
-    referenceLines.referenceLineLabelColor = [UIColor blackColor];
-    referenceLines.referenceLinePosition = ScrollableGraphViewReferenceLinePositionLeft;
-    referenceLines.positionType = ReferenceLinePositioningTypeRelative;
-    referenceLines.shouldAddLabelsToIntermediateReferenceLines = YES;
-    referenceLines.dataPointLabelsSparsity = 1;
-    referenceLines.dataPointLabelColor = [UIColor blackColor];
-    referenceLines.shouldShowReferenceLineUnits = YES;
-    referenceLines.shouldShowLabels = YES;
-    [referenceLines setShouldShowReferenceLines:YES];
-    [referenceLines setReferenceLineUnits:@"%%"];
-    referenceLines.dataPointLabelColor = [[UIColor whiteColor] colorWithAlphaComponent:0.5];
-    
-    [self.graphView addReferenceLinesWithReferenceLines:referenceLines];
 }
 
 - (void)viewDidLoad
@@ -145,10 +127,32 @@
     
     self.graphView.dataPointSpacing = 70;
     
-    // Add everything
-    [self.graphView addPlotWithPlot:self.mealBarPlot];
-    //[self.graphView addPlotWithPlot:self.recommendedConsumptionBarPlot];
+    ReferenceLines *referenceLines = [[ReferenceLines alloc] init];
     
+    referenceLines.referenceLineLabelFont = [UIFont boldSystemFontOfSize:8.0];
+    referenceLines.referenceLineColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
+    referenceLines.referenceLineLabelColor = [UIColor blackColor];
+    referenceLines.referenceLinePosition = ScrollableGraphViewReferenceLinePositionLeft;
+    referenceLines.positionType = ReferenceLinePositioningTypeRelative;
+    referenceLines.shouldAddLabelsToIntermediateReferenceLines = YES;
+    referenceLines.dataPointLabelsSparsity = 2;
+    referenceLines.dataPointLabelColor = [UIColor blackColor];
+    referenceLines.shouldShowReferenceLineUnits = YES;
+    
+    referenceLines.dataPointLabelFont = [UIFont systemFontOfSize:10.0];
+    referenceLines.shouldShowLabels = YES;
+    [referenceLines setShouldShowReferenceLines:YES];
+    [referenceLines setReferenceLineUnits:@"%%"];
+    referenceLines.dataPointLabelColor = [[UIColor blackColor] colorWithAlphaComponent:0.8];
+    referenceLines.shouldShowLabels = YES;
+    
+    self.graphView.shouldAnimateOnStartup = YES;
+    self.graphView.shouldRangeAlwaysStartAtZero = YES;
+    self.graphView.showsVerticalScrollIndicator = YES;
+    self.graphView.showsHorizontalScrollIndicator = YES;
+    
+    [self.graphView addReferenceLinesWithReferenceLines:referenceLines];
+    [self.graphView addPlotWithPlot:self.mealBarPlot];
     [self.view addSubview:self.graphView];
 }
 
@@ -195,7 +199,6 @@
 
 - (NSString * _Nonnull) labelAtIndex:(NSInteger)pointIndex
 {
-    
     NSString *relevantKey = [[self.totalPerCategory allKeys] objectAtIndex:pointIndex];
     return [relevantKey stringByReplacingOccurrencesOfString:@"nf_" withString:@""];
 }
