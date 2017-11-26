@@ -29,6 +29,7 @@
 #import "TrendsScoreViewController.h"
 #import "DailyScoreView.h"
 #import "DailyFeedbackCollectionViewCell.h"
+#import "FoodViewController.h"
 
 
 static NSString *MONGO_DB_CONNECTION_STRING = @"138.197.36.15:27017";

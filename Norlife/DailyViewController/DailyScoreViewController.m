@@ -22,6 +22,9 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
 
 @property (strong, nonatomic) NSMutableArray<NSDictionary*> *feedbackArray;
 
+@property (strong, nonatomic) FoodClassifierHandler *foodClassifierHandler;
+@property (strong, nonatomic) FoodViewController *foodViewController;
+
 @end
 
 @implementation DailyScoreViewController
@@ -236,9 +239,9 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
 - (void) dropdownMenu:(MKDropdownMenu *)dropdownMenu didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
     self.lastChosenMenuItem = row;
+    [dropdownMenu closeAllComponentsAnimated:YES];
     
-    if(row == 1) {
-        [dropdownMenu closeAllComponentsAnimated:YES];
+    if(row == 1 || row == 2) {
         [self pressedComposeButton:nil];
     }
 }
@@ -278,7 +281,10 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
 {
     self.chosenImage = image;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
-        [[[FoodClassifierHandler alloc] initWithImage:self.chosenImage forDate:[NSDate date]] classifyImage];
+        self.foodClassifierHandler = [[FoodClassifierHandler alloc] initWithImage:self.chosenImage forDate:[NSDate date]];
+        self.foodClassifierHandler.delegate = self;
+        [self.foodClassifierHandler classifyImage];
+        
     });
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -288,10 +294,21 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
     self.chosenImage = image;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
         if(self.lastChosenMenuItem == 1) {
-            [[[FoodClassifierHandler alloc] initWithImage:self.chosenImage forDate:[NSDate date]] classifyImage];
+            self.foodClassifierHandler = [[FoodClassifierHandler alloc] initWithImage:self.chosenImage forDate:[NSDate date]];
+            self.foodClassifierHandler.delegate = self;
+            [self.foodClassifierHandler classifyImage];
         }
     });
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void) finishedWithFoodScores:(NSMutableArray *)foodScores
+{
+    dispatch_async(dispatch_get_main_queue(), ^(void) {
+        self.foodViewController = [[FoodViewController alloc] initWithNibName:@"FoodViewController"
+                                                                       bundle:[NSBundle mainBundle] foodScores:foodScores];
+        [self presentViewController:self.foodViewController animated:YES completion:nil];
+    });
 }
 
 - (IBAction) pressedComposeButton:(id)sender

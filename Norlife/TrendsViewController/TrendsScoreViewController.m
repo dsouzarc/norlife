@@ -52,7 +52,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
     [self.graphTitleLabel setText:@""];
     [self.dropdownMenu setDropdownShowsBorder:YES];
     [self.dropdownMenu setBackgroundColor:[UIColor lightNordeaBlue]];
@@ -240,9 +240,12 @@
     referenceLines.shouldShowReferenceLineUnits = YES;
     referenceLines.referenceLineColor = [[UIColor blackColor] colorWithAlphaComponent:0.6];
     referenceLines.referenceLineLabelColor = [UIColor blackColor];
-    referenceLines.positionType = ReferenceLinePositioningTypeRelative;
+    referenceLines.positionType = ReferenceLinePositioningTypeAbsolute;
     referenceLines.absolutePositions = @[@(self.plotMinY), @(self.plotMaxY), @(0.0)];
+    //referenceLines.relativePositions = @[@(self.plotMinY), @(self.plotMaxY), @(0.0)];
+    referenceLines.dataPointLabelFont = [UIFont systemFontOfSize:10.0];
     referenceLines.referenceLinePosition = ScrollableGraphViewReferenceLinePositionLeft;
+    referenceLines.positionType = ReferenceLinePositioningTypeAbsolute;
     referenceLines.shouldAddLabelsToIntermediateReferenceLines = YES;
     //referenceLines.dataPointLabelsSparsity = 5;
     referenceLines.shouldShowLabels = YES;

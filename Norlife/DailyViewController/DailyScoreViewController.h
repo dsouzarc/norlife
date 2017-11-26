@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#import "FoodClassifierHandler.h"
 #import "Constants.h"
 
 @interface DailyScoreViewController : UIViewController <UICollectionViewDelegate, UICollectionViewDataSource,
-                                                            TGCameraDelegate, MKDropdownMenuDelegate, MKDropdownMenuDataSource>
+                                                            TGCameraDelegate, MKDropdownMenuDelegate, MKDropdownMenuDataSource,
+                                                            FoodClassifierHandlerDelegate>
 
 @end

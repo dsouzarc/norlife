@@ -164,7 +164,7 @@ static MongoDBCollection *foodCollection;
 
 - (void) classifyImage
 {
-    if(!clarifaiApp) {
+    /*if(!clarifaiApp) {
         clarifaiApp = [[ClarifaiApp alloc] initWithApiKey:[Constants CLARIFAI_API_KEY]];
     }
     
@@ -210,10 +210,14 @@ static MongoDBCollection *foodCollection;
                         }
                     }
          ];
-    }];
+    }]; */
     
-    /*NSMutableArray *relevantTags = [NSMutableArray arrayWithArray:[@"breakfast, no person, food, delicious, dawn, plate, lunch, homemade, nutrition, bread, egg, meal, pancake, cooking, butter, dinner, dish, toast, traditional, baking" componentsSeparatedByString:@", "]]; */
-
+    
+    NSMutableArray *relevantTags = [NSMutableArray arrayWithArray:[@"breakfast, no person, food, delicious, dawn, plate, lunch, homemade, nutrition, bread, egg, meal, pancake, cooking, butter, dinner, dish, toast, traditional, baking" componentsSeparatedByString:@", "]];
+    
+    NSMutableArray *foodScores = [self computeFoodScores:relevantTags];
+    
+    [self.delegate finishedWithFoodScores:foodScores];
 }
 
 @end

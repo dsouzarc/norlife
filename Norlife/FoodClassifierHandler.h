@@ -6,11 +6,23 @@
 //  Copyright © 2017 Ryan D'souza. All rights reserved.
 //
 
+
 #import <Foundation/Foundation.h>
+
+@class FoodClassifierHandler;
+
+@protocol FoodClassifierHandlerDelegate <NSObject>
+
+- (void) finishedWithFoodScores:(NSMutableArray*)foodScores;
+
+@end
+
 
 #import "Constants.h"
 
 static NSString *FOOD_COLLECTION_NAME = @"norlife.food";
+
+
 
 @interface FoodClassifierHandler : NSObject
 
@@ -21,5 +33,8 @@ static NSString *FOOD_COLLECTION_NAME = @"norlife.food";
  @brief Classifies the image and saves the results to the database
  */
 - (void) classifyImage;
+
+@property (weak, nonatomic) id<FoodClassifierHandlerDelegate> delegate;
+
 
 @end

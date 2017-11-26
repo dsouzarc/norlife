@@ -27,6 +27,8 @@
 		940A296A1FCA2771005DA001 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29571FCA2771005DA001 /* Plot.swift */; };
 		940A296B1FCA2771005DA001 /* LinePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29581FCA2771005DA001 /* LinePlot.swift */; };
 		940A296C1FCA2771005DA001 /* DotPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29591FCA2771005DA001 /* DotPlot.swift */; };
+		940A29711FCA843B005DA001 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940A296F1FCA843B005DA001 /* FoodViewController.m */; };
+		940A29721FCA843B005DA001 /* FoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940A29701FCA843B005DA001 /* FoodViewController.xib */; };
 		942244111FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9422440F1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m */; };
 		942244121FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942244101FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib */; };
 		942244151FC9FE5A00A83A62 /* checkmark_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 942244131FC9FE5900A83A62 /* checkmark_icon.png */; };
@@ -98,6 +100,9 @@
 		940A29571FCA2771005DA001 /* Plot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Plot.swift; sourceTree = "<group>"; };
 		940A29581FCA2771005DA001 /* LinePlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinePlot.swift; sourceTree = "<group>"; };
 		940A29591FCA2771005DA001 /* DotPlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DotPlot.swift; sourceTree = "<group>"; };
+		940A296E1FCA843B005DA001 /* FoodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
+		940A296F1FCA843B005DA001 /* FoodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
+		940A29701FCA843B005DA001 /* FoodViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodViewController.xib; sourceTree = "<group>"; };
 		9422440E1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyFeedbackCollectionViewCell.h; sourceTree = "<group>"; };
 		9422440F1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyFeedbackCollectionViewCell.m; sourceTree = "<group>"; };
 		942244101FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyFeedbackCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -295,6 +300,9 @@
 		94259F861FC94A460067320B /* DailyViewController */ = {
 			isa = PBXGroup;
 			children = (
+				940A296E1FCA843B005DA001 /* FoodViewController.h */,
+				940A296F1FCA843B005DA001 /* FoodViewController.m */,
+				940A29701FCA843B005DA001 /* FoodViewController.xib */,
 				942244171FCA131100A83A62 /* Feedback View */,
 				94259F7B1FC944C70067320B /* DailyScoreViewController.h */,
 				94259F7C1FC944C70067320B /* DailyScoreViewController.m */,
@@ -546,6 +554,7 @@
 				94259F7F1FC944C70067320B /* DailyScoreViewController.xib in Resources */,
 				942244161FC9FE5A00A83A62 /* cross_mark_icon.png in Resources */,
 				94851B901FC9D215009E11B2 /* DailyScoreView.xib in Resources */,
+				940A29721FCA843B005DA001 /* FoodViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -702,6 +711,7 @@
 				940A29681FCA2771005DA001 /* GraphPointAnimation.swift in Sources */,
 				942244111FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m in Sources */,
 				946662091FC89FFC0033D494 /* SOLocationManager.m in Sources */,
+				940A29711FCA843B005DA001 /* FoodViewController.m in Sources */,
 				94C220A71FC9AFB4009F696D /* WMGaugeView.m in Sources */,
 				940A29651FCA2771005DA001 /* ReferenceLines.swift in Sources */,
 				9466620E1FC8A32F0033D494 /* Constants.m in Sources */,
