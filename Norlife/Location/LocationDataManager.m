@@ -160,7 +160,6 @@ static LocationDataManager *dataManager;
             noMovementMotionTypes = [NSSet setWithObjects:@(MotionTypeAutomotive), @(MotionTypeNotMoving), nil];
         }
         
-        
         //First time - initialize
         if(!lastMotionTypeDate) {
             lastMotionTypeDate = [NSDate date];

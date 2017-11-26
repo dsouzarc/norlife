@@ -154,9 +154,6 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
         
         if (!separator.subviews.count) {
             
-            // … create the subview to represent the line, and set it up
-            // if subviews were present, it means this work has already been done
-            
         }
     }
     
@@ -168,7 +165,7 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
     if([indexPath section] == 0) {
         DailyScoreView *scoreView = [collectionView dequeueReusableCellWithReuseIdentifier:dailyScoreIdentifier
                                                                               forIndexPath:indexPath];
-        [scoreView setupViewWithYesterdayScore:80.6 todayScore:90.7];
+        [scoreView setupViewWithYesterdayScore:[Constants yesterdayScore] todayScore:[Constants todayScore]];
         return scoreView;
     }
     

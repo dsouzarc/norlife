@@ -63,6 +63,16 @@ static Constants *constants;
     return constantsJson;
 }
 
++ (double) yesterdayScore
+{
+    return 80.6;
+}
+
++ (double) todayScore
+{
+    return 90.2;
+}
+
 + (NSString*) NUTRITIONIX_APP_ID
 {
     return [[[Constants constantsJSON] objectForKey:@"nutritionix"] objectForKey:@"x-app-id"];
@@ -192,6 +202,13 @@ static Constants *constants;
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return newImage;
+}
+
++ (NSDate *) beginningOfDay:(NSDate *)date
+{
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [calendar components:NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit fromDate:date];
+    return [calendar dateFromComponents:components];
 }
 
 @end

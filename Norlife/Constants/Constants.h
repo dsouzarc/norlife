@@ -33,9 +33,11 @@
 
 static NSString *MONGO_DB_CONNECTION_STRING = @"138.197.36.15:27017";
 static NSString *TODAYS_FEEDBACK_URL = @"http://138.197.36.15/today-review";
+static NSString *PREDICTIONS_URL = @"http://138.197.36.15/make-prediction";
 
 static NSString *MONGO_DB_USERS_COLLECTION_NAME = @"norlife.users";
 static NSString *MONGO_DB_DAILY_REVIEWS_COLLECTION_NAME = @"norlife.daily_reviews";
+static NSString *MONGO_DB_MONTHLY_REVIEWS_COLLECTION_NAME = @"norlife.monthly_reviews";
 
 static const NSString *NORDEA_BASE_URL = @"https://api.hackathon.developer.nordeaopenbanking.com/v1/";
 
@@ -55,13 +57,19 @@ static const NSString *NORDEA_BASE_URL = @"https://api.hackathon.developer.norde
 + (NSString*) mongoDBUserID;
 + (NSDictionary*) userProperties;
 
++ (double) yesterdayScore;
++ (double) todayScore;
+
 + (CLLocationManager*) getLocationManager;
 + (double) hoursBetween:(NSDate*)firstDate and:(NSDate*)secondDate;
+
++ (NSDate *) beginningOfDay:(NSDate *)date;
 
 + (UIImage*)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
 
 + (NSMutableAttributedString*) string:(NSString*)string color:(UIColor*)color;
 
 + (void) addUserToDB;
+
 
 @end

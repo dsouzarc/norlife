@@ -27,6 +27,8 @@
 @property (strong, nonatomic) NSMutableDictionary *plotsAndIdentifiers;
 @property (strong, nonatomic) NSMutableArray *dailyAggregatesData;
 
+@property (strong, nonatomic) NSMutableDictionary *forecasts;
+
 @property float plotMinY;
 @property float plotMaxY;
 
@@ -40,6 +42,7 @@
     
     if(self) {
         self.dailyAggregatesData = [[NSMutableArray alloc] init];
+        self.forecasts = [[NSMutableDictionary alloc] init];
         [self refreshDailyAggregates];
     }
     
@@ -56,6 +59,22 @@
     
     [self.plotOptionsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ScoreTableViewCellIdentifier"];
     [self refreshDailyAggregates];
+    [self getForecastedRates];
+}
+
+- (void) getForecastedRates
+{
+    NSMutableURLRequest *forecastRequest = [[NSMutableURLRequest alloc] init];
+    [forecastRequest setURL:[NSURL URLWithString:PREDICTIONS_URL]];
+    [forecastRequest setHTTPMethod:@"GET"];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
+        NSData *responseData = [NSURLConnection sendSynchronousRequest:forecastRequest returningResponse:nil error:nil];
+        NSDictionary *responseDict = [NSJSONSerialization JSONObjectWithData:responseData options:kNilOptions error:nil];
+        self.forecasts = [NSMutableDictionary dictionaryWithDictionary:responseDict];
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            [self.dropdownMenu reloadAllComponents];
+        });
+    });
 }
 
 - (BOOL) prefersStatusBarHidden
@@ -316,12 +335,23 @@
 
 - (NSInteger) dropdownMenu:(MKDropdownMenu *)dropdownMenu numberOfRowsInComponent:(NSInteger)component
 {
-    return 1;
+    return MAX(1, [self.forecasts count]);
 }
 
 - (NSString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-    return @"Yo";
+    NSString *text = @"";
+    
+    if(row < [self.forecasts count]) {
+        NSString *key = [[self.forecasts allKeys] objectAtIndex:row];
+        if([key isEqualToString:@"one_month_prediction"]) {
+            text = [NSString stringWithFormat:@"1 Month Prediction: %0.2f %%", [[self.forecasts objectForKey:key] doubleValue]];
+        } else if([key isEqualToString:@"six_months_prediction"]) {
+            text = [NSString stringWithFormat:@"6 Month Prediction: %0.2f %%", [[self.forecasts objectForKey:key] doubleValue]];
+        }
+    }
+    
+    return text;
 }
 
 - (void) dropdownMenu:(MKDropdownMenu *)dropdownMenu didSelectRow:(NSInteger)row inComponent:(NSInteger)component

@@ -33,6 +33,29 @@
     self.todayScore = todayScore;
     [self setupScoreLabels];
     [self setupGaugeView];
+    
+    NSDate *today = [Constants beginningOfDay:[NSDate date]];
+    NSDate *yesterday = [today dateByAddingTimeInterval:(-60 * 60 * 24)];
+    today = yesterday;
+    yesterday = [yesterday dateByAddingTimeInterval:(-60 * 60 * 24)];
+    
+    MongoKeyedPredicate *todayScorePredicate = [MongoKeyedPredicate predicate];
+    [todayScorePredicate keyPath:@"date" isGreaterThan:today];
+    
+    MongoKeyedPredicate *yesterdayScorePredicate = [MongoKeyedPredicate predicate];
+    [yesterdayScorePredicate keyPath:@"date" matches:yesterday];
+
+    
+    MongoDBCollection *collection = [[MongoConnection connectionForServer:MONGO_DB_CONNECTION_STRING error:nil]
+                                     collectionWithName:MONGO_DB_MONTHLY_REVIEWS_COLLECTION_NAME];
+    
+    BSONDocument *todayBSON = [collection findOneWithPredicate:todayScorePredicate error:nil];
+    NSDictionary *todayJSON = [BSONDecoder decodeDictionaryWithDocument:todayBSON];
+    
+    BSONDocument *yesterdayBSON = [collection findOneWithPredicate:yesterdayScorePredicate error:nil];
+    NSDictionary *yesterdayJSON = [BSONDecoder decodeDictionaryWithDocument:yesterdayBSON];
+    
+    //TODO: Get counts from Mongo and update globals here.
 }
     
 - (void) setupScoreLabels
