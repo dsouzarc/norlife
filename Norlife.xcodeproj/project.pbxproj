@@ -282,6 +282,57 @@
 			path = "Scrollable Graph View";
 			sourceTree = "<group>";
 		};
+		9415E0391FCAB29300483F5A /* Food Classifier */ = {
+			isa = PBXGroup;
+			children = (
+				94259F921FC957760067320B /* FoodClassifierHandler.h */,
+				94259F931FC957760067320B /* FoodClassifierHandler.m */,
+			);
+			path = "Food Classifier";
+			sourceTree = "<group>";
+		};
+		9415E03A1FCAB2A100483F5A /* FoodViewController */ = {
+			isa = PBXGroup;
+			children = (
+				940A296E1FCA843B005DA001 /* FoodViewController.h */,
+				940A296F1FCA843B005DA001 /* FoodViewController.m */,
+				940A29701FCA843B005DA001 /* FoodViewController.xib */,
+			);
+			path = FoodViewController;
+			sourceTree = "<group>";
+		};
+		9415E03B1FCAB2AA00483F5A /* Food Views + Logic */ = {
+			isa = PBXGroup;
+			children = (
+				9415E0391FCAB29300483F5A /* Food Classifier */,
+				9415E03A1FCAB2A100483F5A /* FoodViewController */,
+			);
+			path = "Food Views + Logic";
+			sourceTree = "<group>";
+		};
+		9415E03C1FCAB2BF00483F5A /* 3rd Party Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				940A296D1FCA2B20005DA001 /* Scrollable Graph View */,
+				94DE63501FCAAB22004B649F /* MBProgressHUD */,
+				94851B881FC9B050009E11B2 /* WMGaugeView */,
+				946662011FC89FFC0033D494 /* SOMotionDetector */,
+			);
+			path = "3rd Party Libraries";
+			sourceTree = "<group>";
+		};
+		9415E03D1FCAB2D500483F5A /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				94DE63511FCAABBB004B649F /* main_icon.png */,
+				942244131FC9FE5900A83A62 /* checkmark_icon.png */,
+				942244141FC9FE5900A83A62 /* cross_mark_icon.png */,
+				94259F8E1FC955B30067320B /* calendar_icon.png */,
+				94259F8F1FC955B30067320B /* combo_chart_icon.png */,
+			);
+			path = Icons;
+			sourceTree = "<group>";
+		};
 		942244171FCA131100A83A62 /* Feedback View */ = {
 			isa = PBXGroup;
 			children = (
@@ -305,9 +356,6 @@
 		94259F861FC94A460067320B /* DailyViewController */ = {
 			isa = PBXGroup;
 			children = (
-				940A296E1FCA843B005DA001 /* FoodViewController.h */,
-				940A296F1FCA843B005DA001 /* FoodViewController.m */,
-				940A29701FCA843B005DA001 /* FoodViewController.xib */,
 				942244171FCA131100A83A62 /* Feedback View */,
 				94259F7B1FC944C70067320B /* DailyScoreViewController.h */,
 				94259F7C1FC944C70067320B /* DailyScoreViewController.m */,
@@ -388,17 +436,12 @@
 			children = (
 				946662121FC8B0CA0033D494 /* Norlife.entitlements */,
 				94259F8B1FC94BA60067320B /* Extensions */,
-				94851B881FC9B050009E11B2 /* WMGaugeView */,
-				946662011FC89FFC0033D494 /* SOMotionDetector */,
 				94C6FB151FC8C7740089DBA8 /* HealthKit */,
 				94C6FB161FC8C77B0089DBA8 /* Location */,
-				940A296D1FCA2B20005DA001 /* Scrollable Graph View */,
 				94C6FB171FC8C7850089DBA8 /* Constants */,
-				94DE63501FCAAB22004B649F /* MBProgressHUD */,
+				9415E03B1FCAB2AA00483F5A /* Food Views + Logic */,
 				94259F861FC94A460067320B /* DailyViewController */,
 				94259F851FC94A3B0067320B /* TrendsViewController */,
-				94259F921FC957760067320B /* FoodClassifierHandler.h */,
-				94259F931FC957760067320B /* FoodClassifierHandler.m */,
 				94A2B7421FC89D2700B84598 /* AppDelegate.h */,
 				94A2B7431FC89D2700B84598 /* AppDelegate.m */,
 				94A2B7451FC89D2700B84598 /* ViewController.h */,
@@ -407,12 +450,9 @@
 				94A2B74B1FC89D2700B84598 /* Assets.xcassets */,
 				94A2B74D1FC89D2700B84598 /* LaunchScreen.storyboard */,
 				94A2B7501FC89D2700B84598 /* Info.plist */,
-				94DE63511FCAABBB004B649F /* main_icon.png */,
-				942244131FC9FE5900A83A62 /* checkmark_icon.png */,
-				942244141FC9FE5900A83A62 /* cross_mark_icon.png */,
-				94259F8E1FC955B30067320B /* calendar_icon.png */,
-				94259F8F1FC955B30067320B /* combo_chart_icon.png */,
+				9415E03D1FCAB2D500483F5A /* Icons */,
 				94A2B7511FC89D2700B84598 /* main.m */,
+				9415E03C1FCAB2BF00483F5A /* 3rd Party Libraries */,
 			);
 			path = Norlife;
 			sourceTree = "<group>";

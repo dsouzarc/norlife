@@ -103,9 +103,7 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
             } else if([highestKey isEqualToString:@"transaction_score"]) {
                 positiveFeedback = @"Nice money management! That takes real strength and discipline. Keep it up and you'll feel the rewards soon enough :)";
             }
-            
-            NSLog(@"%@", responseDictionary);
-            
+    
             NSDictionary *positiveFeedbackItem = @{@"feedback": @"positive", @"text": positiveFeedback};
             NSDictionary *negativeFeedbackItem = @{@"feedback": @"negative", @"text": negativeFeedback};
             
