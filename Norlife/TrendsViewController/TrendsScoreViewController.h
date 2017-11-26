@@ -12,6 +12,6 @@
 
 #import "Constants.h"
 
-@interface TrendsScoreViewController : UIViewController <ScrollableGraphViewDataSource, MKDropdownMenuDelegate, MKDropdownMenuDataSource>
+@interface TrendsScoreViewController : UIViewController <ScrollableGraphViewDataSource, MKDropdownMenuDelegate, MKDropdownMenuDataSource, UITableViewDelegate, UITableViewDataSource>
 
 @end

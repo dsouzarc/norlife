@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *viewForMainGraph;
 @property (weak, nonatomic) IBOutlet UILabel *graphTitleLabel;
+@property (weak, nonatomic) IBOutlet UITableView *plotOptionsTableView;
 
 @property (strong, nonatomic) ScrollableGraphView *mainGraph;
 @property (strong, nonatomic) LinePlot *scorePlot;
@@ -24,6 +25,7 @@
 @property (strong, nonatomic) LinePlot *heartbeatPlot;
 
 @property (strong, nonatomic) NSMutableDictionary *plotsAndIdentifiers;
+@property (strong, nonatomic) NSMutableArray *identifiers;
 @property (strong, nonatomic) NSMutableArray *dailyAggregatesData;
 
 @property float plotMinY;
@@ -39,6 +41,7 @@
     
     if(self) {
         self.dailyAggregatesData = [[NSMutableArray alloc] init];
+        self.identifiers = [[NSMutableArray alloc] init];
         [self refreshDailyAggregates];
     }
     
@@ -53,6 +56,7 @@
     [self.dropdownMenu setDropdownShowsBorder:YES];
     [self.dropdownMenu setBackgroundColor:[UIColor lightNordeaBlue]];
     
+    [self.plotOptionsTableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"ScoreTableViewCellIdentifier"];
     [self refreshDailyAggregates];
 }
 
@@ -131,11 +135,50 @@
         
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             [self initializePlots];
+            [self.plotOptionsTableView reloadData];
             [self showPlotWithIdentifier:@"total_score"];
             [self.graphTitleLabel setText:@"% Change in Total Score"];
         });
     });
 }
+
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [self.plotsAndIdentifiers count];
+}
+
+- (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ScoreTableViewCellIdentifier"];
+
+    //THE WORST THING TO DO but it's 4AM and I'm exhausted
+    NSString *keyName = [[self.plotsAndIdentifiers allKeys] objectAtIndex:indexPath.row];
+    NSString *buttonOption = @"";
+    
+    if([keyName isEqualToString:@"commute_score"]) {
+        buttonOption = @"Commuting Score";
+    } else if([keyName isEqualToString:@"driving_score"]) {
+        buttonOption = @"Driving Score";
+    } else if([keyName isEqualToString:@"food_score"]) {
+        buttonOption = @"Food Score";
+    } else if([keyName isEqualToString:@"heartbeat_score"]) {
+        buttonOption = @"Heartbeat Score";
+    } else if([keyName isEqualToString:@"total_score"]) {
+        buttonOption = @"Total Score";
+    } else if([keyName isEqualToString:@"transaction_score"]) {
+        buttonOption = @"Transaction Score";
+    }
+    [cell.textLabel setText:buttonOption];
+    [cell.textLabel setTextColor:[UIColor blackColor]];
+    [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
+    return cell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 40.0;
+}
+
 
 - (void) showPlotWithIdentifier:(NSString*)identifier
 {
