@@ -25,7 +25,6 @@
 @property (strong, nonatomic) LinePlot *heartbeatPlot;
 
 @property (strong, nonatomic) NSMutableDictionary *plotsAndIdentifiers;
-@property (strong, nonatomic) NSMutableArray *identifiers;
 @property (strong, nonatomic) NSMutableArray *dailyAggregatesData;
 
 @property float plotMinY;
@@ -41,7 +40,6 @@
     
     if(self) {
         self.dailyAggregatesData = [[NSMutableArray alloc] init];
-        self.identifiers = [[NSMutableArray alloc] init];
         [self refreshDailyAggregates];
     }
     
@@ -147,6 +145,18 @@
     return [self.plotsAndIdentifiers count];
 }
 
+- (void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    NSString *keyName = [[self.plotsAndIdentifiers allKeys] objectAtIndex:indexPath.row];
+    [self showPlotWithIdentifier:keyName];
+    
+    NSString *chartTitle = [NSString stringWithFormat:@"%% Change in %@",
+                            [[[tableView cellForRowAtIndexPath:indexPath] textLabel] text]];
+    self.graphTitleLabel.text = chartTitle;
+}
+
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ScoreTableViewCellIdentifier"];
@@ -168,6 +178,7 @@
     } else if([keyName isEqualToString:@"transaction_score"]) {
         buttonOption = @"Transaction Score";
     }
+    
     [cell.textLabel setText:buttonOption];
     [cell.textLabel setTextColor:[UIColor blackColor]];
     [cell.textLabel setTextAlignment:NSTextAlignmentCenter];
@@ -178,7 +189,6 @@
 {
     return 40.0;
 }
-
 
 - (void) showPlotWithIdentifier:(NSString*)identifier
 {
