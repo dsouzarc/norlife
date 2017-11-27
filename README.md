@@ -16,6 +16,7 @@ Norlife gathers data about a user and visualizes their habits in order to more a
 We created an iOS app that utilizes a MongoDB database hosted on a DigitalOcean instance for back-end data processing. We also use several APIs (like Clarifai, Nordea, and Microsoft Cognitive Services) to gather data on a user's habits. The app provides an interface that shows how the user is scoring in terms of good habits, and gives feedback on the best and worst actions on a daily and monthly basis. It also offers a forecast on how the monthly premium can be affected by the current habits.
 
 
+Link to Demo Video [on Dropbox](https://www.dropbox.com/s/a13aou32uekp9bn/Norlife%20Demo.mov?dl=0) and [as raw file on GitHub](https://github.com/dsouzarc/norlife/blob/master/Screenshots/Norlife%20Demo.mov) and 
 
 
 ## Screenshots
