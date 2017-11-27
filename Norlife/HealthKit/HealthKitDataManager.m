@@ -76,8 +76,6 @@ static HealthKitDataManager *dataManager;
 
 - (void)readHeartRateWithCompletion:(void (^)(NSArray *results, NSError *error))completion
 {
-    
-    //get the heart rates
     NSDate *now = [NSDate date];
     NSCalendar *calendar = [NSCalendar autoupdatingCurrentCalendar];
     NSDateComponents *components = [calendar components:NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay fromDate:now];
@@ -102,7 +100,7 @@ static HealthKitDataManager *dataManager;
                                                       resultsHandler:^(HKSampleQuery *query, NSArray *results, NSError *error){
         if (!results) {
             NSLog(@"An error occured fetching the user's heartrate. The error was: %@.", error);
-            abort();
+            return;
         }
         
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -110,17 +108,16 @@ static HealthKitDataManager *dataManager;
             NSMutableArray *arrayHeartRate = [[NSMutableArray alloc]init];
             
             for (HKQuantitySample *sample in results) {
-                NSLog(@"SOME RESULTS");
                 double hbpm = [sample.quantity doubleValueForUnit:[HealthKitDataManager heartBeatsPerMinuteUnit]];
                 [arrayHeartRate addObject:[NSNumber numberWithDouble:hbpm]];
             }
             
             if (completion) {
-                NSLog(@"COMPLETED");
                 completion(arrayHeartRate, error);
             }
         });
     }];
+    
     [[[HKHealthStore alloc] init] executeQuery:query];
     
 }
