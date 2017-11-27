@@ -14,6 +14,4 @@
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate>
 
-
 @end
-

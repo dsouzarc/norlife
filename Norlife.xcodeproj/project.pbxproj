@@ -306,13 +306,13 @@
 			path = FoodViewController;
 			sourceTree = "<group>";
 		};
-		9415E03B1FCAB2AA00483F5A /* Food Views + Logic */ = {
+		9415E03B1FCAB2AA00483F5A /* FoodViews+Logic */ = {
 			isa = PBXGroup;
 			children = (
 				9415E0391FCAB29300483F5A /* Food Classifier */,
 				9415E03A1FCAB2A100483F5A /* FoodViewController */,
 			);
-			path = "Food Views + Logic";
+			path = "FoodViews+Logic";
 			sourceTree = "<group>";
 		};
 		9415E03C1FCAB2BF00483F5A /* 3rd Party Libraries */ = {
@@ -338,14 +338,24 @@
 			path = Icons;
 			sourceTree = "<group>";
 		};
-		942244171FCA131100A83A62 /* Feedback View */ = {
+		9415E0431FCC816900483F5A /* DailyScoreViewController */ = {
+			isa = PBXGroup;
+			children = (
+				94259F7B1FC944C70067320B /* DailyScoreViewController.h */,
+				94259F7C1FC944C70067320B /* DailyScoreViewController.m */,
+				94259F7D1FC944C70067320B /* DailyScoreViewController.xib */,
+			);
+			path = DailyScoreViewController;
+			sourceTree = "<group>";
+		};
+		942244171FCA131100A83A62 /* FeedbackView */ = {
 			isa = PBXGroup;
 			children = (
 				9422440E1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.h */,
 				9422440F1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m */,
 				942244101FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib */,
 			);
-			path = "Feedback View";
+			path = FeedbackView;
 			sourceTree = "<group>";
 		};
 		94259F851FC94A3B0067320B /* TrendsViewController */ = {
@@ -361,13 +371,9 @@
 		94259F861FC94A460067320B /* DailyViewController */ = {
 			isa = PBXGroup;
 			children = (
-				942244171FCA131100A83A62 /* Feedback View */,
-				94259F7B1FC944C70067320B /* DailyScoreViewController.h */,
-				94259F7C1FC944C70067320B /* DailyScoreViewController.m */,
-				94259F7D1FC944C70067320B /* DailyScoreViewController.xib */,
-				9415E03E1FCAB34200483F5A /* InboxViewController.h */,
-				9415E03F1FCAB34200483F5A /* InboxViewController.m */,
-				9415E0401FCAB34200483F5A /* InboxViewController.xib */,
+				942244171FCA131100A83A62 /* FeedbackView */,
+				9415E0431FCC816900483F5A /* DailyScoreViewController */,
+				94C973801FCC829C0048377D /* InboxViewController */,
 				94851B911FC9E1BE009E11B2 /* Daily Score View */,
 			);
 			path = DailyViewController;
@@ -442,24 +448,21 @@
 		94A2B7411FC89D2700B84598 /* Norlife */ = {
 			isa = PBXGroup;
 			children = (
-				946662121FC8B0CA0033D494 /* Norlife.entitlements */,
-				94259F8B1FC94BA60067320B /* Extensions */,
-				94C6FB151FC8C7740089DBA8 /* HealthKit */,
-				94C6FB161FC8C77B0089DBA8 /* Location */,
-				94C6FB171FC8C7850089DBA8 /* Constants */,
-				9415E03B1FCAB2AA00483F5A /* Food Views + Logic */,
-				94259F861FC94A460067320B /* DailyViewController */,
-				94259F851FC94A3B0067320B /* TrendsViewController */,
 				94A2B7421FC89D2700B84598 /* AppDelegate.h */,
 				94A2B7431FC89D2700B84598 /* AppDelegate.m */,
 				94A2B7451FC89D2700B84598 /* ViewController.h */,
 				94A2B7461FC89D2700B84598 /* ViewController.m */,
-				94A2B7481FC89D2700B84598 /* Main.storyboard */,
+				94259F8B1FC94BA60067320B /* Extensions */,
+				94C6FB151FC8C7740089DBA8 /* HealthKit */,
+				94C6FB161FC8C77B0089DBA8 /* Location */,
+				94C6FB171FC8C7850089DBA8 /* Constants */,
+				9415E03B1FCAB2AA00483F5A /* FoodViews+Logic */,
+				94259F861FC94A460067320B /* DailyViewController */,
+				94259F851FC94A3B0067320B /* TrendsViewController */,
+				94C973811FCC83710048377D /* Default Files */,
 				94A2B74B1FC89D2700B84598 /* Assets.xcassets */,
-				94A2B74D1FC89D2700B84598 /* LaunchScreen.storyboard */,
 				94A2B7501FC89D2700B84598 /* Info.plist */,
 				9415E03D1FCAB2D500483F5A /* Icons */,
-				94A2B7511FC89D2700B84598 /* main.m */,
 				9415E03C1FCAB2BF00483F5A /* 3rd Party Libraries */,
 			);
 			path = Norlife;
@@ -501,6 +504,27 @@
 				940A29401FCA2770005DA001 /* Norlife-Bridging-Header.h */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		94C973801FCC829C0048377D /* InboxViewController */ = {
+			isa = PBXGroup;
+			children = (
+				9415E03E1FCAB34200483F5A /* InboxViewController.h */,
+				9415E03F1FCAB34200483F5A /* InboxViewController.m */,
+				9415E0401FCAB34200483F5A /* InboxViewController.xib */,
+			);
+			path = InboxViewController;
+			sourceTree = "<group>";
+		};
+		94C973811FCC83710048377D /* Default Files */ = {
+			isa = PBXGroup;
+			children = (
+				94A2B7481FC89D2700B84598 /* Main.storyboard */,
+				94A2B74D1FC89D2700B84598 /* LaunchScreen.storyboard */,
+				946662121FC8B0CA0033D494 /* Norlife.entitlements */,
+				94A2B7511FC89D2700B84598 /* main.m */,
+			);
+			path = "Default Files";
 			sourceTree = "<group>";
 		};
 		94DE63501FCAAB22004B649F /* MBProgressHUD */ = {

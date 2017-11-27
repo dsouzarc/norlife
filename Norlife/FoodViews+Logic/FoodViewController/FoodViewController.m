@@ -23,6 +23,7 @@
 
 @end
 
+
 @implementation FoodViewController
 
 - (instancetype) initWithNibName:(NSString *)nibNameOrNil
@@ -155,6 +156,15 @@
     [self.graphView addPlotWithPlot:self.mealBarPlot];
     [self.view addSubview:self.graphView];
 }
+
+
+/****************************************************************
+ *
+ *              Graphing DataSource + Delegate
+ *
+ *****************************************************************/
+
+# pragma mark - Graphing DataSource + Delegate
 
 - (double) valueForPlot:(Plot * _Nonnull)plot atIndex:(NSInteger)pointIndex
 {

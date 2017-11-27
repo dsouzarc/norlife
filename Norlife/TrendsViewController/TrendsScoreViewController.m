@@ -35,6 +35,7 @@
 
 @end
 
+
 @implementation TrendsScoreViewController
 
 - (instancetype) initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -160,6 +161,15 @@
     });
 }
 
+
+/****************************************************************
+ *
+ *              UITableView Delegate + DataSource
+ *
+ *****************************************************************/
+
+# pragma mark - UITableView Delegate + DataSource
+
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return [self.plotsAndIdentifiers count];
@@ -209,6 +219,15 @@
 {
     return 40.0;
 }
+
+
+/****************************************************************
+ *
+ *              Plotting Methods + DataSource
+ *
+ *****************************************************************/
+
+# pragma mark - Plotting Methods + DataSource
 
 - (void) showPlotWithIdentifier:(NSString*)identifier
 {
