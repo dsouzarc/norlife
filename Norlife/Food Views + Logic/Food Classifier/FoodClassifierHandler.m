@@ -187,29 +187,34 @@ static MongoDBCollection *foodCollection;
                             
                             NSMutableArray *relevantFoodScores = [self computeFoodScores:relevantTags];
                             
-                            MongoConnection *connection = [MongoConnection connectionForServer:MONGO_DB_CONNECTION_STRING error:&error];
-                            if(error) {
-                                NSLog(@"ERROR GETTING MONGO CONNECTION: %@", [error description]);
-                            }
-                            
-                            MongoDBCollection *foodCollection = [connection collectionWithName:FOOD_COLLECTION_NAME];
-                            
-                            for(NSMutableDictionary *relevantFoodScore in relevantFoodScores) {
-                                [relevantFoodScore setObject:[Constants mongoDBUserID] forKey:@"user_id"];
-                                [relevantFoodScore setObject:self.foodDate forKey:@"date_consumed"];
+                            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^(void) {
                                 
-                                NSLog(@"INSERTING: %@", relevantFoodScore);
-                                [foodCollection insertDictionary:relevantFoodScore writeConcern:nil error:&error];
+                                NSError *error;
+                                
+                                MongoConnection *connection = [MongoConnection connectionForServer:MONGO_DB_CONNECTION_STRING error:&error];
                                 if(error) {
-                                    NSLog(@"ERROR WRITING TO MONGO IN DRIVING: %@", [error description]);
+                                    NSLog(@"ERROR GETTING MONGO CONNECTION: %@", [error description]);
                                 }
-                            }
+                                
+                                MongoDBCollection *foodCollection = [connection collectionWithName:FOOD_COLLECTION_NAME];
+                                
+                                for(NSMutableDictionary *relevantFoodScore in relevantFoodScores) {
+                                    [relevantFoodScore setObject:[Constants mongoDBUserID] forKey:@"user_id"];
+                                    [relevantFoodScore setObject:self.foodDate forKey:@"date_consumed"];
+                                    
+                                    NSLog(@"INSERTING: %@", relevantFoodScore);
+                                    [foodCollection insertDictionary:relevantFoodScore writeConcern:nil error:&error];
+                                    if(error) {
+                                        NSLog(@"ERROR WRITING TO MONGO IN DRIVING: %@", [error description]);
+                                    }
+                                }
+                            });
+                            
+                            [self.delegate finishedWithFoodScores:relevantFoodScores];
                         }
                         else {
                             NSLog(@"ERROR USING CLARIFAI API: %@", [error description]);
                         }
-                        
-                        [self.delegate finishedWithFoodScores:foodScores];
                     }
          ];
     }];

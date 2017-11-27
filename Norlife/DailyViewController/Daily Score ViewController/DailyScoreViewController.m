@@ -12,6 +12,7 @@ static NSString *dailyScoreIdentifier = @"DailyScoreViewIdentifier";
 static NSString *dailyFeedbackIdentifier = @"DailyFeedbackCellIdentifier";
 static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
 
+
 @interface DailyScoreViewController ()
 
 @property (weak, nonatomic) IBOutlet MKDropdownMenu *mainDropdownMenu;
@@ -26,6 +27,7 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
 @property (strong, nonatomic) FoodViewController *foodViewController;
 
 @end
+
 
 @implementation DailyScoreViewController
 
@@ -64,7 +66,9 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
         [urlRequest setHTTPMethod:@"GET"];
         
         NSData *dataResponse = [NSURLConnection sendSynchronousRequest:urlRequest returningResponse:nil error:nil];
-        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:dataResponse options:NSJSONReadingMutableLeaves error:nil];
+        NSDictionary *responseDictionary = [NSJSONSerialization JSONObjectWithData:dataResponse
+                                                                           options:NSJSONReadingMutableLeaves error:nil];
+        
         if(responseDictionary) {
             self.feedbackArray = [[NSMutableArray alloc] init];
             
@@ -347,6 +351,7 @@ static MBProgressHUD *hud;
 
 - (void) updateMongoFood
 {
+    //One time run to initialize with random data
     NSArray *foodImageURLs = @[@"https://i.pinimg.com/originals/7d/42/04/7d4204b53d7d34ff4a59691ea686b832.jpg",
                                @"https://d29vij1s2h2tll.cloudfront.net/~/media/images/taco-bell/products/default/23732_combos_quesarito_combo_300x300.jpg?w=300&h=300",
                                @"http://www.inspiredtaste.net/wp-content/uploads/2016/06/Brownies-Recipe-2-1200.jpg",
