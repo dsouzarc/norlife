@@ -132,7 +132,7 @@ static LocationDataManager *dataManager;
                                                @"location": location
                                                };
                 NSError *error = nil;
-                //[self.drivingCollection insertDictionary:relevantData writeConcern:nil error:&error];
+                [self.drivingCollection insertDictionary:relevantData writeConcern:nil error:&error];
                 
                 if(error) {
                     NSLog(@"ERROR WRITING TO MONGO IN DRIVING: %@", [error description]);
@@ -141,7 +141,6 @@ static LocationDataManager *dataManager;
                 lastSpeed = location.speed;
             }
             counter += 1;
-            //NSLog(@"Here: %@", location);
         }
     };
     

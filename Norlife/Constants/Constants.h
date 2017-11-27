@@ -6,11 +6,13 @@
 //  Copyright © 2017 Ryan D'souza. All rights reserved.
 //
 
+//Default libraries
 #import <Foundation/Foundation.h>
 #import <CoreLocation/CoreLocation.h>
 #import <Photos/Photos.h>
 #import <QuartzCore/QuartzCore.h>
 
+//3rd Party libraries
 #import "SOMotionDetector.h"
 #import "SOStepDetector.h"
 #import "SOLocationManager.h"
@@ -20,6 +22,7 @@
 #import "MKDropdownMenu.h"
 #include "WMGaugeView.h"
 
+//My libraries
 #import "UIColor+Norlife.h"
 
 #import "FoodClassifierHandler.h"
@@ -42,9 +45,16 @@ static NSString *MONGO_DB_MONTHLY_REVIEWS_COLLECTION_NAME = @"norlife.monthly_re
 
 static const NSString *NORDEA_BASE_URL = @"https://api.hackathon.developer.nordeaopenbanking.com/v1/";
 
+
 @interface Constants : NSObject
 
 + (instancetype) instance;
+
++ (UIImage*)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
+
++ (NSDate *) beginningOfDay:(NSDate *)date;
+
++ (NSDictionary*) userProperties;
 
 + (NSString*) NUTRITIONIX_APP_ID;
 + (NSString*) NUTRITIONIX_APP_KEY;
@@ -56,21 +66,15 @@ static const NSString *NORDEA_BASE_URL = @"https://api.hackathon.developer.norde
 + (NSString*) NORDEA_ACCESS_TOKEN;
 
 + (NSString*) mongoDBUserID;
-+ (NSDictionary*) userProperties;
 
 + (double) yesterdayScore;
 + (double) todayScore;
-
-+ (CLLocationManager*) getLocationManager;
 + (double) hoursBetween:(NSDate*)firstDate and:(NSDate*)secondDate;
 
-+ (NSDate *) beginningOfDay:(NSDate *)date;
-
-+ (UIImage*)imageWithImage:(UIImage *)image scaledToSize:(CGSize)newSize;
++ (CLLocationManager*) getLocationManager;
 
 + (NSMutableAttributedString*) string:(NSString*)string color:(UIColor*)color;
 
 + (void) addUserToDB;
-
 
 @end

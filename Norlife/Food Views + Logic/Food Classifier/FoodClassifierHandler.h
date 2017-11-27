@@ -23,7 +23,6 @@
 static NSString *FOOD_COLLECTION_NAME = @"norlife.food";
 
 
-
 @interface FoodClassifierHandler : NSObject
 
 - (instancetype) initWithImageURL:(NSString*)imageURL forDate:(NSDate*)date;
@@ -35,6 +34,5 @@ static NSString *FOOD_COLLECTION_NAME = @"norlife.food";
 - (void) classifyImage;
 
 @property (weak, nonatomic) id<FoodClassifierHandlerDelegate> delegate;
-
 
 @end
