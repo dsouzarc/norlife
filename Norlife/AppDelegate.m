@@ -19,9 +19,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-
-    //Initialize with the customizability option of your choice. See Customizability for more.
-    
     self.tabBarController = [[UITabBarController alloc] init];
     self.tabBarController.delegate = self;
     
@@ -53,6 +50,15 @@
     
     [[LocationDataManager instance] beginLocationTracking];
     
+    UNUserNotificationCenter* center = [UNUserNotificationCenter currentNotificationCenter];
+    [center requestAuthorizationWithOptions:(UNAuthorizationOptionAlert + UNAuthorizationOptionSound)
+                          completionHandler:^(BOOL granted, NSError * _Nullable error) {
+                              // Enable or disable features based on authorization.
+                          }
+     ];
+    
+    
+    
     return YES;
 }
 
@@ -70,10 +76,13 @@
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
-    // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.repeatInterval = NSCalendarUnitMinute;
+    [notification setAlertBody:@"You're almost at your daily walking goal - keep on going!"];
+    [notification setFireDate:[NSDate dateWithTimeIntervalSinceNow:1]];
+    [notification setTimeZone:[NSTimeZone  defaultTimeZone]];
+    [application setScheduledLocalNotifications:[NSArray arrayWithObject:notification]];
 }
-
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {

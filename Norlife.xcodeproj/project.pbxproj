@@ -29,6 +29,8 @@
 		940A296C1FCA2771005DA001 /* DotPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940A29591FCA2771005DA001 /* DotPlot.swift */; };
 		940A29711FCA843B005DA001 /* FoodViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 940A296F1FCA843B005DA001 /* FoodViewController.m */; };
 		940A29721FCA843B005DA001 /* FoodViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 940A29701FCA843B005DA001 /* FoodViewController.xib */; };
+		9415E0411FCAB34200483F5A /* InboxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9415E03F1FCAB34200483F5A /* InboxViewController.m */; };
+		9415E0421FCAB34200483F5A /* InboxViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9415E0401FCAB34200483F5A /* InboxViewController.xib */; };
 		942244111FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9422440F1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m */; };
 		942244121FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 942244101FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib */; };
 		942244151FC9FE5A00A83A62 /* checkmark_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 942244131FC9FE5900A83A62 /* checkmark_icon.png */; };
@@ -105,6 +107,9 @@
 		940A296E1FCA843B005DA001 /* FoodViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FoodViewController.h; sourceTree = "<group>"; };
 		940A296F1FCA843B005DA001 /* FoodViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodViewController.m; sourceTree = "<group>"; };
 		940A29701FCA843B005DA001 /* FoodViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FoodViewController.xib; sourceTree = "<group>"; };
+		9415E03E1FCAB34200483F5A /* InboxViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InboxViewController.h; sourceTree = "<group>"; };
+		9415E03F1FCAB34200483F5A /* InboxViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InboxViewController.m; sourceTree = "<group>"; };
+		9415E0401FCAB34200483F5A /* InboxViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InboxViewController.xib; sourceTree = "<group>"; };
 		9422440E1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DailyFeedbackCollectionViewCell.h; sourceTree = "<group>"; };
 		9422440F1FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DailyFeedbackCollectionViewCell.m; sourceTree = "<group>"; };
 		942244101FC9FD1B00A83A62 /* DailyFeedbackCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyFeedbackCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -360,6 +365,9 @@
 				94259F7B1FC944C70067320B /* DailyScoreViewController.h */,
 				94259F7C1FC944C70067320B /* DailyScoreViewController.m */,
 				94259F7D1FC944C70067320B /* DailyScoreViewController.xib */,
+				9415E03E1FCAB34200483F5A /* InboxViewController.h */,
+				9415E03F1FCAB34200483F5A /* InboxViewController.m */,
+				9415E0401FCAB34200483F5A /* InboxViewController.xib */,
 				94851B911FC9E1BE009E11B2 /* Daily Score View */,
 			);
 			path = DailyViewController;
@@ -599,6 +607,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94259F841FC946460067320B /* TrendsScoreViewController.xib in Resources */,
+				9415E0421FCAB34200483F5A /* InboxViewController.xib in Resources */,
 				94A2B74F1FC89D2700B84598 /* LaunchScreen.storyboard in Resources */,
 				94A2B74C1FC89D2700B84598 /* Assets.xcassets in Resources */,
 				94259F961FC957D30067320B /* constants.json in Resources */,
@@ -749,6 +758,7 @@
 				940A296A1FCA2771005DA001 /* Plot.swift in Sources */,
 				940A296C1FCA2771005DA001 /* DotPlot.swift in Sources */,
 				940A295D1FCA2771005DA001 /* GradientDrawingLayer.swift in Sources */,
+				9415E0411FCAB34200483F5A /* InboxViewController.m in Sources */,
 				946662171FC8B9350033D494 /* LocationDataManager.m in Sources */,
 				94A2B7521FC89D2700B84598 /* main.m in Sources */,
 				94259F8A1FC94AED0067320B /* UIColor+Norlife.m in Sources */,

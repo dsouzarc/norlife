@@ -221,7 +221,7 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
 
 - (NSInteger) dropdownMenu:(MKDropdownMenu *)dropdownMenu numberOfRowsInComponent:(NSInteger)component
 {
-    return 2;
+    return 3;
 }
 
 - (NSString *)dropdownMenu:(MKDropdownMenu *)dropdownMenu titleForRow:(NSInteger)row forComponent:(NSInteger)component
@@ -230,6 +230,8 @@ static NSString *separatorViewKindIdentifier = @"SeparatorViewKind";
         return @"Upload picture of receipt";
     } else if(row == 1) {
         return @"Upload picture of food";
+    } else if(row == 2) {
+        return @"Messages + Investment Advice";
     }
     return @"";
 }
